@@ -1,3 +1,7 @@
+<?php session_start(); 
+
+    $_SESSION['pseudo'] = "Math";
+?>
 <!DOCTYPE html> <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
 
@@ -26,25 +30,29 @@
 
 <div id="compte">
     <table style="margin: auto;">
-        <tr>
-            <th><label>Nom :</label></th>
-            <th><input type="text" name="nom"></th>
-        </tr>
+    <form method="post">
         <tr>
             <th><label>Prénom :</label></th>
-            <th><input type="text" name="prenom"></th>
+            <th><input type="text" name="nom" id="nom" placeholder="Votre nom" required></th>
         </tr>
         <tr>
             <th><label>Adresse Mail :</label></th>
-            <th><input type="text" name="adresseMail"></th>
+            <th><input type="email" name="email" id="email" placeholder="Votre email" required></th>
         </tr>
         <tr>
             <th><label>Mot De Passe :</label></th>
-            <th><input type="password" name="mdp"></th>
+            <th><input type="password" name="password" id="password" placeholder="Votre mot de passe" required></th>
         </tr>
-        <th colspan = 2><button style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Créer mon compte</button></th>
+        <tr>
+            <th><label>Confirmation :</label></th>
+            <th><input type="password" name="cpassword" id="cpassword" placeholder="Confirmer votre mot de passe" required></th>
+        </tr>
+        <th colspan = 2><button style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="submit" name="formsend" id="formsend">Créer votre compte</button></th>
     </table>
+    </form>
 </div>
+
+<?php include 'data/creation.php' ?>
 
 
 <div id="backBigMenu">

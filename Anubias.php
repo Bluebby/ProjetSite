@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
@@ -157,62 +158,62 @@
         </div>
         
 
-      <div id="client">
-        <div class="open-btn">
+        <?php include 'data/connec.php'; ?>
+
+
+<?php
+
+  if(isset($_SESSION['email']) && (isset($_SESSION['nom']))){
+
+?>
+  <div id="client">
+    <p style="color:white"> Bienvenue <?= $_SESSION['nom']; ?></p>
+  </div>
+  <?php
+  }else{
+    ?>
+    <div id="client">
+      <div class="open-btn">
           <button class="open-button" onclick="openForm()">Se connecter</button>
         </div>
         <div class="login-popup">
           <div class="form-popup" id="popupForm">
-            <form action="/action_page.php" class="form-container">
-              <table
-                style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
-                <tr>
-                  <th>
-                    <h4 class="fas fa-user" style="color:white"> Identifiant :</h4>
-                  </th>
-                  <th><input type="text" name="Identifiant"></th>
-                  <th></th>
-                  <th>
-                    <p style="visibility: hidden;">aaaa</p>
-                  </th>
-                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                  <th style="text-align:center">
-                    <h4 class="fas" style="color:white">Créer votre compte :</h4>
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
-                  </th>
-                  <th><input type="text" name="mdp"></th>
-                  <th></th>
-                  <th>
-                    <p style="visibility: hidden;">aaaa</p>
-                  </th>
-                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                  <th><a href="compte.html"><button class="button"
-                        style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;"
-                        type="button">Se créer un compte</button></a></th>
-                </tr>
-                <tr></tr>
-                <th colspan="2"><button class="button"
-                    style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;"
-                    type="button" onclick="alert('tu es connecté')">Se connecter</button></th>
-                <th></th>
-                <th>
-                  <p style="display:none">aaaa</p>
-                </th>
-                <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                </tr>
-                <tr>
-                  <th colspan="6"><button type="button" class="btn cancel" onclick="closeForm()">Fermer</button></th>
-                </tr>
+              <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
+              <form method="post">
+                  <tr>
+                      <th><h4 class="fas fa-user" style="color:white">  Identifiant :</h4></th>
+                      <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
+                      <th ></th>
+                      <th><p style="visibility: hidden;">aaaa</p></th>       
+                      <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                      <th style="text-align:center"><h4 class="fas" style="color:white">Créer votre compte :</h4></th>
+                  </tr>
+                  <tr>
+                      <th><h4 class="fas fa-lock" style="color:white">  Mot de passe :</h4></th>
+                      <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
+                      <th ></th>
+                      <th><p style="visibility: hidden;">aaaa</p></th>
+                      <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                      <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
+                  </tr>
+                  <tr></tr>
+                      <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
+                      <th></th>
+                      <th><p style="display:none">aaaa</p></th>  
+                      <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                  </tr>
+                  <tr>
+                      <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
+                  </tr>
+                </form>
               </table>
-            </form>
           </div>
         </div>
-
-      </div>
+    
+    </div>
+  <?php
+  }
+?>
 
       <!--<div id="backBigMenu"></div>-->
       
