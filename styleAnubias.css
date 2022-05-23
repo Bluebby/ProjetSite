@@ -31,18 +31,6 @@ body {
   transform: translate(-50%, -50%); /*décalage de 50% de sa propre taille*/
 }
 
-video#bgvid {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  background-size: cover;
-}
-
 #info {
   padding-top: 950px;
   font-size: 8px;
@@ -56,6 +44,7 @@ video#bgvid {
 
 #tabmenu {
   position: absolute;
+  z-index: 3;
   top: 170px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -290,6 +279,7 @@ video#bgvid {
   max-width: 300px;
   border: 1px solid rgb(125, 177, 80);
   background-color: rgb(38, 38, 38);
+  border-radius: 7px;
 }
 
 #backBigMenu {
@@ -303,30 +293,18 @@ video#bgvid {
 
 #product {
   position: absolute;
-  top: 480px;
-
+  margin-top: 200px;
   margin-left: 22%;
+  z-index: 1;
+  border-radius: 7px;
+
   width: 75%;
-  height: 70%;
+  height: 90%;
   max-width: 1300px;
-  min-width: 600px;
 
   border: 1px solid rgb(125, 177, 80);
   background-color: rgb(38, 38, 38);
 }
-
-/*#product {
-  position: absolute;
-  margin-top: 50%;
-  margin-left: 22%;
-  width: 75%;
-  height: 90%;
-  max-width: 1300px;
-  min-width: 600px;
-
-  border: 1px solid rgb(125, 177, 80);
-  background-color: rgb(38, 38, 38);
-}*/
 
 #client {
   margin-top: 30px;
@@ -338,7 +316,7 @@ video#bgvid {
   min-height: 100%;
   min-width: 1024px;
   width: 100%;
-  height: 99%;
+  height: auto;
   top: -3px;
   left: 0px;
   z-index: -100;
@@ -348,7 +326,7 @@ video#bgvid {
 #imgcacheBackGround {
   position: absolute;
   z-index: -10;
-  margin-left: 0px;
+  margin-left: -10px;
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0);
@@ -371,33 +349,25 @@ video#bgvid {
   margin-bottom: -2px;
 }
 #promo {
-  margin-left: 22%;
+  padding-left: 270px;
   margin-top: 170px;
   width: 100%;
 }
 #imgPromo {
-  width: 100%;
+  width: 1000px;
   border: 1px solid rgb(125, 177, 80);
 }
-
-#promoCase {
-  border: 1px solid red;
-  width: 75%;
-  max-width: 1000px;
-  margin-bottom: 0px;
-}
-
 .section {
   margin-top: 0px;
-
   padding: 0;
-  height: 100vh; /*jouer la dessus c ça qui clc*/
+  height: 120vh; /*jouer la dessus c ça qui clc*/
   justify-content: center;
   align-items: center;
 }
 .slider {
-  width: 100%;
-  height: 700px;
+  width: 800px;
+  height: 500px;
+
   overflow: hidden;
 }
 .slide {
@@ -418,7 +388,7 @@ video#bgvid {
 .nav-m {
   position: absolute;
   width: 800px;
-  margin-top: -400px;
+  margin-top: -250px;
   display: flex;
   justify-content: center;
 }
@@ -452,7 +422,7 @@ video#bgvid {
 .nav-auto {
   position: absolute;
   width: 800px;
-  margin-top: 100px;
+  margin-top: 250px;
   display: flex;
   justify-content: center; /*centrer la nav auto avec la nav choisi*/
 }
@@ -569,29 +539,121 @@ video#bgvid {
   margin: 10px auto;
   margin-top: 100px;
   position: absolute;
+  /*border: 2px solid red;*/
   width: 80%;
   max-width: 1200px;
   min-width: 800px;
 }
 
 .bigTittle {
-  font-size: max(4vw, 50px);
+  font-size: max(4vw, 60px);
 }
 
-#t03
-{
-    border-collapse: collapse;
-    width: 90%;
+#quantity_wanted {
+  width: 63px;
+  height: 27px;
+  padding: 0 5px;
+  float: left;
+  border: 1px solid #6db33f !important;
+  line-height: 5px;
 }
 
-#td3, #th3
-{
-    padding: 0.3em; 
-    border:1px solid rgba(209, 202, 202, 0.253);
-    
+#quantitySelect {
+  padding-top: 0px;
+  padding-left: 0px;
 }
 
-#imgProduct{
-  width: 150px;
-  height: auto;
+#imgProduct {
+  margin-left: -35%;
+  height: 300px;
+  width: auto;
+  border-radius: 7px;
+}
+
+#underProduct {
+  /*display: flex;
+  flex-direction: column;*/
+
+  height: 500px;
+  width: 90%;
+}
+
+#infoPriceProduct {
+  position: relative;
+  border: 2px solid #6db33f;
+  margin-left: 50%;
+  margin-top: -258px;
+  width: 25%;
+  min-width: 100px;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 7px;
+}
+#price {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 40px;
+  color: #6db33f;
+}
+
+#case_quantity_wanted {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  padding-top: 50px;
+}
+
+#addBasketPosition {
+  position: absolute;
+  margin-left: 0px;
+}
+
+#description {
+  border: 1px solid rgb(185, 185, 185);
+  background-color: rgb(45, 44, 44);
+  margin-top: 70px;
+  width: 600px;
+  padding: 2px;
+  border-radius: 7px;
+}
+
+h4 {
+  font-size: 15px;
+  font-style: none;
+}
+
+/*site dynamique, fichier stock soit organiser
+fichier csv
+site dynamique trouver les documentation fait en sorte de ne pas avoir a réécrire
+*/
+
+.styled {
+  margin-top: 90px;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: #6db33f;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: #438318;
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
