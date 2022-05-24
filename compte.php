@@ -1,7 +1,11 @@
+<<<<<<< Updated upstream:compte.php
 <?php session_start(); 
 
     $_SESSION['pseudo'] = "Math";
 ?>
+=======
+<?php session_start(); ?>
+>>>>>>> Stashed changes:compte.html
 <!DOCTYPE html> <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
 
@@ -19,10 +23,7 @@
 
 
 <body >
-    
-    <!--video playsinline autoplay muted loop id="bgvid">
-        <source type="video/mp4" src="lave.mp4" >
-    </video>-->
+
     <div id="global">
         <div id="Menu"><h1>AQUAPLANTE</h1></div>
     </div>

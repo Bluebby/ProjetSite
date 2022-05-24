@@ -44,8 +44,12 @@
         } else{
             echo "Les champs ne sont pas tous remplies";
         }
+<<<<<<< Updated upstream
 
     }
     
     
+=======
+    }
+>>>>>>> Stashed changes
 ?>
