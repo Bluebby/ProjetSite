@@ -615,7 +615,7 @@ h4 {
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   border-radius: 10px;
-  background-color: #ff0000;
+  background-color: #3b3b3b;
   background-image: linear-gradient(
     to top left,
     rgba(0, 0, 0, 0.2),
@@ -627,7 +627,7 @@ h4 {
 }
 
 .styled:hover {
-  background-color: #d73900;
+  background-color: #afafaf;
 }
 
 .styled:active {
