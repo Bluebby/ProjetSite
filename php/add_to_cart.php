@@ -21,4 +21,11 @@
       $_SESSION['subtotal'] += $product['price'];
     }
   }
+
+  // Renvoi des données vers la requête Ajax.
+  $quantity = $_SESSION['cart'][$_POST['product']]['quantity'];
+  $price = $_SESSION["cart"][$_POST["product"]]["price"];
+  $subtotal = $_SESSION["subtotal"];
+
+  echo "$quantity,$price,$subtotal";
 ?>
