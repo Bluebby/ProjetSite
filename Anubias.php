@@ -138,7 +138,7 @@
               <div id="underProduct">
                 <img id="imgProduct" src="anubias-sp-nangi.jpg">
                 <div id="infoPriceProduct">
-                    <p id="price" >14,95</p>
+                    <p id="price" >14,95$</p>
                     <p>Quantité</p>
                     <div id="case_quantity_wanted">
                         <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
