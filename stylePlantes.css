@@ -553,6 +553,8 @@ body {
   width: 63px;
   height: 27px;
   padding: 0 5px;
+  left: 50%;
+  transform: translate(50%, 0%);
   align-items: center;
 
   float: left;
@@ -561,7 +563,6 @@ body {
 }
 
 #quantitySelect {
-  padding-left: 0px;
 }
 
 #imgProduct {
