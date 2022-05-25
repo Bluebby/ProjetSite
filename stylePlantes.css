@@ -553,9 +553,11 @@ body {
   width: 63px;
   height: 27px;
   padding: 0 5px;
+  align-items: center;
+
   float: left;
   border: 1px solid #6db33f !important;
-  line-height: 5px;
+  line-height: 10px;
 }
 
 #quantitySelect {
@@ -571,29 +573,27 @@ body {
 
 #underProduct {
   display: flex;
-  height: 500px;
+  height: 600px;
   width: 90%;
   padding: 10px;
 }
 
 #infoPriceProduct {
   position: relative;
-  padding: 10px;
-  border: 2px solid #6db33f;
+  border: 1px solid #6db33f;
+  background-color: rgb(35, 35, 35);
   /*margin-left: 50%;
   margin-top: -258px;*/
   width: 25%;
-  min-width: 100px;
+  min-width: 150px;
   max-width: 300px;
-  height: 200px;
+  height: 250px;
   border-radius: 7px;
 }
 #price {
   font-size: 40px;
   color: #6db33f;
 }
-
-
 
 h4 {
   font-size: 15px;
@@ -608,7 +608,7 @@ h4 {
 .styled {
   border: 0;
   line-height: 2.5;
-  padding: 0 20px;
+  padding: 0px 20px;
   font-size: 1rem;
   text-align: center;
   color: #fff;
