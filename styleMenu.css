@@ -3,13 +3,12 @@ body {
   margin: 0px; /*avant il y avait 10 de margin*/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  overflow-y: scroll;
   justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #global {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #Menu {
@@ -55,8 +54,8 @@ video#bgvid {
 }
 
 #tabmenu {
-  position: absolute;
-  top: 170px;
+  position: relative;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -69,6 +68,7 @@ video#bgvid {
 }
 #menu-demo2 li {
   display: inline-block;
+  width: 23%;
   position: relative;
   border-radius: 8px 8px 0 0; /*bordure de la premiere casse li*/
 }
@@ -100,19 +100,20 @@ video#bgvid {
 /* background des liens sur menus */
 #menu-demo2 li:first-child {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 45%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:nth-child(2) {
-  background-color: rgb(125, 177, 80);
+  background-color: rgb(38, 38, 38);
   background-image: -webkit-linear-gradient(
     top,
     rgb(125, 177, 80) 0%,
@@ -575,23 +576,22 @@ video#bgvid {
 }
 
 .bigTittle {
+  margin-top: 100px;
   font-size: max(4vw, 50px);
 }
 
-#t03
-{
-    border-collapse: collapse;
-    width: 90%;
+#t03 {
+  border-collapse: collapse;
+  width: 90%;
 }
 
-#td3, #th3
-{
-    padding: 0.3em; 
-    border:1px solid rgba(209, 202, 202, 0.253);
-    
+#td3,
+#th3 {
+  padding: 0.3em;
+  border: 1px solid rgba(209, 202, 202, 0.253);
 }
 
-#imgProduct{
+#imgProduct {
   width: 150px;
   height: auto;
 }
