@@ -6,7 +6,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1,0" />  <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
+  <meta name="viewport" content="width=device-width, initial-scale=1,0" />
+  <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
   <title>MenuTD</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
   <link rel="stylesheet" href="styleMenu.css" />
@@ -20,17 +21,17 @@
     </video>-->
 
 
-    <!--responsive      margin: auto;
+  <!--responsive      margin: auto;
     max-width;
   width:...%
     typo en responsive
     font-size: 5vw;-->
 
 
-    <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
+  <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
     faire en sorte que le se connecter ne passe pas derriere le menu-->
   <header id="showcase">
-    
+
     <div id="responsive">
       <div id="global">
         <div id="Menu">
@@ -40,11 +41,10 @@
       <div id="tabmenu">
         <ul id="menu-demo2">
           <li>
-            <a href="#">Plantes</a>
+            <a href="Plantes.php">Plantes</a>
             <ul>
               <li>
-                <a
-                  href="Anubias.php">Anubias</a>
+                <a href="Anubias.php">Anubias</a>
               </li>
               <li><a href="Bucephalandra.php">Bucephalandra</a></li>
               <li><a href="#">Sous menu 1</a></li>
@@ -133,167 +133,101 @@
         </li>
       </div>
 
-      
+
       <div id="product">
         <div id="treize">
           <h4 style="font-style: Arial"><u>PRODUIT</u></h4>
           <center>
             <table id="t03">
               <tr>
-                <th
-                  id="th3"
-                  width="200px"
-                  style="border-top-style: none; border-left-style: none"
-                >
+                <th id="th3" width="200px" style="border-top-style: none; border-left-style: none">
                   Photo
                 </th>
-                <th
-                  id="th3"
-                  width="200px"
-                  style="border-top-style: none; border-left-style: none"
-                >
+                <th id="th3" width="200px" style="border-top-style: none; border-left-style: none">
                   Plantes
                 </th>
 
-                <th
-                  id="th3"
-                  style="border-top-style: none; border-right-style: none"
-                >
+                <th id="th3" style="border-top-style: none; border-right-style: none">
                   Prix HTVA
                 </th>
-                <th
-                  id="th3"
-                  style="
+                <th id="th3" style="
                     border-top-style: none;
                     border-right-style: none;
                     border-left-style: none;
-                  "
-                >
+                  ">
                   Prix TVAC
                 </th>
               </tr>
               <tr>
-                <td
-                  id="td3"
-                  style="border-left-style: none; border-bottom-style: none"
-                  align="left"
-                >
+                <td id="td3" style="border-left-style: none; border-bottom-style: none" align="left">
                   <img id="imgProduct" src="anubias-sp-nangi.jpg">
                 </td>
-                <td
-                  id="td3"
-                  style="border-left-style: none; border-bottom-style: none"
-                  align="left"
-                >
+                <td id="td3" style="border-left-style: none; border-bottom-style: none" align="left">
                   Anubias
                 </td>
-                <td
-                  id="td3"
-                  style="border-right-style: none; border-bottom-style: none"
-                  align="right"
-                >
+                <td id="td3" style="border-right-style: none; border-bottom-style: none" align="right">
                   34,95$
                 </td>
-                <td
-                  id="td3"
-                  style="
+                <td id="td3" style="
                     border-right-style: none;
                     border-left-style: none;
                     border-bottom-style: none;
-                  "
-                  align="right"
-                >
+                  " align="right">
                   44,55$
                 </td>
               </tr>
               <tr>
-                <td
-                  id="td3"
-                  style="border-left-style: none; border-bottom-style: none"
-                  align="left"
-                >
+                <td id="td3" style="border-left-style: none; border-bottom-style: none" align="left">
                   <img id="imgProduct" src="bucephalandra-biblis-premium.jpg">
                 </td>
-                <td
-                  id="td3"
-                  style="
+                <td id="td3" style="
                     border-left-style: none;
                     border-top-style: none;
                     border-bottom-style: none;
-                  "
-                  align="left"
-                >
+                  " align="left">
                   Bucephalandra
                 </td>
-                <td
-                  id="td3"
-                  style="
+                <td id="td3" style="
                     border-top-style: none;
                     border-right-style: none;
                     border-bottom-style: none;
-                  "
-                  align="right"
-                >
+                  " align="right">
                   43,00$
                 </td>
-                <td
-                  id="td3"
-                  style="
+                <td id="td3" style="
                     border-top-style: none;
                     border-right-style: none;
                     border-left-style: none;
                     border-bottom-style: none;
-                  "
-                  align="right"
-                >
+                  " align="right">
                   52.30$
                 </td>
               </tr>
               <tr>
-                <td
-                  id="td3"
-                  style="border-left-style: none; border-bottom-style: none"
-                  align="left"
-                >
-                  
+                <td id="td3" style="border-left-style: none; border-bottom-style: none" align="left">
+
                   <img id="imgProduct" src="crevette-caridina-japonica-amano-shrimp-taille-s (1).jpg">
                 </td>
-                <td
-                  id="td3"
-                  style="border-top-style: none; border-left-style: none"
-                  align="left"
-                >
+                <td id="td3" style="border-top-style: none; border-left-style: none" align="left">
                   crevette Amano
                 </td>
-                <td
-                  id="td3"
-                  style="border-top-style: none; border-right-style: none"
-                  align="right"
-                >
+                <td id="td3" style="border-top-style: none; border-right-style: none" align="right">
                   48.00$
                 </td>
-                <td
-                  id="td3"
-                  style="
+                <td id="td3" style="
                     border-top-style: none;
                     border-right-style: none;
                     border-left-style: none;
-                  "
-                  align="right"
-                >
+                  " align="right">
                   57.30$
                 </td>
               </tr>
               <tr>
-                <td
-                  colspan="3"
-                  style="
+                <td colspan="3" style="
                     border-left-style: none;
                     border-right-style: none;
                     border-bottom-style: none;
-                  "
-                  align="center"
-                >
+                  " align="center">
                   Liste de prix au 14/10/2005
                 </td>
               </tr>
@@ -304,64 +238,76 @@
       <?php include 'data/connec.php'; ?>
 
 
-<?php
+      <?php
 
-  if(isset($_SESSION['email']) && (isset($_SESSION['nom']))){
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
 
-?>
-  <div id="client">
-    <p style="color:white"> Bienvenue <?= $_SESSION['nom']; ?></p>
-  </div>
-  <?php
-  }else{
-    ?>
-    <div id="client">
-      <div class="open-btn">
-          <button class="open-button" onclick="openForm()">Se connecter</button>
+      ?>
+        <div id="client">
+          <p style="color:white"> Bienvenue <?= $_SESSION['nom']; ?></p>
         </div>
-        <div class="login-popup">
-          <div class="form-popup" id="popupForm">
+      <?php
+      } else {
+      ?>
+        <div id="client">
+          <div class="open-btn">
+            <button class="open-button" onclick="openForm()">Se connecter</button>
+          </div>
+          <div class="login-popup">
+            <div class="form-popup" id="popupForm">
               <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
-              <form method="post">
+                <form method="post">
                   <tr>
-                      <th><h4 class="fas fa-user" style="color:white">  Identifiant :</h4></th>
-                      <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
-                      <th ></th>
-                      <th><p style="visibility: hidden;">aaaa</p></th>       
-                      <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                      <th style="text-align:center"><h4 class="fas" style="color:white">Créer votre compte :</h4></th>
+                    <th>
+                      <h4 class="fas fa-user" style="color:white"> Identifiant :</h4>
+                    </th>
+                    <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
+                    <th></th>
+                    <th>
+                      <p style="visibility: hidden;">aaaa</p>
+                    </th>
+                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                    <th style="text-align:center">
+                      <h4 class="fas" style="color:white">Créer votre compte :</h4>
+                    </th>
                   </tr>
                   <tr>
-                      <th><h4 class="fas fa-lock" style="color:white">  Mot de passe :</h4></th>
-                      <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
-                      <th ></th>
-                      <th><p style="visibility: hidden;">aaaa</p></th>
-                      <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                      <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
+                    <th>
+                      <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
+                    </th>
+                    <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
+                    <th></th>
+                    <th>
+                      <p style="visibility: hidden;">aaaa</p>
+                    </th>
+                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                    <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
                   </tr>
                   <tr></tr>
-                      <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
-                      <th></th>
-                      <th><p style="display:none">aaaa</p></th>  
-                      <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                  <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
+                  <th></th>
+                  <th>
+                    <p style="display:none">aaaa</p>
+                  </th>
+                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
                   </tr>
                   <tr>
-                      <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
+                    <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
                   </tr>
                 </form>
               </table>
+            </div>
           </div>
-        </div>
-    
-    </div>
-  <?php
-  }
-?>
-      
 
-  
+        </div>
+      <?php
+      }
+      ?>
+
+
+
       <!--<div id="backBigMenu"></div>-->
-      
+
       <!--
       <div>
       <img id="imgAquascaping" src="aquascapingBackGround.jpg" />
@@ -371,48 +317,48 @@
       <div id="promo">
         <!-- <img id="imgPromo" src="BlueVelvet.jpg" />-->
         <div id="promoCase">
-        <div class="section">
-          <div class="slider">
-            <div class="slide">
-              <input type="radio" name="radio-btn" id="radio1" />
-              <input type="radio" name="radio-btn" id="radio2" />
-              <input type="radio" name="radio-btn" id="radio3" />
-              <input type="radio" name="radio-btn" id="radio4" />
-              <div class="st first">
-                <img id="imgPromo" src="BlueVelvet.jpg" alt="" />
-              </div>
-              <div class="st">
-                <img id="imgPromo" src="5b891061ada2f8dcf71ec52b23abe11e749a3b7c_lot_de_plantes.jpg" alt="" />
-              </div>
-              <div class="st">
-                <img id="imgPromo" src="6eea2d46e77516c9658ddec08618959ff8073f9a_BIG_REDFIRE.jpg" alt="" />
-              </div>
-              <div class="st">
-                <img id="imgPromo" src="f761a5b3768d753c4488936be96b6a45c701063c_ovoo_stone_promo (1).jpg" alt="" />
+          <div class="section">
+            <div class="slider">
+              <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+                <div class="st first">
+                  <img id="imgPromo" src="BlueVelvet.jpg" alt="" />
+                </div>
+                <div class="st">
+                  <img id="imgPromo" src="5b891061ada2f8dcf71ec52b23abe11e749a3b7c_lot_de_plantes.jpg" alt="" />
+                </div>
+                <div class="st">
+                  <img id="imgPromo" src="6eea2d46e77516c9658ddec08618959ff8073f9a_BIG_REDFIRE.jpg" alt="" />
+                </div>
+                <div class="st">
+                  <img id="imgPromo" src="f761a5b3768d753c4488936be96b6a45c701063c_ovoo_stone_promo (1).jpg" alt="" />
+                </div>
+
+                <div class="nav-auto">
+                  <div class="a-b1"></div>
+                  <div class="a-b2"></div>
+                  <div class="a-b3"></div>
+                  <div class="a-b4"></div>
+                </div>
               </div>
 
-              <div class="nav-auto">
-                <div class="a-b1"></div>
-                <div class="a-b2"></div>
-                <div class="a-b3"></div>
-                <div class="a-b4"></div>
+              <div class="nav-m">
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio2" class="m-btn"></label>
+                <label for="radio3" class="m-btn"></label>
+                <label for="radio4" class="m-btn"></label>
               </div>
-            </div>
-
-            <div class="nav-m">
-              <label for="radio1" class="m-btn"></label>
-              <label for="radio2" class="m-btn"></label>
-              <label for="radio3" class="m-btn"></label>
-              <label for="radio4" class="m-btn"></label>
             </div>
           </div>
+
         </div>
-        
-      </div>
-      
+
       </div>
     </div>
-    
+
   </header>
 
   <div id="imgcacheBackGround"></div>
@@ -420,4 +366,5 @@
 
 
 </body>
+
 </html>
