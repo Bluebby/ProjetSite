@@ -1,4 +1,11 @@
-<?php session_start() ?>
+<?php
+session_start();
+
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+    $_SESSION['subtotal'] = 0;
+}
+?>
 <!DOCTYPE html>
 <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
@@ -13,6 +20,7 @@
     <link rel="stylesheet" href="stylePlantes.css" />
     <script defer src="menu.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/cartAjaxFunctions.js"></script>
 </head>
 
 <body>
@@ -141,8 +149,9 @@
                             <p id="price">14,95$</p>
                             <p>ANUBIAS</p>
                             <div id="case_quantity_wanted">
-                                <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <input class="favorite styled" type="button" value="Add to Cart">
+                                <input type="number" min="1" name="qty" id="Anubias" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
 
                         </div>
@@ -150,16 +159,18 @@
                             <div id="case_quantity_wanted">
                                 <p id="price">12,95$</p>
                                 <p>BUCEPHALANDRA</p>
-                                <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <input class="favorite styled" type="button" value="Add to Cart">
+                                <input type="number" min="1" name="qty" id="Bucephalandra" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
                         </div>
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
-                                <p id="price">12,95$</p>
+                                <p id="price">20,00$</p>
                                 <p>HYGROPHILA</p>
-                                <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <input class="favorite styled" type="button" value="Add to Cart">
+                                <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Hygrophila', 20, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
                         </div>
 
@@ -233,6 +244,30 @@
                     </div>
 
                 </div>
+
+
+                <!-- Panier dans l'en-tête du site -->
+                <ul id="hcart">
+                    <li><a href="cart.php">Mon panier</a>
+                        <ul id="hcart-products">
+
+                            <!-- Affichage de tous les produits enregistrés dans le panier : -->
+                            <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
+                                <li id="hcart-<?= $product ?>">
+                                    <p><?= $product ?></p> <!-- Nom du produit -->
+                                    <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
+                                    <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
+                                </li>
+                            <?php endforeach; ?>
+
+                            <!-- Affichage du prix total :-->
+                            <li>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+
             <?php
             }
             ?>

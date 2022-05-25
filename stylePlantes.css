@@ -549,7 +549,7 @@ body {
   font-size: max(4vw, 60px);
 }
 
-#quantity_wanted {
+.quantity_wanted {
   width: 63px;
   height: 27px;
   padding: 0 5px;
@@ -562,8 +562,8 @@ body {
   line-height: 10px;
 }
 
-#quantitySelect {
-}
+/*#quantitySelect {
+ } */
 
 #imgProduct {
   margin-left: -35%;
