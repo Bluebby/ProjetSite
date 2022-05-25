@@ -145,10 +145,14 @@ if (!isset($_SESSION['cart'])) {
                 <center>
                     <h1 id="titleProduct">Plantes</h1>
                     <div id="underProduct">
+
                         <div id="infoPriceProduct">
-                            <p id="price">14,95$</p>
-                            <p>ANUBIAS</p>
                             <div id="case_quantity_wanted">
+                                <img id="imgProduct" src="anubias-sp-nangi.jpg">
+                                <p id="nameProduct">ANUBIAS</p>
+                                <p id="price">14,95$</p>
+
+
                                 <input type="number" min="1" name="qty" id="Anubias" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                 <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                                 <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite styled">Ajouter au panier</button>
@@ -157,8 +161,10 @@ if (!isset($_SESSION['cart'])) {
                         </div>
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
+                                <img id="imgProduct" src="pl01_bucephalandra.jpg">
+                                <p id="nameProduct">BUCEPHALANDRA</p>
                                 <p id="price">12,95$</p>
-                                <p>BUCEPHALANDRA</p>
+
                                 <input type="number" min="1" name="qty" id="Bucephalandra" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                 <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                                 <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite styled">Ajouter au panier</button>
@@ -166,14 +172,19 @@ if (!isset($_SESSION['cart'])) {
                         </div>
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
-                                <p id="price">20,00$</p>
-                                <p>HYGROPHILA</p>
-                                <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Hygrophila', 20, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
+                                <img id="imgProduct" src="Hygrophyla-corymbosa-thailande.jpg">
+                                <div id="underInfoPriceProduct">
+                                    <p id="nameProduct">HYGROPHILA</p>
+                                    <p id="price">20,00$</p>
+
+                                    <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
+                                </div>
                             </div>
                         </div>
 
+                    </div>
                 </center>
 
             </div>
@@ -247,25 +258,27 @@ if (!isset($_SESSION['cart'])) {
 
 
                 <!-- Panier dans l'en-tête du site -->
-                <ul id="hcart">
-                    <li><a href="cart.php">Mon panier</a>
-                        <ul id="hcart-products">
+                <div id=cart>
+                    <ul id="hcart">
+                        <li><a href="cart.php">Mon panier</a>
+                            <ul id="hcart-products">
 
-                            <!-- Affichage de tous les produits enregistrés dans le panier : -->
-                            <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
-                                <li id="hcart-<?= $product ?>">
-                                    <p><?= $product ?></p> <!-- Nom du produit -->
-                                    <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
-                                    <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
-                                </li>
-                            <?php endforeach; ?>
+                                <!-- Affichage de tous les produits enregistrés dans le panier : -->
+                                <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
+                                    <li id="hcart-<?= $product ?>">
+                                        <p><?= $product ?></p> <!-- Nom du produit -->
+                                        <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
+                                        <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
+                                    </li>
+                                <?php endforeach; ?>
 
-                            <!-- Affichage du prix total :-->
-                            <li>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></li>
+                                <!-- Affichage du prix total :-->
+                                <li>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></li>
 
-                        </ul>
-                    </li>
-                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
 
             <?php

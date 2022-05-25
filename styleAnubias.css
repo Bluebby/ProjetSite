@@ -581,10 +581,11 @@ body {
 #infoPriceProduct {
   position: relative;
   border: 2px solid #6db33f;
-  margin-left: 50%;
+  margin-left: 52%;
   margin-top: -258px;
+  margin-right: 5%;
   width: 25%;
-  min-width: 100px;
+  min-width: 150px;
   max-width: 300px;
   height: 200px;
   border-radius: 7px;
