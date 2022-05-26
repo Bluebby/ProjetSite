@@ -1,0 +1,46 @@
+/*div qui englobe tout le panier*/
+#hcart {
+    width: 120px;
+    border: solid 1px #6db33f;
+    position: absolute;
+    background-color: rgb(38, 38, 38);
+    border-radius: 5px;
+    margin-left: 78%;
+}
+
+/*bouton qui affiche le panier qd on passe la souris & renvoie vers le panier qd on clique*/
+#hcart-button {
+    color: white;
+    background-color: rgb(38, 38, 38);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*div qui englobe les cases div de chaque produit*/
+#hcart-products {
+    color: white;
+}
+
+/*div de chaque produit + div du prix total*/
+#hcart-products>div {
+    border-bottom: 1px solid;
+}
+
+/*masque le contenu du panier*/
+#hcart #hcart-products {
+    display: none;
+}
+
+/*rÃ©affiche le contenu qd on passe la souris*/
+#hcart:hover #hcart-products {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #7db150;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px;
+    z-index: 10;
+}

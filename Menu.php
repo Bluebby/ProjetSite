@@ -11,6 +11,7 @@
   <title>MenuTD</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
   <link rel="stylesheet" href="styleMenu.css" />
+  <link rel="stylesheet" href="StylePanier.css" />
   <script defer src="menu.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -85,8 +86,8 @@
       if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
 
       ?>
-        <div id="client">
-          <h4 class="fas fa-user" style="color:white"> <?= $_SESSION['prenom']; ?></h4>
+        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
+          <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
       } else {
@@ -147,14 +148,29 @@
       }
       ?>
 
-      
+      <!-- Panier dans l'en-tête du site -->
+            
+      <div id="hcart">
+                    <button id="hcart-button" onclick="window.location.href = 'cart.php'">Mon panier</button>
+                    <div id="hcart-products">
+                        <!-- Affichage de tous les produits enregistrés dans le panier : -->
+                        <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
+                        <div id="hcart-<?=$product?>">
+                            <p><?=$product?></p> <!-- Nom du produit -->
+                            <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
+                            <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
+                        </div>
+                        <?php endforeach; ?>
 
-      <div id="panier"> <img id="imgCart" src="cart.png" alt="" />
-
+                        <!-- Affichage du prix total :-->
+                        <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
+                </div>
+ 
       </div>
-
-
-
+      <div class="LOGOimage">
+        <a href="Menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="logo/logo.png" /> </a>
+      </div>
+      
 
       <div id="secondMenu">
         <li id="titleSndMenu">
@@ -211,7 +227,7 @@
       </div>
 
 
-      <div id="product">
+      <div id="product" style="color: white">
         <div id="treize">
           <h4 style="font-style: Arial"><u>PRODUIT</u></h4>
           <center>

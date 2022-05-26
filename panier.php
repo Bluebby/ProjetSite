@@ -18,6 +18,7 @@ if (!isset($_SESSION['cart'])) {
     <title>MenuTD</title>
     <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
     <link rel="stylesheet" href="stylePlantes.css" />
+    <link rel="stylesheet" href="StylePanier.css" />
     <script defer src="menu.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="js/cartAjaxFunctions.js"></script>
@@ -211,28 +212,6 @@ if (!isset($_SESSION['cart'])) {
                 <div id="client">
                     <p style="color:white"> Bienvenue <?= $_SESSION['nom']; ?></p>
                 </div>
-                <!-- Panier dans l'en-tête du site -->
-                <div id=cart>
-                    <ul id="hcart">
-                        <li><a href="panier.php">Mon panier</a>
-                            <ul id="hcart-products">
-
-                                <!-- Affichage de tous les produits enregistrés dans le panier : -->
-                                <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
-                                    <li id="hcart-<?= $product ?>">
-                                        <p><?= $product ?></p> <!-- Nom du produit -->
-                                        <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
-                                        <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
-                                    </li>
-                                <?php endforeach; ?>
-
-                                <!-- Affichage du prix total :-->
-                                <li>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
             <?php
             } else {
             ?>
@@ -287,35 +266,29 @@ if (!isset($_SESSION['cart'])) {
                     </div>
 
                 </div>
-
-
-                <!-- Panier dans l'en-tête du site -->
-                <div id=cart>
-                    <ul id="hcart">
-                        <li><a href="panier.php">Mon panier</a>
-                            <ul id="hcart-products">
-
-                                <!-- Affichage de tous les produits enregistrés dans le panier : -->
-                                <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
-                                    <li id="hcart-<?= $product ?>">
-                                        <p><?= $product ?></p> <!-- Nom du produit -->
-                                        <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
-                                        <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
-                                    </li>
-                                <?php endforeach; ?>
-
-                                <!-- Affichage du prix total :-->
-                                <li>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-
             <?php
             }
             ?>
+
+            <!-- Panier dans l'en-tête du site -->
+            
+                <div id="hcart">
+                    <button id="hcart-button" onclick="window.location.href = 'cart.php'">Mon panier</button>
+                    <div id="hcart-products">
+                        <!-- Affichage de tous les produits enregistrés dans le panier : -->
+                        <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
+                        <div id="hcart-<?=$product?>">
+                            <p><?=$product?></p> <!-- Nom du produit -->
+                            <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
+                            <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
+                        </div>
+                        <?php endforeach; ?>
+
+                        <!-- Affichage du prix total :-->
+                        <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
+                </div>
+                
+            </div>
 
             <!--<div id="backBigMenu"></div>-->
 
