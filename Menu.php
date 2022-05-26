@@ -33,42 +33,40 @@
   <header id="showcase">
 
     <div id="responsive">
-      <div id="global">
-        <div id="Menu">
-          <h1 class="bigTittle">FISH LE CAMP</h1>
-        </div>
+      <div id="opaqueNezo"></div>
+      <div id="Menu">
+        <h1 class="bigTittle">FISH LE CAMP</h1>
       </div>
       <div id="tabmenu">
         <ul id="menu-demo2">
           <li>
-            <a href="Plantes.php">Plantes</a>
+            <a href="Plantes.php">PLANTES</a>
             <ul>
               <li>
-                <a href="Anubias.php">Anubias</a>
+                <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
               </li>
-              <li><a href="Bucephalandra.php">Bucephalandra</a></li>
-              <li><a href="#">Sous menu 1</a></li>
+              <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
+              <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
             </ul>
           </li>
           <li>
-            <a href="Poissons.php">Poissons</a>
+            <a href="Poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#">Invertébrés d'eau douce</a></li>
-              <li><a href="#">Poissons d'eau douce</a></li>
-              <li><a href="#">Poissons marins</a></li>
+              <li><a href="#" id="fontUnderMenu">CREVETTE AMANO</a></li>
+              <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
+              <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
+              <li><a href="#" id="fontUnderMenu">RAMIREZ</a></li>
+
             </ul>
           </li>
           <li>
-            <a href="#">Matériel</a>
+            <a href="#">MATERIEL</a>
             <ul>
-              <li><a href="#">Aquarium</a></li>
-              <li><a href="#">Sous menu 3</a></li>
-              <li><a href="#">Sous menu 3</a></li>
-              <li><a href="#">Sous menu 3</a></li>
+              <li><a href="#" id="fontUnderMenu">Aquarium</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">Promotion</a>
+            <a href="#">PROMOTION</a>
             <ul>
               <li><a href="#">Sous menu 4</a></li>
               <li><a href="#">Sous menu 4</a></li>
@@ -79,6 +77,66 @@
         </ul>
         <br />
       </div>
+
+      <div id="client">
+        <div class="open-btn">
+          <button class="open-button" onclick="openForm()">Se connecter</button>
+        </div>
+        <div class="login-popup">
+          <div class="form-popup" id="popupForm">
+            <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
+              <form method="post">
+                <tr>
+                  <th>
+                    <h4 class="fas fa-user" style="color:white"> Identifiant :</h4>
+                  </th>
+                  <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
+                  <th></th>
+                  <th>
+                    <p style="visibility: hidden;">aaaa</p>
+                  </th>
+                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                  <th style="text-align:center">
+                    <h4 class="fas" style="color:white">Créer votre compte :</h4>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
+                  </th>
+                  <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
+                  <th></th>
+                  <th>
+                    <p style="visibility: hidden;">aaaa</p>
+                  </th>
+                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                  <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
+                </tr>
+                <tr></tr>
+                <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
+                <th></th>
+                <th>
+                  <p style="display:none">aaaa</p>
+                </th>
+                <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                </tr>
+                <tr>
+                  <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
+                </tr>
+              </form>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="panier"> <img id="imgCart" src="cart.png" alt="" />
+
+      </div>
+
+
+
+
       <div id="secondMenu">
         <li id="titleSndMenu">
           <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Plantes</a>
@@ -249,57 +307,7 @@
       <?php
       } else {
       ?>
-        <div id="client">
-          <div class="open-btn">
-            <button class="open-button" onclick="openForm()">Se connecter</button>
-          </div>
-          <div class="login-popup">
-            <div class="form-popup" id="popupForm">
-              <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
-                <form method="post">
-                  <tr>
-                    <th>
-                      <h4 class="fas fa-user" style="color:white"> Identifiant :</h4>
-                    </th>
-                    <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
-                    <th></th>
-                    <th>
-                      <p style="visibility: hidden;">aaaa</p>
-                    </th>
-                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                    <th style="text-align:center">
-                      <h4 class="fas" style="color:white">Créer votre compte :</h4>
-                    </th>
-                  </tr>
-                  <tr>
-                    <th>
-                      <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
-                    </th>
-                    <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
-                    <th></th>
-                    <th>
-                      <p style="visibility: hidden;">aaaa</p>
-                    </th>
-                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                    <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
-                  </tr>
-                  <tr></tr>
-                  <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
-                  <th></th>
-                  <th>
-                    <p style="display:none">aaaa</p>
-                  </th>
-                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                  </tr>
-                  <tr>
-                    <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
-                  </tr>
-                </form>
-              </table>
-            </div>
-          </div>
 
-        </div>
       <?php
       }
       ?>
