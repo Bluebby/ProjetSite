@@ -19,7 +19,7 @@
 <body>
   <header id="showcase">
 
-    <div id="responsive">
+    <div id="responsive" style="margin-top: 14%">
       <div id="opaqueNezo"></div>
       <div id="Menu">
         <h1 class="bigTittle">FISH LE CAMP</h1>
@@ -72,13 +72,13 @@
       if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
 
       ?>
-        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
+        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px; margin-top: -6%;">
           <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
       } else {
       ?>
-      <div id="client">
+      <div id="client" style="margin-top: -6%;"> 
         <div class="open-btn">
           <button class="open-button" onclick="openForm()">Se connecter</button>
         </div>

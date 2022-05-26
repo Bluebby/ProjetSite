@@ -36,7 +36,7 @@
                         'telephone' => $telephone
                     ]);
                     echo '<script type="text/javascript">window.alert("Votre compte a bien été crée");</script>';
-                    header('Location: Menu.php');
+                    header('Location: ../Menu.php');
                     exit();
 
                 }else{

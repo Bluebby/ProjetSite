@@ -311,7 +311,7 @@ video#bgvid {
 
 #product {
   position: absolute;
-  top: 480px;
+  top: 580px;
 
   margin-left: 22%;
   width: 75%;
@@ -339,7 +339,6 @@ video#bgvid {
 
 #client {
   margin-left: 78%;
-  margin-top: -55px;
   width: 120px;
 }
 
@@ -581,7 +580,6 @@ video#bgvid {
 
 #responsive {
   margin: 10px auto;
-  margin-top: 100px;
   position: absolute;
   width: 80%;
   max-width: 1200px;
@@ -657,7 +655,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   font-size: 20px;
-  padding: 300px 0 100px;
+  padding: 400px 0 100px;
 
 }
 
