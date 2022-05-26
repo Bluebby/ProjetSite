@@ -17,20 +17,6 @@
 </head>
 
 <body>
-  <!--video playsinline autoplay muted loop id="bgvid">
-        <source type="video/mp4" src="lave.mp4" >
-    </video>-->
-
-
-  <!--responsive      margin: auto;
-    max-width;
-  width:...%
-    typo en responsive
-    font-size: 5vw;-->
-
-
-  <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
-    faire en sorte que le se connecter ne passe pas derriere le menu-->
   <header id="showcase">
 
     <div id="responsive">
@@ -151,7 +137,7 @@
       <!-- Panier dans l'en-tête du site -->
             
       <div id="hcart">
-                    <button id="hcart-button" onclick="window.location.href = 'cart.php'">Mon panier</button>
+                    <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
                     <div id="hcart-products">
                         <!-- Affichage de tous les produits enregistrés dans le panier : -->
                         <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
@@ -165,7 +151,7 @@
                         <!-- Affichage du prix total :-->
                         <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
                 </div>
- 
+                
       </div>
       <div class="LOGOimage">
         <a href="Menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="logo/logo.png" /> </a>

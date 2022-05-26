@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1,0" />  <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
   <title>MenuTD</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
-  <link rel="stylesheet" href="styleAnubias.css" />
+  <link rel="stylesheet" href="styleAnubias.css"/>
   <script defer src="menu.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -31,44 +31,41 @@
     faire en sorte que le se connecter ne passe pas derriere le menu-->
   <header id="showcase">
     
-    <div id="responsive">
-      <div id="global">
-        <div id="Menu">
-          <h1 class="bigTittle">FISH LE CAMP</h1>
-        </div>
+  <div id="responsive">
+      <div id="opaqueNezo"></div>
+      <div id="Menu">
+        <h1 class="bigTittle">FISH LE CAMP</h1>
       </div>
       <div id="tabmenu">
         <ul id="menu-demo2">
           <li>
-            <a href="#">Plantes</a>
+            <a href="Plantes.php">PLANTES</a>
             <ul>
               <li>
-                <a
-                  href="https://www.aquaplante.fr/achat-plantes-avant-plan-pour-aquarium/aquaplante-plantes/773-anubias-nana-bonzai.html">Anubias</a>
+                <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
               </li>
-              <li><a href="Bucephalandra.html">Bucephalandra</a></li>
-              <li><a href="#">Sous menu 1</a></li>
+              <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
+              <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">Poissons</a>
+            <a href="Poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#">Invertébrés d'eau douce</a></li>
-              <li><a href="#">Poissons d'eau douce</a></li>
-              <li><a href="#">Poissons marins</a></li>
+              <li><a href="#" id="fontUnderMenu">CREVETTE AMANO</a></li>
+              <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
+              <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
+              <li><a href="#" id="fontUnderMenu">RAMIREZ</a></li>
+
             </ul>
           </li>
           <li>
-            <a href="#">Matériel</a>
+            <a href="#">MATERIEL</a>
             <ul>
-              <li><a href="#">Aquarium</a></li>
-              <li><a href="#">Sous menu 3</a></li>
-              <li><a href="#">Sous menu 3</a></li>
-              <li><a href="#">Sous menu 3</a></li>
+              <li><a href="#" id="fontUnderMenu">Aquarium</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">Promotion</a>
+            <a href="#">PROMOTION</a>
             <ul>
               <li><a href="#">Sous menu 4</a></li>
               <li><a href="#">Sous menu 4</a></li>
@@ -79,6 +76,100 @@
         </ul>
         <br />
       </div>
+
+      <?php include 'data/connec.php'; ?>
+
+      <?php
+
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+
+      ?>
+        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
+          <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
+        </div>
+      <?php
+      } else {
+      ?>
+      <div id="client">
+        <div class="open-btn">
+          <button class="open-button" onclick="openForm()">Se connecter</button>
+        </div>
+        <div class="login-popup">
+          <div class="form-popup" id="popupForm">
+            <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
+              <form method="post">
+                <tr>
+                  <th>
+                    <h4 class="fas fa-user" style="color:white"> Email :</h4>
+                  </th>
+                  <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
+                  <th></th>
+                  <th>
+                    <p style="visibility: hidden;">aaaa</p>
+                  </th>
+                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                  <th style="text-align:center">
+                    <h4 class="fas" style="color:white">Créer votre compte :</h4>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
+                  </th>
+                  <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
+                  <th></th>
+                  <th>
+                    <p style="visibility: hidden;">aaaa</p>
+                  </th>
+                  <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                  <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
+                </tr>
+                <tr></tr>
+                <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
+                <th></th>
+                <th>
+                  <p style="display:none">aaaa</p>
+                </th>
+                <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
+                </tr>
+                <tr>
+                  <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
+                </tr>
+              </form>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <?php
+      }
+      ?>
+
+      <!-- Panier dans l'en-tête du site -->
+            
+      <div id="hcart">
+                    <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
+                    <div id="hcart-products">
+                        <!-- Affichage de tous les produits enregistrés dans le panier : -->
+                        <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
+                        <div id="hcart-<?=$product?>">
+                            <p><?=$product?></p> <!-- Nom du produit -->
+                            <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
+                            <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
+                        </div>
+                        <?php endforeach; ?>
+
+                        <!-- Affichage du prix total :-->
+                        <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
+                </div>
+                
+      </div>
+      <div class="LOGOimage">
+        <a href="Menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="logo/logo.png" /> </a>
+      </div>
+      
+
       <div id="secondMenu">
         <li id="titleSndMenu">
           <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Plantes</a>
@@ -87,7 +178,7 @@
               <a href="#" style="color: white; text-decoration: none">Toutes les plantes aquatiques</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="Bucephalandra.html" style="color: white; text-decoration: none">Bucephalandra</a>
+              <a href="Bucephalandra.php" style="color: white; text-decoration: none">Bucephalandra</a>
             </li>
             <li id="UnderTitleSndMenu">
               <a href="#" style="color: white; text-decoration: none">Mousses pour aquarium</a>
@@ -233,20 +324,6 @@
   </header>
 
   <div id="imgcacheBackGround"></div>
-
-  <!--  <div id="sommaire">
-     <p style="font-size: 20px;"><center>Corrections</center><p\> <p><center><a href="TD1.html" style="color:rgb(255, 217, 0)"title="Introduction to HTML 5 Language">TD1</a> </center> </p>
-     <p><center><a href="TD2.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Language">TD2</a></center> </p>
-     <p><center><a href="TD3.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Forms">TD3</a></center> </p> 
-     <p><center><a href="TD4.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Forms">TD4</a></center> </p>
-     <p><center><a href="TD5.test.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Forms">TD5</a></center> </p>
-    </div>
-
-    <div id="info">
-        <p style="font-style:rgb(255, 166, 0);">Problème de compatibilité rencontré sur différents navigateurs. Mon code marche parfaitement sur operaGX. 
-            Je vais l'adapter les technologies employée pour les prochains cours.</p>
-    </div>
-    -->
 
 </body>
 </html>

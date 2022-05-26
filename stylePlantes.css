@@ -3,7 +3,6 @@ body {
   margin: 0px; /*avant il y avait 10 de margin*/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
   justify-self: center;
   margin-left: auto;
   margin-right: auto;
@@ -19,6 +18,7 @@ body {
   top: 20px;
   transform: translate(-50%, -50%); /*décalage de 50% de sa propre taille*/
   filter: blur(em);
+  width: 100%;
 }
 
 #sommaire {
@@ -29,6 +29,18 @@ body {
   left: 50%;
   /*top: 100%;*/
   transform: translate(-50%, -50%); /*décalage de 50% de sa propre taille*/
+}
+
+video#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
 }
 
 #info {
@@ -43,9 +55,8 @@ body {
 }
 
 #tabmenu {
-  position: absolute;
-  z-index: 3;
-  top: 170px;
+  position: relative;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -53,17 +64,20 @@ body {
 #menu-demo2,
 #menu-demo2 ul {
   padding: 0;
+
   list-style: none;
   text-align: center; /*position sur l'enseble des cases 2nd*/
 }
 #menu-demo2 li {
   display: inline-block;
+  width: 23%;
   position: relative;
   border-radius: 8px 8px 0 0; /*bordure de la premiere casse li*/
 }
 #menu-demo2 ul li {
   display: inherit; /*permet d'hériter des caractéristique précedante sur les cases 2nd*/
   border-radius: 0;
+  width: 100%;
 }
 #menu-demo2 ul li:hover {
   border-radius: 0; /*permet de retirer les rebord sur le menu déroulantquand la souris passe */
@@ -89,54 +103,58 @@ body {
 /* background des liens sur menus */
 #menu-demo2 li:first-child {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 45%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:nth-child(2) {
-  background-color: rgb(125, 177, 80);
+  background-color: rgb(38, 38, 38);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:nth-child(3) {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:last-child {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
 }
 /* background des liens sous menus */
@@ -272,6 +290,7 @@ body {
 
 #secondMenu {
   position: absolute;
+  border-radius: 7px;
   margin-top: 200px;
   margin-left: 1%;
   width: 20%;
@@ -279,7 +298,6 @@ body {
   max-width: 300px;
   border: 1px solid rgb(125, 177, 80);
   background-color: rgb(38, 38, 38);
-  border-radius: 7px;
 }
 
 #backBigMenu {
@@ -293,260 +311,17 @@ body {
 
 #product {
   position: absolute;
-  margin-top: 200px;
+  margin-top: 170px;
   margin-left: 22%;
   z-index: 1;
   border-radius: 7px;
-
+  
   width: 75%;
   height: 90%;
   max-width: 1300px;
-
+  
   border: 1px solid rgb(125, 177, 80);
   background-color: rgb(38, 38, 38);
-}
-
-#client {
-  margin-top: 30px;
-  margin-left: 80%;
-}
-
-#imgAquascaping {
-  position: absolute;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  top: -3px;
-  left: 0px;
-  z-index: -100;
-  background-size: cover;
-}
-
-#imgcacheBackGround {
-  position: absolute;
-  z-index: -10;
-  margin-left: -10px;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-}
-
-#titleSndMenu {
-  list-style-type: none;
-  color: rgb(125, 177, 80);
-  text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: -10px;
-}
-
-#UnderTitleSndMenu {
-  font-size: 12px;
-  list-style-type: none;
-  color: rgb(125, 177, 80);
-  text-decoration: none;
-  margin-left: -30px;
-  margin-bottom: -2px;
-}
-#promo {
-  padding-left: 270px;
-  margin-top: 170px;
-  width: 100%;
-}
-#imgPromo {
-  width: 1000px;
-  border: 1px solid rgb(125, 177, 80);
-}
-.section {
-  margin-top: 0px;
-  padding: 0;
-  height: 120vh; /*jouer la dessus c ça qui clc*/
-  justify-content: center;
-  align-items: center;
-}
-.slider {
-  width: 800px;
-  height: 500px;
-
-  overflow: hidden;
-}
-.slide {
-  width: 500%;
-  height: 500px;
-  display: flex;
-}
-.slide input {
-  display: none;
-}
-.st {
-  width: 20%;
-  transition: 1s;
-}
-.st img {
-  width: 800px;
-}
-.nav-m {
-  position: absolute;
-  width: 800px;
-  margin-top: -250px;
-  display: flex;
-  justify-content: center;
-}
-.m-btn {
-  border: 2px solid rgb(125, 177, 80);
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.m-btn:not(:last-child) {
-  margin-right: 30px;
-}
-.m-btn:hover {
-  background-color: rgb(125, 177, 80);
-}
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-#radio2:checked ~ .first {
-  margin-left: -20%;
-}
-#radio3:checked ~ .first {
-  margin-left: -40%;
-}
-#radio4:checked ~ .first {
-  margin-left: -60%;
-}
-
-.nav-auto {
-  position: absolute;
-  width: 800px;
-  margin-top: 250px;
-  display: flex;
-  justify-content: center; /*centrer la nav auto avec la nav choisi*/
-}
-
-.nav-auto div {
-  border: 2px solid rgb(125, 177, 80);
-  padding: 5px;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-
-.nav-auto div:not(:last-child) {
-  margin-right: 30px;
-  justify-content: center;
-}
-
-#radio1:checked ~ .nav-auto .a-b1 {
-  background-color: rgb(125, 177, 80);
-}
-#radio2:checked ~ .nav-auto .a-b2 {
-  background-color: rgb(125, 177, 80);
-}
-#radio3:checked ~ .nav-auto .a-b3 {
-  background-color: rgb(125, 177, 80);
-}
-#radio4:checked ~ .nav-auto .a-b4 {
-  background-color: rgb(125, 177, 80);
-}
-
-#connect {
-  background-color: rgb(125, 177, 80);
-  color: white;
-  border: 0;
-  font-size: 1em;
-}
-
-#connect:hover {
-  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),
-    0 17px 50px 0 rgba(255, 255, 255, 0.19);
-}
-
-/* Fixez le bouton sur le côté gauche de la page the button on the left side of the page */
-.open-btn {
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* Stylez et fixez le bouton sur la page */
-.open-button {
-  background-color: rgb(125, 177, 80);
-  color: white;
-  padding: 12px 20px;
-  margin-left: 2px;
-  min-width: 120px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-}
-/* Positionnez la forme Popup */
-
-.login-popup {
-  position: relative;
-  text-align: center;
-  width: 400%;
-}
-
-/* Masquez la forme Popup */
-.form-popup {
-  display: none;
-  position: fixed;
-  left: 47%;
-  top: 25%;
-  transform: translate(-45%, 5%);
-  z-index: 9;
-}
-
-/* Stylez le bouton de connexion */
-.form-container .btn {
-  background-color: #8ebf42;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-
-/* Stylez le bouton pour annuler */
-.form-container .cancel {
-  background-color: #cc0000;
-}
-
-/* Planez les effets pour le bouton rouge */
-.form-container .btn:hover,
-.open-button:hover {
-  opacity: 1;
-}
-
-#showcase {
-  background-image: url("aquascapingBackGround.jpg");
-  height: 120vh;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#responsive {
-  margin: 10px auto;
-  margin-top: 100px;
-  position: absolute;
-  /*border: 2px solid red;*/
-  width: 80%;
-  max-width: 1200px;
-  min-width: 800px;
-}
-
-.bigTittle {
-  font-size: max(4vw, 60px);
 }
 
 .quantity_wanted {
@@ -613,38 +388,442 @@ h4 {
   font-style: none;
 }
 
-/*site dynamique, fichier stock soit organiser
-  fichier csv
-  site dynamique trouver les documentation fait en sorte de ne pas avoir a réécrire
-  */
+#client {
+  margin-left: 78%;
+  margin-top: -55px;
+  width: 120px;
+}
 
-.styled {
+#imgAquascaping {
+  position: absolute;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: 99%;
+  top: -3px;
+  left: 0px;
+  z-index: -100;
+  background-size: cover;
+}
+
+#imgcacheBackGround {
+  position: absolute;
+  z-index: -10;
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+#titleSndMenu {
+  list-style-type: none;
+  color: rgb(125, 177, 80);
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+#UnderTitleSndMenu {
+  font-size: 12px;
+  list-style-type: none;
+  color: rgb(125, 177, 80);
+  text-decoration: none;
+  margin-left: -30px;
+  margin-bottom: -2px;
+}
+#promo {
+  margin-left: 22%;
+  margin-top: 170px;
+  width: 100%;
+}
+#imgPromo {
+  width: 100%;
+  border: 1px solid rgb(125, 177, 80);
+  border-radius: 7px;
+}
+
+#promoCase {
+  width: 75%;
+  max-width: 1000px;
+  margin-bottom: 0px;
+  margin-bottom: 1%;
+}
+
+.section {
   margin-top: 0px;
-  border: 0;
-  line-height: 2.5;
-  padding: 0px 20px;
-  font-size: 1rem;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+
+  padding: 0;
+  height: 100vh; /*jouer la dessus c ça qui clc*/
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.slide {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+.slide input {
+  display: none;
+}
+.st {
+  width: 20%;
+  transition: 1s;
+}
+.st img {
+  width: 800px;
+}
+.nav-m {
+  position: absolute;
+  width: 800px;
+  margin-top: -400px;
+  display: flex;
+  justify-content: center;
+}
+.m-btn {
+  border: 2px solid rgb(125, 177, 80);
+  padding: 5px;
   border-radius: 10px;
-  background-color: #3b3b3b;
-  background-image: linear-gradient(
-    to top left,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 30%,
-    rgba(0, 0, 0, 0)
-  );
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 1s;
 }
 
-.styled:hover {
-  background-color: #afafaf;
+.m-btn:not(:last-child) {
+  margin-right: 30px;
+}
+.m-btn:hover {
+  background-color: rgb(125, 177, 80);
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
 }
 
-.styled:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+.nav-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: center; /*centrer la nav auto avec la nav choisi*/
 }
 
+.nav-auto div {
+  border: 2px solid rgb(125, 177, 80);
+  padding: 5px;
+  border-radius: 10px;
 
+  transition: 0.5s;
+}
+
+.nav-auto div:not(:last-child) {
+  margin-right: 30px;
+  justify-content: center;
+}
+
+#radio1:checked ~ .nav-auto .a-b1 {
+  background-color: rgb(125, 177, 80);
+}
+#radio2:checked ~ .nav-auto .a-b2 {
+  background-color: rgb(125, 177, 80);
+}
+#radio3:checked ~ .nav-auto .a-b3 {
+  background-color: rgb(125, 177, 80);
+}
+#radio4:checked ~ .nav-auto .a-b4 {
+  background-color: rgb(125, 177, 80);
+}
+
+#connect {
+  background-color: rgb(125, 177, 80);
+  color: white;
+  border: 0;
+  font-size: 1em;
+}
+
+#connect:hover {
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),
+    0 17px 50px 0 rgba(255, 255, 255, 0.19);
+}
+
+/* Fixez le bouton sur le côté gauche de la page the button on the left side of the page */
+.open-btn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Stylez et fixez le bouton sur la page */
+.open-button {
+  background-color: rgb(38, 38, 38);
+  border: 1px solid #8ebf42;
+  color: white;
+  padding: 12px 20px;
+  margin-left: 2px;
+  min-width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 2;
+}
+/* Positionnez la forme Popup */
+
+.login-popup {
+  position: relative;
+  text-align: center;
+  width: 400%;
+}
+
+/* Masquez la forme Popup */
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 47%;
+  top: 25%;
+  transform: translate(-45%, 5%);
+  z-index: 9;
+}
+
+/* Stylez le bouton de connexion */
+.form-container .btn {
+  background-color: #8ebf42;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+  background-color: #cc0000;
+}
+
+/* Planez les effets pour le bouton rouge */
+.form-container .btn:hover,
+.open-button:hover {
+  color: rgb(125, 177, 80);
+}
+
+#showcase {
+  background-image: url("aquascapingBackGround.jpg");
+  height: 120vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#responsive {
+  margin: 10px auto;
+  position: absolute;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 800px;
+}
+
+.bigTittle {
+  margin-top: 100px;
+  font-size: max(2vw, 50px);
+  color: #eae4e4;
+}
+
+#t03 {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+#td3,
+#th3 {
+  padding: 0.3em;
+  border: 1px solid rgba(209, 202, 202, 0.253);
+}
+
+#imgProduct {
+  width: 150px;
+  height: auto;
+}
+
+#fontUnderMenu {
+  font-size: 13px;
+}
+
+#opaqueNezo {
+  position: absolute;
+  background-color: rgba(209, 202, 202, 0.253);
+  opacity: 0.2;
+  margin-left: 1%;
+  width: 96%;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+#panier {
+  position: absolute;
+  background-color: rgb(38, 38, 38);
+  border: 1px solid #8ebf42;
+  padding: 12px 20px;
+  margin-left: 91%;
+  margin-top: -41px;
+  width: 0px;
+  height: 14.2px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+#imgCart {
+  width: 30px;
+  margin-left: -20px;
+  margin-top: -15px;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  color: white;
+}
+
+.contenu-footer{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 300px 0 100px;
+
+}
+
+.bloc {
+  width: 25%;
+  margin: 0 100px;
+}
+
+.footer-contact h3,
+.footer-services h3,
+.footer-medias h3{
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.footer-contact li{
+  padding: 5px 0;
+}
+
+.liste-contact,
+.liste-services,
+.liste-medias{
+  list-style-type: none;
+}
+
+.liste-services li {
+  padding: 2px 0;
+}
+.liste-services a {
+  text-decoration: none;
+  color: white;
+}
+.liste-services a:hover {
+  color:rgb(125, 177, 80);
+}
+
+.liste-medias img{
+  width: 40px;
+  margin: 10px 10px;
+}
+
+.liste-medias a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.liste-contact a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.liste-contact a:hover {
+  color:rgb(125, 177, 80);
+}
+.liste-medias a:hover {
+  color:rgb(125, 177, 80);
+}
+
+.liste-medias{
+  margin:0;
+  padding:0;
+  position: relative;
+  right: 10px;
+}
+
+.liste-contact{
+  margin:0;
+  padding:0;  
+}
+
+.liste-services{
+  margin:0;
+  padding:0;
+}
+
+@media screen and (max-width: 1300px) {
+
+  .contenu-footer{
+    width: 700px;
+    flex-wrap: wrap ;
+  }
+  .block {
+    width: 40%;
+    margin: 0 0;
+  }
+  .bloc:nth-child(1),
+  .bloc:nth-child(2){
+    margin-bottom: 50px;
+  } 
+}
+
+@media screen and (max-width: 800px) {
+
+  .contenu-footer{
+    width: 320px;
+    flex-wrap: wrap ;
+  }
+  .block {
+    width: 320px;
+    margin: 30px 30px;
+  }
+  .bloc:nth-child(1),
+  .bloc:nth-child(2){
+    margin-bottom: 30px;
+  }
+  .bloc:nth-child(1){
+    margin-top: 0;
+  }
+}
+
+.logo{
+  width: 20px;
+}
