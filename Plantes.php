@@ -260,7 +260,7 @@ if (!isset($_SESSION['cart'])) {
                 <!-- Panier dans l'en-tête du site -->
                 <div id=cart>
                     <ul id="hcart">
-                        <li><a href="cart.php">Mon panier</a>
+                        <li><a href="panier.php">Mon panier</a>
                             <ul id="hcart-products">
 
                                 <!-- Affichage de tous les produits enregistrés dans le panier : -->

@@ -78,6 +78,19 @@
         <br />
       </div>
 
+      <?php include 'data/connec.php'; ?>
+
+      <?php
+
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+
+      ?>
+        <div id="client">
+          <h4 class="fas fa-user" style="color:white"> <?= $_SESSION['prenom']; ?></h4>
+        </div>
+      <?php
+      } else {
+      ?>
       <div id="client">
         <div class="open-btn">
           <button class="open-button" onclick="openForm()">Se connecter</button>
@@ -88,7 +101,7 @@
               <form method="post">
                 <tr>
                   <th>
-                    <h4 class="fas fa-user" style="color:white"> Identifiant :</h4>
+                    <h4 class="fas fa-user" style="color:white"> Email :</h4>
                   </th>
                   <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
                   <th></th>
@@ -129,6 +142,12 @@
         </div>
 
       </div>
+
+      <?php
+      }
+      ?>
+
+      
 
       <div id="panier"> <img id="imgCart" src="cart.png" alt="" />
 
@@ -293,24 +312,6 @@
           </center>
         </div>
       </div>
-      <?php include 'data/connec.php'; ?>
-
-
-      <?php
-
-      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
-
-      ?>
-        <div id="client">
-          <p style="color:white"> Bienvenue <?= $_SESSION['nom']; ?></p>
-        </div>
-      <?php
-      } else {
-      ?>
-
-      <?php
-      }
-      ?>
 
 
 
@@ -370,6 +371,41 @@
   </header>
 
   <div id="imgcacheBackGround"></div>
+
+  <footer>
+    <div class="contenu-footer">
+      <div class="bloc footer-contact">
+        <h3>Nous contacter</h3>
+        <ul class="liste-contact">
+          <li><a href="formulaire/contact.php">Formulaire de contact</a></li>
+        </ul>
+      </div>
+
+      <div class="bloc footer-services">
+        <h3>Nos horraires</h3>
+        <ul class="liste-services">
+          <li>✅ Lun 10h-19h</li>
+          <li>✅ Mar 10h-19h</li>
+          <li>✅ Mer 10h-19h</li>
+          <li>✅ Jeu 10h-19h</li>
+          <li>✅ Ven 10h-19h</li>
+          <li>❌ Sam fermé</li>
+          <li>❌ Dim fermé</li>
+        </ul>
+      </div>
+
+      <div class="bloc footer-medias">
+        <h3>Nos Réseaux</h3>
+        <ul class="liste-medias">
+          <li><a href="https://www.facebook.com"><img class="logo" src="logo/facebook.png" alt="icones reseaux">Facebook</a></li>
+          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="logo/github.png" alt="icones reseaux">github</a></li>
+          <li><a href="https://www.instagram.com"><img class="logo" src="logo/instagram.png" alt="icones reseaux">instagram</a></li>
+          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="logo/twitter.png" alt="icones reseaux">Twitter</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </footer>
 
 
 

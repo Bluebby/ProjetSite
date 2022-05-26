@@ -6,7 +6,7 @@
         extract($_POST);
 
 
-        if(!empty($password) && !empty($cpassword) && !empty($email) && !empty($nom)){
+        if(!empty($password) && !empty($cpassword) && !empty($email) && !empty($nom) && !empty($prenom) && !empty($adresse) && !empty($telephone)){
             
 
             if($password == $cpassword){
@@ -26,11 +26,14 @@
                 $result = $c->rowCount();
 
                 if($result == 0){
-                    $q = $db->prepare("INSERT INTO user(nom,email,password) VALUES(:nom,:email,:password)");
+                    $q = $db->prepare("INSERT INTO user(nom,email,password,prenom,adresse,telephone) VALUES(:nom,:email,:password,:prenom,:adresse,:telephone)");
                     $q->execute([
                         'nom' => $nom,
                         'email' => $email,
-                        'password' => $hashpass
+                        'password' => $hashpass,
+                        'prenom' => $prenom,
+                        'adresse' => $adresse,
+                        'telephone' => $telephone
                     ]);
                     header('Location: Menu.php');
                     exit();
@@ -44,12 +47,6 @@
         } else{
             echo "Les champs ne sont pas tous remplies";
         }
-<<<<<<< Updated upstream
 
     }
-    
-    
-=======
-    }
->>>>>>> Stashed changes
 ?>

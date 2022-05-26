@@ -49,7 +49,7 @@ if (!isset($_SESSION['cart'])) {
             <div id="tabmenu">
                 <ul id="menu-demo2">
                     <li>
-                        <a href="#">Plantes</a>
+                        <a href="Plantes.php">Plantes</a>
                         <ul>
                             <li>
                                 <a href="https://www.aquaplante.fr/achat-plantes-avant-plan-pour-aquarium/aquaplante-plantes/773-anubias-nana-bonzai.html">Anubias</a>
@@ -143,65 +143,56 @@ if (!isset($_SESSION['cart'])) {
 
             <div id="product">
                 <center>
-                    <h1 id="titleProduct">Poissons</h1>
-                    <div id="underProduct">
+                    <div style="display: flex">
 
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="crevette-caridina-japonica-amano-shrimp-taille-s (1).jpg">
-                                <p id="nameProduct">CREVETTE AMANO</p>
-                                <p id="price">2,95$</p>
+                    <div style="margin-left: 35px; float: left; color:white">
+                        <table>
+                            <tr>
+                                <th>
+                                    <h3>Votre panier</h3>
+                                </th>
+                            </tr>
 
+                            <!-- Liste de tous les produits enregistrés dans le panier : -->
+                            <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
+                                <tr id="<?= $product ?>">
+                                    <td style="border: 1px solid rgb(136, 176, 93); padding: 3px">
+                                        <?= $product ?>
+                                        <!-- Affichage nom article -->
+                                        <em>Qté : <?= $in_cart['quantity'] ?></em> <!-- Affichage quantité article -->
+                                        <br>
+                                        <em><?= $in_cart['price'] ?> €</em> <!-- Affichage prix article -->
+                                        <!-- Bouton "Supprimer" -->
+                                        <br>
+                                        <button style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" onclick="removeProduct('<?= $product ?>')">
+                                            Supprimer
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
+                    </div>
 
-                                <input type="number" min="1" name="qty" id="Anubias" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite styled">Ajouter au panier</button>
-                            </div>
-
-                        </div>
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="boraras-b.jpg">
-                                <p id="nameProduct">RASBORA BRIGITTAE</p>
-                                <p id="price">3,50$</p>
-
-                                <input type="number" min="1" name="qty" id="Bucephalandra" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite styled">Ajouter au panier</button>
-                            </div>
-                        </div>
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="celestichthys-margaritatus-rasbora-galaxy-elevage-semi-sauvage-indonesie.jpg">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct">RASBORA GALAXY</p>
-                                    <p id="price">3,95$</p>
-
-                                    <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Mikrogeophagus_ramirezi_2-725x483.jpg">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct">RAMIREZ</p>
-                                    <p id="price">15,50$</p>
-
-                                    <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
+                    <div style="margin-left: 230px; color:white">
+                        <h3>Total</h3>
+                        <p id="subtotal"><?= $_SESSION['subtotal'] ?> €</p> <!-- Affichage sous-total -->
+                        <form action="account_check.php" method="POST">
+                            <!-- Bouton "Passer la commande" -->
+                            <?php
+                            if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+                            ?>
+                                <input style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="submit" name="checkout" value="Passer la commande" />
+                                <input type="hidden" value="<?= $subtotal ?>" />
+                            <?php
+                            } else {
+                            ?>
+                                <a href="compte.php"><button class="button" style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="button">Passer la commande</button></a>
+                                <input type="hidden" value="<?= $subtotal ?>" />
+                            <?php
+                            }
+                            ?>
+                        </form>
+                    </div>
 
                     </div>
                 </center>
@@ -219,6 +210,28 @@ if (!isset($_SESSION['cart'])) {
             ?>
                 <div id="client">
                     <p style="color:white"> Bienvenue <?= $_SESSION['nom']; ?></p>
+                </div>
+                <!-- Panier dans l'en-tête du site -->
+                <div id=cart>
+                    <ul id="hcart">
+                        <li><a href="panier.php">Mon panier</a>
+                            <ul id="hcart-products">
+
+                                <!-- Affichage de tous les produits enregistrés dans le panier : -->
+                                <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
+                                    <li id="hcart-<?= $product ?>">
+                                        <p><?= $product ?></p> <!-- Nom du produit -->
+                                        <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
+                                        <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
+                                    </li>
+                                <?php endforeach; ?>
+
+                                <!-- Affichage du prix total :-->
+                                <li>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></li>
+
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             <?php
             } else {

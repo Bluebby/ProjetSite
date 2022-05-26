@@ -1,0 +1,108 @@
+body {
+    background-image:url(aquascapingBackGround.jpg) ;
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+  font-family: Montserrat, "sans-serif";
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+
+}
+
+
+.contactez-nous {
+  width: 700px;
+  height: min-content;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0 50px 0 50px;
+  background: rgb(136, 176, 93);
+}
+
+.contactez-nous > h1 {
+  font-weight: 500;
+}
+
+.contactez-nous > p {
+  font-weight: 300;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 25px;
+}
+
+form div > label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+  background:rgb(38, 38, 38);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-style: white;
+  font-weight: 500;
+  font-family: Montserrat, "sans-serif";
+  color: white
+  /*box-shadow: 0px 2px 2px 0px whitesmoke;*/
+}
+
+form div > input, form div > select {
+  height: 50px;
+  padding-left: 10px;
+  color: white
+}
+
+form div > select {
+  appearance: none;
+  background-size: 15px;
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+  color: white
+}
+
+form div > textarea {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  color: white
+}
+
+form div > input::placeholder, form div > textarea::placeholder {
+  color: white;
+  margin-bottom: auto;
+}
+
+form div > select:invalid {
+  color: white;
+}
+
+form div > select option {
+  background: white;
+  color: #303030;
+}
+
+form div:last-child {
+  align-items:center;
+  margin-top: 20px;
+}
+
+form button {
+  width: 450px;
+  max-width: 500px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  background: white;
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  /*border-radius: 5px;*/
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  color:rgba(0,0,0,0.25) ;
+}

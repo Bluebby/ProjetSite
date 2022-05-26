@@ -19,6 +19,10 @@
                     if(password_verify($lpassword, $result['password'])){
                         $_SESSION['email'] = $result['email'];
                         $_SESSION['nom'] = $result['nom'];
+                        $_SESSION['prenom'] = $result['prenom'];
+                        $_SESSION['adresse'] = $result['adresse'];
+                        $_SESSION['telephone'] = $result['telephone'];
+                        echo '<script type="text/JavaScript"> location.reload(); </script>';
                     }else{
                         $message="Le mot de passe n'est pas le bon.";
                         echo '<script type="text/javascript">window.alert("'.$message.'");</script>';
