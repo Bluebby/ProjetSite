@@ -176,18 +176,18 @@ if (!isset($_SESSION['cart'])) {
                     <div style="margin-left: 230px; color:white">
                         <h3>Total</h3>
                         <p id="subtotal"><?= $_SESSION['subtotal'] ?> €</p> <!-- Affichage sous-total -->
-                        <form action="account_check.php" method="POST">
+                        <form action="facture.php" method="POST">
                             <!-- Bouton "Passer la commande" -->
                             <?php
                             if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
                             ?>
                                 <input style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="submit" name="checkout" value="Passer la commande" />
-                                <input type="hidden" value="<?= $subtotal ?>" />
+                                <!-- <input type="hidden" value="<?= $subtotal ?>" />-->
                             <?php
                             } else {
                             ?>
                                 <a href="compte.php"><button class="button" style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="button">Passer la commande</button></a>
-                                <input type="hidden" value="<?= $subtotal ?>" />
+                                <!-- <input type="hidden" value="<?= $subtotal ?>" />-->
                             <?php
                             }
                             ?>
