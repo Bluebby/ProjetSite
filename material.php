@@ -25,20 +25,6 @@ if (!isset($_SESSION['cart'])) {
 </head>
 
 <body>
-    <!--video playsinline autoplay muted loop id="bgvid">
-        <source type="video/mp4" src="lave.mp4" >
-    </video>-->
-
-
-    <!--responsive      margin: auto;
-    max-width;
-  width:...%
-    typo en responsive
-    font-size: 5vw;-->
-
-
-    <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
-    faire en sorte que le se connecter ne passe pas derriere le menu-->
     <header id="showcase">
 
     <div id="responsive">
@@ -56,7 +42,6 @@ if (!isset($_SESSION['cart'])) {
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
               <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
-              <li><a href="#" id="fontUnderMenu">PANES</a></li>
               <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
@@ -243,77 +228,79 @@ if (!isset($_SESSION['cart'])) {
 
             <div id="product">
                 <center>
-                    <h1 id="titleProduct" style="color:white">Plantes</h1>
+                    <h1 id="titleProduct" style="color:white">Materiel</h1>
                     <div id="underProduct">
 
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="anubias-sp-nangi.jpg">
-                                <p id="nameProduct" style="color:white">ANUBIAS</p>
-                                <p id="price">14,95$</p>
+                                <img id="imgProduct" src="aquarium.png">
+                                <p id="nameProduct" style="color:white">AQUARIUM</p>
+                                <p id="price">15,96$</p>
 
 
-                                <input type="number" min="1" name="qty" id="Anubias" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <input type="number" min="1" name="qty" id="Aquarium" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                 <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite styled">Ajouter au panier</button>
-                            </div>
-
-                        </div>
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="pl01_bucephalandra.jpg">
-                                <p id="nameProduct" style="color:white">BUCEPHALANDRA</p>
-                                <p id="price">12,95$</p>
-
-                                <input type="number" min="1" name="qty" id="Bucephalandra" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite styled">Ajouter au panier</button>
+                                <button onclick="addToCart('Aquarium', 15.95, document.getElementById('Aquarium').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
                         </div>
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Hygrophyla-corymbosa-thailande.jpg">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">HYGROPHILA</p>
-                                    <p id="price">20,00$</p>
+                                <img id="imgProduct" src="filtre.jpg">
+                                <p id="nameProduct" style="color:white">FILTRE</p>
+                                <p id="price">50$</p>
 
-                                    <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <input type="number" min="1" name="qty" id="Filtre" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Filtre', 50, document.getElementById('Filtre').value)" class="favorite styled">Ajouter au panier</button>
+                            </div>
+                        </div>
+                        <div id="infoPriceProduct">
+                            <div id="case_quantity_wanted">
+                                <img id="imgProduct" src="lumiere.png">
+                                <div id="underInfoPriceProduct">
+                                    <p id="nameProduct" style="color:white">LED</p>
+                                    <p id="price">10,95$</p>
+
+                                    <input type="number" min="1" name="qty" id="led" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                     <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
+                                    <button onclick="addToCart('led', 10.95, document.getElementById('led').value)" class="favorite styled">Ajouter au panier</button>
                                 </div>
                             </div>
+                        </div>
+
+                        <div id="infoPriceProduct">
+                            <div id="case_quantity_wanted">
+                                <img id="imgProduct" src="sable.jpg">
+                                <p id="nameProduct" style="color:white">SABLE</p>
+                                <p id="price">45,95$</p>
+
+
+                                <input type="number" min="1" name="qty" id="Sable" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Sable', 45.95 , document.getElementById('Sable').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
+                            </div>
+
                             <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Patrick.png">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">PANES</p>
-                                    <p id="price">25,00$</p>
+                                <img id="imgProduct" src="co2.png">
+                                <p id="nameProduct" style="color:white">DIFFUSEUR CO2</p>
+                                <p id="price">12,63$</p>
 
-                                    <input type="number" min="1" name="qty" id="Panes" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Panes', 25.05, document.getElementById('Panes').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
+
+                                <input type="number" min="1" name="qty" id="Filtre C02" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Filtre C02', 12.63 , document.getElementById('Filtre C02').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
                             </div>
-                            <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Titouman.png">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">TITOUMAN</p>
-                                    <p id="price">5,00$</p>
-
-                                    <input type="number" min="1" name="qty" id="Titouman" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Titouman', 5.05, document.getElementById('Titouman').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
-                            </div>
-
                     </div>
+                    
                 </center>
 
-                </div>
+            </div>
 
+
+            
             <div class="section">
 
 
@@ -323,42 +310,19 @@ if (!isset($_SESSION['cart'])) {
 
     <div id="imgcacheBackGround"></div>
 
-<footer>
-    <div class="contenu-footer">
-      <div class="bloc footer-contact">
-        <h3>Nous contacter</h3>
-        <ul class="liste-contact">
-          <li><a href="formulaire/contact.php">Formulaire de contact</a></li>
-        </ul>
-      </div>
-
-      <div class="bloc footer-services">
-        <h3>Nos horraires</h3>
-        <ul class="liste-services">
-          <li>✅ Lun 10h-19h</li>
-          <li>✅ Mar 10h-19h</li>
-          <li>✅ Mer 10h-19h</li>
-          <li>✅ Jeu 10h-19h</li>
-          <li>✅ Ven 10h-19h</li>
-          <li>❌ Sam fermé</li>
-          <li>❌ Dim fermé</li>
-        </ul>
-      </div>
-
-      <div class="bloc footer-medias">
-        <h3>Nos Réseaux</h3>
-        <ul class="liste-medias">
-          <li><a href="https://www.facebook.com"><img class="logo" src="logo/facebook.png" alt="icones reseaux">Facebook</a></li>
-          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="logo/github.png" alt="icones reseaux">github</a></li>
-          <li><a href="https://www.instagram.com"><img class="logo" src="logo/instagram.png" alt="icones reseaux">instagram</a></li>
-          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="logo/twitter.png" alt="icones reseaux">Twitter</a></li>
-        </ul>
-      </div>
-      
+    <!--  <div id="sommaire">
+     <p style="font-size: 20px;"><center>Corrections</center><p\> <p><center><a href="TD1.html" style="color:rgb(255, 217, 0)"title="Introduction to HTML 5 Language">TD1</a> </center> </p>
+     <p><center><a href="TD2.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Language">TD2</a></center> </p>
+     <p><center><a href="TD3.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Forms">TD3</a></center> </p> 
+     <p><center><a href="TD4.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Forms">TD4</a></center> </p>
+     <p><center><a href="TD5.test.html" style="color:rgb(255, 217, 0)" title="Introduction to HTML 5 Forms">TD5</a></center> </p>
     </div>
-</footer>
 
-
+    <div id="info">
+        <p style="font-style:rgb(255, 166, 0);">Problème de compatibilité rencontré sur différents navigateurs. Mon code marche parfaitement sur operaGX. 
+            Je vais l'adapter les technologies employée pour les prochains cours.</p>
+    </div>
+    -->
 
 </body>
 

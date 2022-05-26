@@ -25,6 +25,20 @@ if (!isset($_SESSION['cart'])) {
 </head>
 
 <body>
+    <!--video playsinline autoplay muted loop id="bgvid">
+        <source type="video/mp4" src="lave.mp4" >
+    </video>-->
+
+
+    <!--responsive      margin: auto;
+    max-width;
+  width:...%
+    typo en responsive
+    font-size: 5vw;-->
+
+
+    <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
+    faire en sorte que le se connecter ne passe pas derriere le menu-->
     <header id="showcase">
 
     <div id="responsive">
@@ -80,13 +94,13 @@ if (!isset($_SESSION['cart'])) {
       if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
 
       ?>
-        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px; margin-top: -5%;">
+        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
           <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
       } else {
       ?>
-      <div id="client" style="margin-top: -6%;">
+      <div id="client">
         <div class="open-btn">
           <button class="open-button" onclick="openForm()">Se connecter</button>
         </div>

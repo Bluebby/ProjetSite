@@ -42,6 +42,8 @@ if (!isset($_SESSION['cart'])) {
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
               <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
+              <li><a href="#" id="fontUnderMenu">PANES</a></li>
             </ul>
           </li>
           <li>
@@ -51,13 +53,18 @@ if (!isset($_SESSION['cart'])) {
               <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
               <li><a href="#" id="fontUnderMenu">RAMIREZ</a></li>
+              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
 
             </ul>
           </li>
           <li>
-            <a href="#">MATERIEL</a>
+            <a href="material.php">MATERIEL</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">Aquarium</a></li>
+            <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
+              <li><a href="#" id="fontUnderMenu">SYSTEME CO2</a></li>
             </ul>
           </li>
           <li>
@@ -80,13 +87,13 @@ if (!isset($_SESSION['cart'])) {
       if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
 
       ?>
-        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px; margin-top: -5%;">
+        <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
           <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
       } else {
       ?>
-      <div id="client" style="margin-top: -6%;">
+      <div id="client">
         <div class="open-btn">
           <button class="open-button" onclick="openForm()">Se connecter</button>
         </div>
@@ -236,7 +243,6 @@ if (!isset($_SESSION['cart'])) {
                                 <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                                 <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
-
                         </div>
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
@@ -265,24 +271,31 @@ if (!isset($_SESSION['cart'])) {
 
                         <div id="infoPriceProduct">
                             <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Mikrogeophagus_ramirezi_2-725x483.jpg">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">RAMIREZ</p>
-                                    <p id="price">15,50$</p>
+                                <img id="imgProduct" src="Pictichromis.png">
+                                <p id="nameProduct" style="color:white">PICTICHROMIS</p>
+                                <p id="price">45,95$</p>
 
-                                    <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
+
+                                <input type="number" min="1" name="qty" id="Pictichromis" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Pictichromis', 45.95 , document.getElementById('Pictichromis').value)" class="favorite styled">Ajouter au panier</button>
                             </div>
-                        </div>
+                            </div>
+
+                            <div id="infoPriceProduct">
+                            <div id="case_quantity_wanted">
+                                <img id="imgProduct" src="Mikrogeophagus_ramirezi_2-725x483.jpg">
+                                <p id="nameProduct" style="color:white">RAMIREZ</p>
+                                <p id="price">12,63$</p>
 
 
-
-
-
-
+                                <input type="number" min="1" name="qty" id="Ramirez" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
+                                <button onclick="addToCart('Ramirez', 12.63 , document.getElementById('Ramirez').value)" class="favorite styled">Ajouter au panier</button>
+                            </div>
+                            </div>
                     </div>
+                    
                 </center>
 
             </div>
