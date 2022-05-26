@@ -631,6 +631,7 @@ h4 {
 }
 
 #responsive {
+  top: 3%;
   margin: 10px auto;
   position: absolute;
   width: 80%;
