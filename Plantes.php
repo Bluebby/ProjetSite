@@ -1,11 +1,16 @@
 <?php
-session_start();
+  session_start();
 
-if (!isset($_SESSION['cart'])) {
+  // On crée un panier vide s'il n'y en a pas dans la session en cours.
+  if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
     $_SESSION['subtotal'] = 0;
-}
+  }
+
+  // Lecture de la base de donnée liée aux produits.
+  $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.json'), true);
 ?>
+
 <!DOCTYPE html>
 <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
@@ -17,9 +22,9 @@ if (!isset($_SESSION['cart'])) {
     <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
     <title>MenuTD</title>
     <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
-    <link rel="stylesheet" href="stylePlantes.css" />
-    <link rel="stylesheet" href="StylePanier.css" />
-    <script defer src="menu.js"></script>
+    <link rel="stylesheet" href="css/stylePlantes.css" />
+    <link rel="stylesheet" href="css/stylePanier.css" />
+    <script defer src="js/menu.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="js/cartAjaxFunctions.js"></script>
 </head>
@@ -49,7 +54,7 @@ if (!isset($_SESSION['cart'])) {
       <div id="tabmenu">
         <ul id="menu-demo2">
           <li>
-            <a href="Plantes.php">PLANTES</a>
+            <a href="plantes.php">PLANTES</a>
             <ul>
               <li>
                 <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
@@ -61,24 +66,24 @@ if (!isset($_SESSION['cart'])) {
             </ul>
           </li>
           <li>
-            <a href="Poissons.php">POISSONS</a>
+            <a href="poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">CREVETTE AMANO</a></li>
+              <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
-              <li><a href="#" id="fontUnderMenu">RAMIREZ</a></li>
+              <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
               <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
 
             </ul>
           </li>
           <li>
-            <a href="material.php">MATERIEL</a>
+            <a href="materiel.php">MATERIEL</a>
             <ul>
             <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
               <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
               <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
               <li><a href="#" id="fontUnderMenu">SABLE</a></li>
-              <li><a href="#" id="fontUnderMenu">SYSTEME CO2</a></li>
+              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
             </ul>
           </li>
           <li>
@@ -164,26 +169,25 @@ if (!isset($_SESSION['cart'])) {
       ?>
 
       <!-- Panier dans l'en-tête du site -->
-            
       <div id="hcart">
-                    <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
-                    <div id="hcart-products">
-                        <!-- Affichage de tous les produits enregistrés dans le panier : -->
-                        <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
-                        <div id="hcart-<?=$product?>">
-                            <p><?=$product?></p> <!-- Nom du produit -->
-                            <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
-                            <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
-                        </div>
-                        <?php endforeach; ?>
+        <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
+        <div id="hcart-products">
+          <!-- Affichage de tous les produits enregistrés dans le panier : -->
+          <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
+            <div id="hcart-<?=$product?>">
+              <p><?=$product?></p> <!-- Nom du produit -->
+              <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
+              <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
+            </div>
+          <?php endforeach; ?>
 
-                        <!-- Affichage du prix total :-->
-                        <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
-                </div>
-                
+          <!-- Affichage du prix total :-->
+          <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
+        </div>        
       </div>
+  
       <div class="LOGOimage">
-        <a href="Menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="logo/logo.png" /> </a>
+        <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>
       
 
@@ -241,78 +245,26 @@ if (!isset($_SESSION['cart'])) {
         </li>
       </div>
 
-            <div id="product">
-                <center>
-                    <h1 id="titleProduct" style="color:white">Plantes</h1>
-                    <div id="underProduct">
+    <!-- Liste des produits mis en vente. -->
+    <div class="product">
+      <h1 class="titleProduct" style="color:white">Plantes</h1>
+      <div class="underProduct">
 
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="anubias-sp-nangi.jpg">
-                                <p id="nameProduct" style="color:white">ANUBIAS</p>
-                                <p id="price">14,95$</p>
+        <!-- Affichage des produits à partir de la base de données. -->
+        <?php foreach ($_SESSION['products_data']['plantes'] as $plante => $data): ?>
+          <div class="infoPriceProduct">
+            <div class="case_quantity_wanted">
+              <img class="imgProduct" src="<?=$data['img']?>" />
+              <p class="nameProduct" style="color:white"><?=$data['name']?></p>
+              <p class="price"><?=$data['price']?> €</p>
+              <input id="<?=$data['name']?>-add-qty" type="number" min="0" value=1 class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);" />
+              <button onclick="addToCart('<?=$data['name']?>', <?=$data['price']?>, document.getElementById('<?=$data['name']?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+            </div>
+          </div>
+        <?php endforeach; ?>
 
-
-                                <input type="number" min="1" name="qty" id="Anubias" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite styled">Ajouter au panier</button>
-                            </div>
-
-                        </div>
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="pl01_bucephalandra.jpg">
-                                <p id="nameProduct" style="color:white">BUCEPHALANDRA</p>
-                                <p id="price">12,95$</p>
-
-                                <input type="number" min="1" name="qty" id="Bucephalandra" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite styled">Ajouter au panier</button>
-                            </div>
-                        </div>
-                        <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Hygrophyla-corymbosa-thailande.jpg">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">HYGROPHILA</p>
-                                    <p id="price">20,00$</p>
-
-                                    <input type="number" min="1" name="qty" id="Hygrophila" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Patrick.png">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">PANES</p>
-                                    <p id="price">25,00$</p>
-
-                                    <input type="number" min="1" name="qty" id="Panes" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Panes', 25.05, document.getElementById('Panes').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div id="infoPriceProduct">
-                            <div id="case_quantity_wanted">
-                                <img id="imgProduct" src="Titouman.png">
-                                <div id="underInfoPriceProduct">
-                                    <p id="nameProduct" style="color:white">TITOUMAN</p>
-                                    <p id="price">5,00$</p>
-
-                                    <input type="number" min="1" name="qty" id="Titouman" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
-                                    <button onclick="addToCart('Titouman', 5.05, document.getElementById('Titouman').value)" class="favorite styled">Ajouter au panier</button>
-                                </div>
-                            </div>
-
-                    </div>
-                </center>
-
-                </div>
+      </div>
+    </div>
 
             <div class="section">
 
@@ -328,12 +280,12 @@ if (!isset($_SESSION['cart'])) {
       <div class="bloc footer-contact">
         <h3>Nous contacter</h3>
         <ul class="liste-contact">
-          <li><a href="formulaire/contact.php">Formulaire de contact</a></li>
+          <li><a href="contact.php">Formulaire de contact</a></li>
         </ul>
       </div>
 
       <div class="bloc footer-services">
-        <h3>Nos horraires</h3>
+        <h3>Nos horaires</h3>
         <ul class="liste-services">
           <li>✅ Lun 10h-19h</li>
           <li>✅ Mar 10h-19h</li>
@@ -348,10 +300,10 @@ if (!isset($_SESSION['cart'])) {
       <div class="bloc footer-medias">
         <h3>Nos Réseaux</h3>
         <ul class="liste-medias">
-          <li><a href="https://www.facebook.com"><img class="logo" src="logo/facebook.png" alt="icones reseaux">Facebook</a></li>
-          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="logo/github.png" alt="icones reseaux">github</a></li>
-          <li><a href="https://www.instagram.com"><img class="logo" src="logo/instagram.png" alt="icones reseaux">instagram</a></li>
-          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="logo/twitter.png" alt="icones reseaux">Twitter</a></li>
+          <li><a href="https://www.facebook.com"><img class="logo" src="img/icons/facebook.png" alt="icones reseaux">Facebook</a></li>
+          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="img/icons/github.png" alt="icones reseaux">github</a></li>
+          <li><a href="https://www.instagram.com"><img class="logo" src="img/icons/instagram.png" alt="icones reseaux">instagram</a></li>
+          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="img/icons/twitter.png" alt="icones reseaux">Twitter</a></li>
         </ul>
       </div>
       

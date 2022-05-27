@@ -1,4 +1,16 @@
-<?php session_start() ?>
+<?php
+  session_start();
+
+  // On crée un panier vide s'il n'y en a pas dans la session en cours.
+  if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+    $_SESSION['subtotal'] = 0;
+  }
+
+  // Lecture de la base de donnée liée aux produits.
+  $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.json'), true);
+?>
+
 <!DOCTYPE html>
 <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
@@ -10,8 +22,8 @@
   <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
   <title>MenuTD</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
-  <link rel="stylesheet" href="styleAnubias.css" />
-  <script defer src="menu.js"></script>
+  <link rel="stylesheet" href="css/styleAnubias.css" />
+  <script defer src="js/menu.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -133,18 +145,18 @@
         </li>
       </div>
 
-      <div id="product">
+      <div class="product">
         <center>
           <h1 id="titleProduct">ANUBIAS</h1>
-          <div id="underProduct">
-            <img id="imgProduct" src="anubias-sp-nangi.jpg">
-            <div id="infoPriceProduct">
-              <p id="price">14,95$</p>
+          <div class="underProduct">
+            <img class="imgProduct" src="img/anubias.jpg">
+            <div class="infoPriceProduct">
+              <p class="price">14,95$</p>
               <p>Quantité</p>
-              <div id="case_quantity_wanted">
-                <input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+              <div class="case_quantity_wanted">
+                <input type="number" min="1" name="qty" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
               </div>
-              <input class="favorite styled" type="button" value="Add to Basket">
+
             </div>
 
             <div id="firstDescription">
@@ -185,8 +197,8 @@
                 <div id="fontCharacteristic">TRES FACILE</div>
               </div>
               </p>
-
             </div>
+
             <div id="secondDescription">
               <h4>DESCRIPTION</h4>
               <p id="fontDescription">L'Anubias nana est une petite plante séduisante qui pousse dans tous milieux, issue d'une sélection naine d'Anubias barteri var Nana. La croissance est lente, les feuilles pouvant durer plusieurs années, ce qui laisse parfois le temps aux algues le temps de s' établir.
@@ -195,8 +207,8 @@
 
                 Non consommée par les poissons phytophages, A. nana résiste particulièrement à l'appétit des poissons rouges.
               </p>
-
             </div>
+
             <div id="thirdDescription">
               <div style="width:100%">
                 <h4>LES AUTRES ONT AIME</h4>
@@ -205,13 +217,12 @@
 
                 <div id="infoOtherPriceProduct">
 
-                  <img id="imgOtherProduct" src="crevette-caridina-japonica-amano-shrimp-taille-s (1).jpg">
+                  <img id="imgOtherProduct" src="img/anubias.jpg">
                   <p id="nameOtherProduct">CREVETTE AMANO</p>
                   <p id="priceOther">2,95$</p>
 
                   <div id="Othercase_quantity_wanted">
                     <input type="number" min="1" name="qty" id="Anubias" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                   </div>
                   <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
@@ -219,25 +230,23 @@
                 </div>
                 <div id="infoOtherPriceProduct">
 
-                  <img id="imgOtherProduct" src="boraras-b.jpg">
+                  <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
                   <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
                   <p id="priceOther">3,50$</p>
                   <div id="Othercase_quantity_wanted">
                     <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                    <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                   </div>
                   <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
                 </div>
                 <div id="infoOtherPriceProduct">
 
-                  <img id="imgOtherProduct" src="celestichthys-margaritatus-rasbora-galaxy-elevage-semi-sauvage-indonesie.jpg">
+                  <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
                   <div id="underInfoPriceProduct">
                     <p id="nameOtherProduct">RASBORA GALAXY</p>
                     <p id="priceOther">3,95$</p>
                     <div id="Othercase_quantity_wanted">
                       <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                      <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                     </div>
                     <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
@@ -246,13 +255,12 @@
 
                 <div id="infoOtherPriceProduct">
 
-                  <img id="imgOtherProduct" src="Mikrogeophagus_ramirezi_2-725x483.jpg">
+                  <img id="imgOtherProduct" src="img/ramirezi.jpg">
                   <div id="underOtherInfoPriceProduct">
                     <p id="nameOtherProduct">RAMIREZ</p>
                     <p id="priceOther">15,50$</p>
                     <div id="Othercase_quantity_wanted">
                       <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                      <!--<input class="favorite styled" type="button" value="Add to Cart">-->
                     </div>
                     <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
 

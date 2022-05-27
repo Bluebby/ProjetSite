@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  // La case du produit est supprimée de l'array "panier".
+  // La case du produit est supprimée de la variable "panier".
   unset($_SESSION['cart'][$_POST['product']]);
 
   // Re-calcul du sous-total.

@@ -291,7 +291,7 @@ body {
   background-color: rgb(125, 177, 80);
 }
 
-#product {
+.product {
   position: absolute;
   margin-top: 200px;
   margin-left: 22%;
@@ -524,7 +524,7 @@ body {
 }
 
 #showcase {
-  background-image: url("aquascapingBackGround.jpg");
+  background-image: url("/img/bg-aquascaping.jpg");
   height: 120vh;
   background-position: center;
   background-size: cover;
@@ -549,7 +549,7 @@ body {
   font-size: max(4vw, 60px);
 }
 
-#quantity_wanted {
+.quantity_wanted {
   width: 63px;
   height: 27px;
   padding: 0 5px;
@@ -563,7 +563,7 @@ body {
   padding-left: 0px;
 }
 
-#infoPriceProduct {
+.infoPriceProduct {
   position: relative;
   border: 2px solid #6db33f;
   margin-left: 55%;
@@ -687,21 +687,21 @@ site dynamique trouver les documentation fait en sorte de ne pas avoir a réécr
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-#imgProduct {
+.imgProduct {
   margin-left: -35%;
   height: 300px;
   width: auto;
   border-radius: 7px;
 }
 
-#underProduct {
+.underProduct {
   /*display: flex;
     flex-direction: column;*/
   height: 500px;
   width: 90%;
 }
 
-#price {
+.price {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -709,7 +709,7 @@ site dynamique trouver les documentation fait en sorte de ne pas avoir a réécr
   color: #6db33f;
 }
 
-#case_quantity_wanted {
+.case_quantity_wanted {
   position: absolute;
   left: 50%;
   transform: translate(-50%);

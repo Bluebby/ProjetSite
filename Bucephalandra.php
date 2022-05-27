@@ -1,3 +1,16 @@
+<?php
+  session_start();
+
+  // On crée un panier vide s'il n'y en a pas dans la session en cours.
+  if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+    $_SESSION['subtotal'] = 0;
+  }
+
+  // Lecture de la base de donnée liée aux produits.
+  $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.json'), true);
+?>
+
 <!DOCTYPE html> <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
 
@@ -8,7 +21,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MenuTD</title>
 <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png">   
-<link rel="stylesheet" href="BucephalandraStyle.css">
+<link rel="stylesheet" href="css/BucephalandraStyle.css">
 
 
 <body >

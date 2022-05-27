@@ -1,4 +1,16 @@
-<?php session_start() ?>
+<?php
+  session_start();
+
+  // On crée un panier vide s'il n'y en a pas dans la session en cours.
+  if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+    $_SESSION['subtotal'] = 0;
+  }
+
+  // Lecture de la base de donnée liée aux produits.
+  $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.json'), true);
+?>
+
 <!DOCTYPE html>
 <!--son role est de préciser le type de document qui va suivre-->
 <html lang="en">
@@ -10,9 +22,9 @@
   <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
   <title>MenuTD</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
-  <link rel="stylesheet" href="stylecompte.css" />
-  <link rel="stylesheet" href="StylePanier.css" />
-  <script defer src="menu.js"></script>
+  <link rel="stylesheet" href="css/styleCompte.css" />
+  <link rel="stylesheet" href="css/stylePanier.css" />
+  <script defer src="js/menu.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -43,7 +55,7 @@
   <div id="tabmenu">
     <ul id="menu-demo2">
       <li>
-        <a href="Plantes.php">PLANTES</a>
+        <a href="plantes.php">PLANTES</a>
         <ul>
           <li>
             <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
@@ -53,7 +65,7 @@
         </ul>
       </li>
       <li>
-        <a href="Poissons.php">POISSONS</a>
+        <a href="poissons.php">POISSONS</a>
         <ul>
           <li><a href="#" id="fontUnderMenu">CREVETTE AMANO</a></li>
           <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
@@ -151,26 +163,26 @@
   ?>
 
   <!-- Panier dans l'en-tête du site -->
-        
   <div id="hcart">
-                <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
-                <div id="hcart-products">
-                    <!-- Affichage de tous les produits enregistrés dans le panier : -->
-                    <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
-                    <div id="hcart-<?=$product?>">
-                        <p><?=$product?></p> <!-- Nom du produit -->
-                        <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
-                        <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
-                    </div>
-                    <?php endforeach; ?>
+    <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
+    <div id="hcart-products">
+      <!-- Affichage de tous les produits enregistrés dans le panier : -->
+      <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
+        <div id="hcart-<?=$product?>">
+          <p><?=$product?></p> <!-- Nom du produit -->
+          <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
+          <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
+        </div>
+      <?php endforeach; ?>
 
-                    <!-- Affichage du prix total :-->
-                    <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
-            </div>
-            
+      <!-- Affichage du prix total :-->
+      <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
+    </div>        
   </div>
+
+
   <div class="LOGOimage">
-    <a href="Menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="logo/logo.png" /> </a>
+    <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
   </div>
   
 
@@ -255,7 +267,7 @@
       <div class="bloc footer-contact">
         <h3>Nous contacter</h3>
         <ul class="liste-contact">
-          <li><a href="formulaire/contact.php">Formulaire de contact</a></li>
+          <li><a href="contact.php">Formulaire de contact</a></li>
         </ul>
       </div>
 
@@ -275,10 +287,10 @@
       <div class="bloc footer-medias">
         <h3>Nos Réseaux</h3>
         <ul class="liste-medias">
-          <li><a href="https://www.facebook.com"><img class="logo" src="logo/facebook.png" alt="icones reseaux">Facebook</a></li>
-          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="logo/github.png" alt="icones reseaux">github</a></li>
-          <li><a href="https://www.instagram.com"><img class="logo" src="logo/instagram.png" alt="icones reseaux">instagram</a></li>
-          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="logo/twitter.png" alt="icones reseaux">Twitter</a></li>
+          <li><a href="https://www.facebook.com"><img class="logo" src="img/icons/facebook.png" alt="icones reseaux">Facebook</a></li>
+          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="img/icons/github.png" alt="icones reseaux">github</a></li>
+          <li><a href="https://www.instagram.com"><img class="logo" src="img/icons/instagram.png" alt="icones reseaux">instagram</a></li>
+          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="img/icons/twitter.png" alt="icones reseaux">Twitter</a></li>
         </ul>
       </div>
       

@@ -6,7 +6,7 @@ session_start();
 <head>
   <meta charset="UTF-8"/>
   <title>Facture FISHELECAMP</title>
-  <link rel="stylesheet" href="facture.css" />
+  <link rel="stylesheet" href="css/facture.css" />
 
 </head>
 <body>

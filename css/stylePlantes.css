@@ -1,6 +1,7 @@
 body {
   padding: 0px;
-  margin: 0px; /*avant il y avait 10 de margin*/
+  margin: 0px;
+  /*avant il y avait 10 de margin*/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   justify-self: center;
@@ -8,15 +9,13 @@ body {
   margin-right: auto;
 }
 
-#global {
-}
-
 #Menu {
   position: absolute;
   color: rgb(204, 204, 204);
   left: 50%;
   top: 20px;
-  transform: translate(-50%, -50%); /*décalage de 50% de sa propre taille*/
+  transform: translate(-50%, -50%);
+  /*décalage de 50% de sa propre taille*/
   filter: blur(em);
   width: 100%;
 }
@@ -28,7 +27,8 @@ body {
   position: absolute;
   left: 50%;
   /*top: 100%;*/
-  transform: translate(-50%, -50%); /*décalage de 50% de sa propre taille*/
+  transform: translate(-50%, -50%);
+  /*décalage de 50% de sa propre taille*/
 }
 
 video#bgvid {
@@ -66,201 +66,179 @@ video#bgvid {
   padding: 0;
 
   list-style: none;
-  text-align: center; /*position sur l'enseble des cases 2nd*/
+  text-align: center;
+  /*position sur l'enseble des cases 2nd*/
 }
+
 #menu-demo2 li {
   display: inline-block;
   width: 23%;
   position: relative;
-  border-radius: 8px 8px 0 0; /*bordure de la premiere casse li*/
+  border-radius: 8px 8px 0 0;
+  /*bordure de la premiere casse li*/
 }
+
 #menu-demo2 ul li {
-  display: inherit; /*permet d'hériter des caractéristique précedante sur les cases 2nd*/
+  display: inherit;
+  /*permet d'hériter des caractéristique précedante sur les cases 2nd*/
   border-radius: 0;
   width: 100%;
 }
+
 #menu-demo2 ul li:hover {
-  border-radius: 0; /*permet de retirer les rebord sur le menu déroulantquand la souris passe */
+  border-radius: 0;
+  /*permet de retirer les rebord sur le menu déroulantquand la souris passe */
 }
+
 #menu-demo2 ul li:last-child {
-  border-radius: 0 0 8px 8px; /* permet de mettre un rebord sur le dernier des menu du déroulant*/
+  border-radius: 0 0 8px 8px;
+  /* permet de mettre un rebord sur le dernier des menu du déroulant*/
 }
 
 #menu-demo2 ul {
   position: absolute;
-  max-height: 0em; /*l'element ne sera pas visible*/
+  max-height: 0em;
+  /*l'element ne sera pas visible*/
   left: 0;
   right: 0;
-  overflow: hidden; /*viens cacher les element en dessous de ma taille qui est a un moment a 0 puis aller le passage de la souris a 15*/
+  overflow: hidden;
+  /*viens cacher les element en dessous de ma taille qui est a un moment a 0 puis aller le passage de la souris a 15*/
   -moz-transition: 0.8s all 0.3s;
   -webkit-transition: 0.8s all 0.3s;
   transition: 0.8s all 0.3s;
 }
+
 #menu-demo2 li:hover ul {
   /*on place une action sur la case menu1*/
-  max-height: 20em; /*vient modifier la taille max du deroulant de sous menu avec la transition plus on a un max grand plus la transition sera rapide*/
+  max-height: 20em;
+  /*vient modifier la taille max du deroulant de sous menu avec la transition plus on a un max grand plus la transition sera rapide*/
 }
+
 /* background des liens sur menus */
 #menu-demo2 li:first-child {
   background-color: rgb(125, 177, 80);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(38, 38, 38) 45%,
-    rgb(38, 38, 38) 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
+  background-image: linear-gradient(to bottom right,
+      rgb(38, 38, 38) 45%,
+      rgb(38, 38, 38) 100%);
 }
+
 #menu-demo2 li:nth-child(2) {
   background-color: rgb(38, 38, 38);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
+  background-image: linear-gradient(to bottom right,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
 }
+
 #menu-demo2 li:nth-child(3) {
   background-color: rgb(125, 177, 80);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
+  background-image: linear-gradient(to bottom right,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
 }
+
 #menu-demo2 li:last-child {
   background-color: rgb(125, 177, 80);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(38, 38, 38) 0%,
-    rgb(38, 38, 38) 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
+  background-image: linear-gradient(to bottom right,
+      rgb(38, 38, 38) 0%,
+      rgb(38, 38, 38) 100%);
 }
+
 /* background des liens sous menus */
 #menu-demo2 li:first-child li {
   /*On agit sur le*/
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 #menu-demo2 li:nth-child(2) li {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 #menu-demo2 li:nth-child(3) li {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) a 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) a 0%,
+      #3c3a3f 100%);
 }
+
 #menu-demo2 li:last-child li {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 /* background des liens menus et sous menus au survol */
 #menu-demo2 li:first-child:hover,
 #menu-demo2 li:first-child li:hover {
   /*Viens changer des couleurs au passage de la souris*/
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 #menu-demo2 li:nth-child(2):hover,
 #menu-demo2 li:nth-child(2) li:hover {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 #menu-demo2 li:nth-child(3):hover,
 #menu-demo2 li:nth-child(3) li:hover {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 #menu-demo2 li:last-child:hover,
 #menu-demo2 li:last-child li:hover {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
-  );
-  background-image: linear-gradient(
-    to left,
-    rgb(125, 177, 80) 0%,
-    #3c3a3f 100%
-  );
+  background-image: -webkit-linear-gradient(top,
+      rgb(125, 177, 80) 0%,
+      #2a2333 100%);
+  background-image: linear-gradient(to left,
+      rgb(125, 177, 80) 0%,
+      #3c3a3f 100%);
 }
+
 /* les a href */
 #menu-demo2 a {
   /*le menu de base comment il est*/
@@ -270,22 +248,24 @@ video#bgvid {
   color: rgb(253, 253, 253);
   font-family: arial;
 }
+
 #menu-demo2 ul a {
   /*on agit sur le paggind des case seconde la largeur ne sert a rien*/
   padding: 8px 0;
 }
+
 #menu-demo2 li:hover li a {
   /*quand souris passe sur menu les sous cases prenent la forme suivante*/
   color: rgb(255, 255, 255);
   text-transform: inherit;
 }
+
 #menu-demo2 li:hover a,
 #menu-demo2 li li:hover a {
-  color: rgb(
-    247,
-    241,
-    241
-  ); /*quand les cases et sous cases sont survolé elle prennent un couleur grise*/
+  color: rgb(247,
+      241,
+      241);
+  /*quand les cases et sous cases sont survolé elle prennent un couleur grise*/
 }
 
 #secondMenu {
@@ -309,17 +289,17 @@ video#bgvid {
   background-color: rgb(125, 177, 80);
 }
 
-#product {
+.product {
   position: absolute;
   margin-top: 170px;
   margin-left: 22%;
   z-index: 1;
   border-radius: 7px;
-  
+
   width: 75%;
   height: 90%;
   max-width: 1300px;
-  
+
   border: 1px solid rgb(125, 177, 80);
   background-color: rgb(38, 38, 38);
 }
@@ -335,7 +315,7 @@ video#bgvid {
 /*#quantitySelect {
  } */
 
-#imgProduct {
+.imgProduct {
   height: 80%;
   width: auto;
   margin: 5%;
@@ -344,7 +324,7 @@ video#bgvid {
   border-radius: 7px;
 }
 
-#underProduct {
+.underProduct {
   display: flex;
 
   flex-flow: row wrap;
@@ -355,7 +335,7 @@ video#bgvid {
   margin-right: auto;
 }
 
-#infoPriceProduct {
+.infoPriceProduct {
   position: relative;
   border: 1px solid #6db33f;
   flex-flow: column wrap;
@@ -372,12 +352,12 @@ video#bgvid {
   padding: 1%;
 }
 
-#nameProduct {
+.nameProduct {
   margin-top: 0px;
   font-size: 20px;
 }
 
-#price {
+.price {
   margin-top: 0px;
   font-size: 15px;
   color: #6db33f;
@@ -431,11 +411,13 @@ h4 {
   margin-left: -30px;
   margin-bottom: -2px;
 }
+
 #promo {
   margin-left: 22%;
   margin-top: 170px;
   width: 100%;
 }
+
 #imgPromo {
   width: 100%;
   border: 1px solid rgb(125, 177, 80);
@@ -453,31 +435,38 @@ h4 {
   margin-top: 0px;
 
   padding: 0;
-  height: 100vh; /*jouer la dessus c ça qui clc*/
+  height: 100vh;
+  /*jouer la dessus c ça qui clc*/
   justify-content: center;
   align-items: center;
 }
+
 .slider {
   width: 100%;
   height: 700px;
   overflow: hidden;
   border-radius: 7px;
 }
+
 .slide {
   width: 500%;
   height: 500px;
   display: flex;
 }
+
 .slide input {
   display: none;
 }
+
 .st {
   width: 20%;
   transition: 1s;
 }
+
 .st img {
   width: 800px;
 }
+
 .nav-m {
   position: absolute;
   width: 800px;
@@ -485,6 +474,7 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
 .m-btn {
   border: 2px solid rgb(125, 177, 80);
   padding: 5px;
@@ -496,19 +486,24 @@ h4 {
 .m-btn:not(:last-child) {
   margin-right: 30px;
 }
+
 .m-btn:hover {
   background-color: rgb(125, 177, 80);
 }
-#radio1:checked ~ .first {
+
+#radio1:checked~.first {
   margin-left: 0;
 }
-#radio2:checked ~ .first {
+
+#radio2:checked~.first {
   margin-left: -20%;
 }
-#radio3:checked ~ .first {
+
+#radio3:checked~.first {
   margin-left: -40%;
 }
-#radio4:checked ~ .first {
+
+#radio4:checked~.first {
   margin-left: -60%;
 }
 
@@ -518,7 +513,8 @@ h4 {
   margin-top: 100px;
 
   display: flex;
-  justify-content: center; /*centrer la nav auto avec la nav choisi*/
+  justify-content: center;
+  /*centrer la nav auto avec la nav choisi*/
 }
 
 .nav-auto div {
@@ -534,16 +530,19 @@ h4 {
   justify-content: center;
 }
 
-#radio1:checked ~ .nav-auto .a-b1 {
+#radio1:checked~.nav-auto .a-b1 {
   background-color: rgb(125, 177, 80);
 }
-#radio2:checked ~ .nav-auto .a-b2 {
+
+#radio2:checked~.nav-auto .a-b2 {
   background-color: rgb(125, 177, 80);
 }
-#radio3:checked ~ .nav-auto .a-b3 {
+
+#radio3:checked~.nav-auto .a-b3 {
   background-color: rgb(125, 177, 80);
 }
-#radio4:checked ~ .nav-auto .a-b4 {
+
+#radio4:checked~.nav-auto .a-b4 {
   background-color: rgb(125, 177, 80);
 }
 
@@ -578,6 +577,7 @@ h4 {
   opacity: 1;
   z-index: 2;
 }
+
 /* Positionnez la forme Popup */
 
 .login-popup {
@@ -619,7 +619,7 @@ h4 {
 }
 
 #showcase {
-  background-image: url("aquascapingBackGround.jpg");
+  background-image: url("/img/bg-aquascaping.jpg");
   height: 120vh;
   background-position: center;
   background-size: cover;
@@ -656,7 +656,7 @@ h4 {
   border: 1px solid rgba(209, 202, 202, 0.253);
 }
 
-#imgProduct {
+.imgProduct {
   width: 150px;
   height: auto;
 }
@@ -701,7 +701,7 @@ footer {
   color: white;
 }
 
-.contenu-footer{
+.contenu-footer {
   width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -719,33 +719,35 @@ footer {
 
 .footer-contact h3,
 .footer-services h3,
-.footer-medias h3{
+.footer-medias h3 {
   font-size: 25px;
   padding-bottom: 20px;
 }
 
-.footer-contact li{
+.footer-contact li {
   padding: 5px 0;
 }
 
 .liste-contact,
 .liste-services,
-.liste-medias{
+.liste-medias {
   list-style-type: none;
 }
 
 .liste-services li {
   padding: 2px 0;
 }
+
 .liste-services a {
   text-decoration: none;
   color: white;
 }
+
 .liste-services a:hover {
-  color:rgb(125, 177, 80);
+  color: rgb(125, 177, 80);
 }
 
-.liste-medias img{
+.liste-medias img {
   width: 40px;
   margin: 10px 10px;
 }
@@ -767,64 +769,70 @@ footer {
 }
 
 .liste-contact a:hover {
-  color:rgb(125, 177, 80);
-}
-.liste-medias a:hover {
-  color:rgb(125, 177, 80);
+  color: rgb(125, 177, 80);
 }
 
-.liste-medias{
-  margin:0;
-  padding:0;
+.liste-medias a:hover {
+  color: rgb(125, 177, 80);
+}
+
+.liste-medias {
+  margin: 0;
+  padding: 0;
   position: relative;
   right: 10px;
 }
 
-.liste-contact{
-  margin:0;
-  padding:0;  
+.liste-contact {
+  margin: 0;
+  padding: 0;
 }
 
-.liste-services{
-  margin:0;
-  padding:0;
+.liste-services {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 1300px) {
 
-  .contenu-footer{
+  .contenu-footer {
     width: 700px;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
   }
+
   .block {
     width: 40%;
     margin: 0 0;
   }
+
   .bloc:nth-child(1),
-  .bloc:nth-child(2){
+  .bloc:nth-child(2) {
     margin-bottom: 50px;
-  } 
+  }
 }
 
 @media screen and (max-width: 800px) {
 
-  .contenu-footer{
+  .contenu-footer {
     width: 320px;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
   }
+
   .block {
     width: 320px;
     margin: 30px 30px;
   }
+
   .bloc:nth-child(1),
-  .bloc:nth-child(2){
+  .bloc:nth-child(2) {
     margin-bottom: 30px;
   }
-  .bloc:nth-child(1){
+
+  .bloc:nth-child(1) {
     margin-top: 0;
   }
 }
 
-.logo{
+.logo {
   width: 20px;
 }

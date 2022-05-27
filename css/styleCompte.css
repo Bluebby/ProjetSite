@@ -8,9 +8,6 @@ body {
     margin-right: auto;
   }
   
-  #global {
-  }
-  
   #Menu {
     position: absolute;
     color: rgb(204, 204, 204);
@@ -311,12 +308,10 @@ body {
   
   #product {
     position: absolute;
-    margin-top: 170px;
+    top: 250px;
   
-    margin-left: 22%;
     width: 75%;
-    height: 70%;
-    max-width: 1300px;
+    max-width: 700px;
     min-width: 600px;
     border-radius: 7px;
   
@@ -568,7 +563,7 @@ body {
   }
   
   #showcase {
-    background-image: url("aquascapingBackGround.jpg");
+    background-image: url("/img/bg-aquascaping.jpg");
     height: 120vh;
     background-position: center;
     background-size: cover;
@@ -582,6 +577,7 @@ body {
   #responsive {
     margin: 10px auto;
     position: absolute;
+    top: 3%;
     width: 80%;
     max-width: 1200px;
     min-width: 800px;
@@ -656,7 +652,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     font-size: 20px;
-    padding: 300px 0 100px;
+    padding: 100px 0 50px;
   
   }
   
