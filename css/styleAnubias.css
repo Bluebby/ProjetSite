@@ -43,9 +43,8 @@ body {
 }
 
 #tabmenu {
-  position: absolute;
-  z-index: 3;
-  top: 170px;
+  position: relative;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -53,17 +52,20 @@ body {
 #menu-demo2,
 #menu-demo2 ul {
   padding: 0;
+
   list-style: none;
   text-align: center; /*position sur l'enseble des cases 2nd*/
 }
 #menu-demo2 li {
   display: inline-block;
+  width: 23%;
   position: relative;
   border-radius: 8px 8px 0 0; /*bordure de la premiere casse li*/
 }
 #menu-demo2 ul li {
   display: inherit; /*permet d'hériter des caractéristique précedante sur les cases 2nd*/
   border-radius: 0;
+  width: 100%;
 }
 #menu-demo2 ul li:hover {
   border-radius: 0; /*permet de retirer les rebord sur le menu déroulantquand la souris passe */
@@ -89,54 +91,58 @@ body {
 /* background des liens sur menus */
 #menu-demo2 li:first-child {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 45%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:nth-child(2) {
-  background-color: rgb(125, 177, 80);
+  background-color: rgb(38, 38, 38);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:nth-child(3) {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
 }
 #menu-demo2 li:last-child {
   background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
   background-image: -webkit-linear-gradient(
     top,
-    rgb(125, 177, 80) 0%,
-    #2a2333 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
   background-image: linear-gradient(
     to bottom right,
-    rgb(125, 177, 80) 45%,
-    #3c3a3f 100%
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
   );
 }
 /* background des liens sous menus */
@@ -173,7 +179,7 @@ body {
   );
   background-image: linear-gradient(
     to left,
-    rgb(125, 177, 80) a 0%,
+    rgb(125, 177, 80) 0%,
     #3c3a3f 100%
   );
 }
@@ -299,16 +305,17 @@ body {
   border-radius: 7px;
 
   width: 75%;
-  height: 150%;
+  height: 140%;
   max-width: 1300px;
+  max-height: 1550px;
 
   border: 1px solid rgb(125, 177, 80);
   background-color: rgb(38, 38, 38);
 }
 
 #client {
-  margin-top: 30px;
-  margin-left: 80%;
+  margin-left: 78%;
+  margin-top: -55px;
 }
 
 #imgAquascaping {
@@ -328,7 +335,7 @@ body {
   z-index: -10;
   margin-left: -10px;
   width: 100%;
-  height: 100%;
+  height: 210%;
   background-color: rgb(0, 0, 0);
 }
 
@@ -338,6 +345,9 @@ body {
   text-decoration: none;
   margin-top: 10px;
   margin-bottom: -10px;
+}
+#fontUnderMenu {
+  font-size: 13px;
 }
 
 #UnderTitleSndMenu {
@@ -472,16 +482,16 @@ body {
 
 /* Stylez et fixez le bouton sur la page */
 .open-button {
-  background-color: rgb(125, 177, 80);
+  background-color: rgb(38, 38, 38);
+  border: 1px solid #8ebf42;
   color: white;
   padding: 12px 20px;
   margin-left: 2px;
-  min-width: 120px;
-  border: none;
+  min-width: 125px;
   border-radius: 5px;
   cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
+  opacity: 1;
+  z-index: 2;
 }
 /* Positionnez la forme Popup */
 
@@ -539,14 +549,15 @@ body {
   margin: 10px auto;
   margin-top: 100px;
   position: absolute;
-  /*border: 2px solid red;*/
   width: 80%;
   max-width: 1200px;
   min-width: 800px;
 }
 
 .bigTittle {
-  font-size: max(4vw, 60px);
+  margin-top: 100px;
+  font-size: max(4vw, 50px);
+  color: #eae4e4;
 }
 
 .quantity_wanted {
@@ -556,6 +567,17 @@ body {
   float: left;
   border: 1px solid #6db33f !important;
   line-height: 5px;
+}
+
+#opaqueNezo {
+  position: absolute;
+  background-color: rgba(209, 202, 202, 0.253);
+  opacity: 0.2;
+  margin-left: 1%;
+  width: 96%;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 0;
 }
 
 #quantitySelect {
@@ -627,6 +649,7 @@ body {
   max-width: 700px;
   padding: 10px;
   border-radius: 7px;
+  color: white;
 }
 
 #thirdDescription {
@@ -641,6 +664,7 @@ body {
   height: 700px;
   padding: 10px;
   border-radius: 7px;
+  color: white;
 }
 
 #fontDescription {
@@ -824,4 +848,135 @@ h4 {
   left: 50%;
   transform: translate(-50%);
   padding-top: 0px;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  color: white;
+}
+
+.contenu-footer {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 850px 0 50px;
+}
+
+.bloc {
+  width: 25%;
+  margin: 0 100px;
+}
+
+.footer-contact h3,
+.footer-services h3,
+.footer-medias h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.footer-contact li {
+  padding: 5px 0;
+}
+
+.liste-contact,
+.liste-services,
+.liste-medias {
+  list-style-type: none;
+}
+
+.liste-services li {
+  padding: 2px 0;
+}
+.liste-services a {
+  text-decoration: none;
+  color: white;
+}
+.liste-services a:hover {
+  color: rgb(125, 177, 80);
+}
+
+.liste-medias img {
+  width: 40px;
+  margin: 10px 10px;
+}
+
+.liste-medias a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.liste-contact a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.liste-contact a:hover {
+  color: rgb(125, 177, 80);
+}
+.liste-medias a:hover {
+  color: rgb(125, 177, 80);
+}
+
+.liste-medias {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 10px;
+}
+
+.liste-contact {
+  margin: 0;
+  padding: 0;
+}
+
+.liste-services {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .contenu-footer {
+    width: 700px;
+    flex-wrap: wrap;
+  }
+  .block {
+    width: 40%;
+    margin: 0 0;
+  }
+  .bloc:nth-child(1),
+  .bloc:nth-child(2) {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contenu-footer {
+    width: 320px;
+    flex-wrap: wrap;
+  }
+  .block {
+    width: 320px;
+    margin: 30px 30px;
+  }
+  .bloc:nth-child(1),
+  .bloc:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .bloc:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.logo {
+  width: 20px;
 }

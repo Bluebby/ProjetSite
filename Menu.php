@@ -1,14 +1,14 @@
 <?php
-  session_start();
+session_start();
 
-  // On crée un panier vide s'il n'y en a pas dans la session en cours.
-  if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = array();
-    $_SESSION['subtotal'] = 0;
-  }
+// On crée un panier vide s'il n'y en a pas dans la session en cours.
+if (!isset($_SESSION['cart'])) {
+  $_SESSION['cart'] = array();
+  $_SESSION['subtotal'] = 0;
+}
 
-  // Lecture de la base de donnée liée aux produits.
-  $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.json'), true);
+// Lecture de la base de donnée liée aux produits.
+$_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.json'), true);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1,0" />
   <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-  <title>MenuTD</title>
+  <title>Accueil</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
   <link rel="stylesheet" href="css/styleMenu.css" />
   <link rel="stylesheet" href="css/stylePanier.css" />
@@ -34,7 +34,11 @@
     <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
-        <h1 class="bigTittle">FISH LE CAMP</h1>
+        <a href="Menu.php">
+          <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
+            <h1 class="bigTittle">FISH LE CAMP</h1>
+          </a>
+        </a>
       </div>
       <div id="tabmenu">
         <ul id="menu-demo2">
@@ -71,10 +75,7 @@
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
+      
             </ul>
           </li>
         </ul>
@@ -150,24 +151,24 @@
       }
       ?>
 
-  <!-- Panier dans l'en-tête du site -->
-  <div id="hcart">
-    <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
-    <div id="hcart-products">
-      <!-- Affichage de tous les produits enregistrés dans le panier : -->
-      <?php foreach ($_SESSION['cart'] as $product => $in_cart): ?>
-        <div id="hcart-<?=$product?>">
-          <p><?=$product?></p> <!-- Nom du produit -->
-          <p id="<?=$product?>-qty">Quantité : <?=$in_cart['quantity']?></p> <!-- Quantité dans le panier -->
-          <p id="<?=$product?>-price"><?=$in_cart['price']?> €</p>           <!-- Prix de la quantité -->
-        </div>
-      <?php endforeach; ?>
+      <!-- Panier dans l'en-tête du site -->
+      <div id="hcart">
+        <button id="hcart-button" onclick="window.location.href = 'panier.php'">Mon panier</button>
+        <div id="hcart-products">
+          <!-- Affichage de tous les produits enregistrés dans le panier : -->
+          <?php foreach ($_SESSION['cart'] as $product => $in_cart) : ?>
+            <div id="hcart-<?= $product ?>">
+              <p><?= $product ?></p> <!-- Nom du produit -->
+              <p id="<?= $product ?>-qty">Quantité : <?= $in_cart['quantity'] ?></p> <!-- Quantité dans le panier -->
+              <p id="<?= $product ?>-price"><?= $in_cart['price'] ?> €</p> <!-- Prix de la quantité -->
+            </div>
+          <?php endforeach; ?>
 
-      <!-- Affichage du prix total :-->
-      <p>Total : <b id="hcart-subtotal"><?=$_SESSION['subtotal']?> €</b></p>
-    </div>        
-  </div>
-  
+          <!-- Affichage du prix total :-->
+          <p>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></p>
+        </div>
+      </div>
+
       <div class="LOGOimage">
         <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>
@@ -275,8 +276,34 @@
 
         <div id="product" style="color: white">
           <div id="treize">
-            <h4 style="font-style: Arial"><u>PRODUIT</u></h4>
+            <h4 style="font-style: Arial"><u></u></h4>
             <center>
+
+
+              <div class="product">
+                <h1 id="titleProduct" style="color:white">MEILLEURS VENTES</h1>
+                <br>
+                <div class="underProduct">
+
+                  <!-- Affichage des produits à partir de la base de données. -->
+                  <?php foreach ($_SESSION['products_data']['poissons'] as $poisson => $data) : ?>
+                    <div class="infoPriceProduct">
+                      <div class="case_quantity_wanted">
+                        <a href="<?= $data['id'] ?>.php">
+                          <img class="imgProduct" src="<?= $data['img'] ?>" />
+                        </a>
+                        <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
+                        <p class="price"><?= $data['price'] ?> €</p>
+                        <input id="<?= $data['name'] ?>-add-qty" type="number" min="0" value=1 class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);" />
+                        <button onclick="addToCart('<?= $data['name'] ?>', <?= $data['price'] ?>, document.getElementById('<?= $data['name'] ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+                      </div>
+                    </div>
+                  <?php endforeach; ?>
+
+                </div>
+              </div>
+
+
 
             </center>
           </div>

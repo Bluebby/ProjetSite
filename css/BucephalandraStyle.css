@@ -130,7 +130,7 @@ video#bgvid {
     }
     #menu-demo2 li:nth-child(3) li{
         background-image:-webkit-linear-gradient(top, rgb(125, 177, 80)  0%, rgb(190, 186, 186) 100%);
-        background-image:linear-gradient(to left, rgb(125, 177, 80) a 0%, #3c3a3f 100%);
+        background-image:linear-gradient(to left, rgb(125, 177, 80)  0%, #3c3a3f 100%);
     }
     #menu-demo2 li:last-child li{
         background-image:-webkit-linear-gradient(top, rgb(125, 177, 80)  0%, rgb(190, 186, 186) 100%);

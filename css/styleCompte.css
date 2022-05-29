@@ -188,7 +188,7 @@ body {
     );
     background-image: linear-gradient(
       to left,
-      rgb(125, 177, 80) a 0%,
+      rgb(125, 177, 80) 0%,
       #3c3a3f 100%
     );
   }
@@ -516,7 +516,7 @@ body {
     color: white;
     padding: 12px 20px;
     margin-left: 2px;
-    min-width: 120px;
+    min-width: 125px;
     border-radius: 5px;
     cursor: pointer;
     opacity: 1;
