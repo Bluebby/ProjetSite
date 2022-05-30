@@ -29,7 +29,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 </head>
 
 <body>
-  <header id="showcase">
+  <div id="showcase">
 
     <div id="responsive">
       <div id="opaqueNezo"></div>
@@ -75,7 +75,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-      
+
             </ul>
           </li>
         </ul>
@@ -322,7 +322,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       </div>
     </div>
-  </header>
+  </div>
 
   <div id="imgcacheBackGround"></div>
 

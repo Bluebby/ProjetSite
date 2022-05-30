@@ -563,7 +563,7 @@ body {
   }
   
   #showcase {
-    background-image: url("/img/bg-aquascaping.jpg");
+    background-image: url("../img/bg-aquascaping.jpg");
     height: 120vh;
     background-position: center;
     background-size: cover;

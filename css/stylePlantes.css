@@ -118,125 +118,173 @@ video#bgvid {
 #menu-demo2 li:first-child {
   background-color: rgb(125, 177, 80);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(top,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
-  background-image: linear-gradient(to bottom right,
-      rgb(38, 38, 38) 45%,
-      rgb(38, 38, 38) 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 45%,
+    rgb(38, 38, 38) 100%
+  );
 }
 
 #menu-demo2 li:nth-child(2) {
   background-color: rgb(38, 38, 38);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(top,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
-  background-image: linear-gradient(to bottom right,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
 }
 
 #menu-demo2 li:nth-child(3) {
   background-color: rgb(125, 177, 80);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(top,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
-  background-image: linear-gradient(to bottom right,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
 }
 
 #menu-demo2 li:last-child {
   background-color: rgb(125, 177, 80);
   border: 1px solid rgb(125, 177, 80);
-  background-image: -webkit-linear-gradient(top,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
-  background-image: linear-gradient(to bottom right,
-      rgb(38, 38, 38) 0%,
-      rgb(38, 38, 38) 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
 }
 
 /* background des liens sous menus */
 #menu-demo2 li:first-child li {
   /*On agit sur le*/
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 #menu-demo2 li:nth-child(2) li {
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 #menu-demo2 li:nth-child(3) li {
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 #menu-demo2 li:last-child li {
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 /* background des liens menus et sous menus au survol */
 #menu-demo2 li:first-child:hover,
 #menu-demo2 li:first-child li:hover {
   /*Viens changer des couleurs au passage de la souris*/
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 #menu-demo2 li:nth-child(2):hover,
 #menu-demo2 li:nth-child(2) li:hover {
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 #menu-demo2 li:nth-child(3):hover,
 #menu-demo2 li:nth-child(3) li:hover {
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 #menu-demo2 li:last-child:hover,
 #menu-demo2 li:last-child li:hover {
-  background-image: -webkit-linear-gradient(top,
-      rgb(125, 177, 80) 0%,
-      #2a2333 100%);
-  background-image: linear-gradient(to left,
-      rgb(125, 177, 80) 0%,
-      #3c3a3f 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
 }
 
 /* les a href */
@@ -262,9 +310,7 @@ video#bgvid {
 
 #menu-demo2 li:hover a,
 #menu-demo2 li li:hover a {
-  color: rgb(247,
-      241,
-      241);
+  color: rgb(247, 241, 241);
   /*quand les cases et sous cases sont survolé elle prennent un couleur grise*/
 }
 
@@ -491,19 +537,19 @@ h4 {
   background-color: rgb(125, 177, 80);
 }
 
-#radio1:checked~.first {
+#radio1:checked ~ .first {
   margin-left: 0;
 }
 
-#radio2:checked~.first {
+#radio2:checked ~ .first {
   margin-left: -20%;
 }
 
-#radio3:checked~.first {
+#radio3:checked ~ .first {
   margin-left: -40%;
 }
 
-#radio4:checked~.first {
+#radio4:checked ~ .first {
   margin-left: -60%;
 }
 
@@ -530,19 +576,19 @@ h4 {
   justify-content: center;
 }
 
-#radio1:checked~.nav-auto .a-b1 {
+#radio1:checked ~ .nav-auto .a-b1 {
   background-color: rgb(125, 177, 80);
 }
 
-#radio2:checked~.nav-auto .a-b2 {
+#radio2:checked ~ .nav-auto .a-b2 {
   background-color: rgb(125, 177, 80);
 }
 
-#radio3:checked~.nav-auto .a-b3 {
+#radio3:checked ~ .nav-auto .a-b3 {
   background-color: rgb(125, 177, 80);
 }
 
-#radio4:checked~.nav-auto .a-b4 {
+#radio4:checked ~ .nav-auto .a-b4 {
   background-color: rgb(125, 177, 80);
 }
 
@@ -619,7 +665,7 @@ h4 {
 }
 
 #showcase {
-  background-image: url("/img/bg-aquascaping.jpg");
+  background-image: url("../img/bg-aquascaping.jpg");
   height: 120vh;
   background-position: center;
   background-size: cover;
@@ -709,7 +755,6 @@ footer {
   align-items: flex-start;
   font-size: 20px;
   padding: 300px 0 100px;
-
 }
 
 .bloc {
@@ -794,7 +839,6 @@ footer {
 }
 
 @media screen and (max-width: 1300px) {
-
   .contenu-footer {
     width: 700px;
     flex-wrap: wrap;
@@ -812,7 +856,6 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-
   .contenu-footer {
     width: 320px;
     flex-wrap: wrap;

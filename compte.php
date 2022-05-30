@@ -20,7 +20,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1,0" />
   <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-  <title>S'inscrire</title>
+  <title>Se</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
   <link rel="stylesheet" href="css/styleCompte.css" />
   <link rel="stylesheet" href="css/stylePanier.css" />
@@ -48,9 +48,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
-        <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
-          <h1 class="bigTittle">FISH LE CAMP</h1>
-        </a>
+        <h1 class="bigTittle">FISH LE CAMP</h1>
       </div>
       <div id="tabmenu">
         <ul id="menu-demo2">
@@ -192,50 +190,50 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
       <table style="background-color: rgb(38,38,38);   margin: auto; color:white">
         <form method="post">
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Nom :</label></th>
             <th><input type="text" name="nom" id="nom" placeholder="Votre nom" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Prénom :</label></th>
             <th><input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Adresse :</label></th>
             <th><input type="text" name="adresse" id="adresse" placeholder="Votre adresse" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Téléphone :</label></th>
             <th><input type="text" name="telephone" id="telephone" placeholder="Votre numéro de téléphone" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Adresse mail :</label></th>
             <th><input type="email" name="email" id="email" placeholder="Votre email" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Mot de passe :</label></th>
             <th><input type="password" name="password" id="password" placeholder="Votre mot de passe" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
           <tr>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
             <th><label>Confirmation :</label></th>
             <th><input type="password" name="cpassword" id="cpassword" placeholder="Confirmer votre mot de passe" required></th>
-            <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+            <th style="visibility: hidden;">aaaaaaa</th>
           </tr>
-          <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+          <th style="visibility: hidden;">aaaaaaa</th>
           <th colspan=2><button style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="submit" name="formsend" id="formsend">Créer votre compte</button></th>
-          <th style="color: rgb(38, 38, 38)">aaaaaaa</th>
+          <th style="visibility: hidden;">aaaaaaa</th>
       </table>
       </form>
     </div>
