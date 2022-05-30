@@ -36,7 +36,7 @@ if (isset($_POST['formsend'])) {
                     'telephone' => $telephone
                 ]);
                 echo '<script type="text/javascript">window.alert("Votre compte a bien été crée");</script>';
-                header('Location: ../menu.php');
+                header('Location: ../Menu.php');
                 exit();
             } else {
                 $message = "Un compte existe déja avec cette adresse email";

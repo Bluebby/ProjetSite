@@ -43,12 +43,17 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
   <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
     faire en sorte que le se connecter ne passe pas derriere le menu-->
-  <header id="showcase">
+
+  <div id="showcase">
 
     <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
-        <h1 class="bigTittle">FISH LE CAMP</h1>
+        <a href="Menu.php">
+          <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
+            <h1 class="bigTittle">FISH LE CAMP</h1>
+          </a>
+        </a>
       </div>
       <div id="tabmenu">
         <ul id="menu-demo2">
@@ -60,37 +65,39 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
               <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="#" id="fontUnderMenu">PANES</a></li>
+              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
             <a href="poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">CREVETTE AMANO</a></li>
+              <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
-              <li><a href="#" id="fontUnderMenu">RAMIREZ</a></li>
-
+              <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
+              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">MATERIEL</a>
+            <a href="materiel.php">MATERIEL</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">Aquarium</a></li>
+              <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
+              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
             </ul>
           </li>
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
+
             </ul>
           </li>
         </ul>
         <br />
       </div>
-
       <?php include 'data/connec.php'; ?>
 
       <?php
@@ -236,6 +243,10 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <th style="visibility: hidden;">aaaaaaa</th>
       </table>
       </form>
+      <div style="text-align:center">
+        <br>
+        <a href="menu.php"><button class="button" style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="button">Retour</button></a> <!-- retour sur le formulaire-->
+      </div>
     </div>
 
     <?php include 'data/creation.php' ?>
@@ -256,7 +267,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
     </div>
 
-  </header>
+  </div>
 
   <div id="imgcacheBackGround"></div>
 

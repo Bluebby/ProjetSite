@@ -50,6 +50,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
               <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="#" id="fontUnderMenu">PANES</a></li>
+              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
@@ -59,7 +61,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
               <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
               <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
-
+              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
             </ul>
           </li>
           <li>
