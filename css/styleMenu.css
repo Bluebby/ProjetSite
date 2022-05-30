@@ -339,6 +339,7 @@ video#bgvid {
 #client {
   margin-left: 78%;
   margin-top: -55px;
+  width: 125px;
 }
 
 #imgAquascaping {
@@ -840,4 +841,11 @@ h4 {
   left: 50%;
   transform: translate(-50%);
   padding-top: 0px;
+}
+
+#deco {
+  position: absolute;
+  margin-left: 78%;
+  margin-top: 60px;
+  width: 125px;
 }

@@ -170,6 +170,18 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         </div>
       </div>
 
+      <?php
+
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+
+      ?>
+        <div id="deco" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
+          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button>
+        </div>
+      <?php
+      }
+      ?>
+
       <div class="LOGOimage">
         <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>

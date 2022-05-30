@@ -60,12 +60,12 @@ session_start();
         <td><?= $in_cart['quantity'] ?></td>
         <td><?= $product ?></td>
         <td>20%</td>
-        <td><?= $in_cart['price'] ?></td><?php endforeach; ?>
+        <td><?= $in_cart['price'] ?>€</td><?php endforeach; ?>
       </tr>
       <tfoot>
         <tr>
           <td colspan="2">− La TVA est déja incluse dans nos prix ! −</td>
-          <td colspan="2">Total: <?= $_SESSION['subtotal'] ?></td>
+          <td colspan="2">Total: <?= $_SESSION['subtotal'] ?>€</td>
         </tr>
       </tfoot>
   </table>

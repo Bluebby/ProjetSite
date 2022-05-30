@@ -29,7 +29,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 </head>
 
 <body>
-  <div id="showcase">
+  <header id="showcase">
 
     <div id="responsive">
       <div id="opaqueNezo"></div>
@@ -50,8 +50,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
               <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
-              <li><a href="#" id="fontUnderMenu">PANES</a></li>
-              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
@@ -61,7 +59,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
               <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
               <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
-              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
+
             </ul>
           </li>
           <li>
@@ -77,7 +75,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-
+      
             </ul>
           </li>
         </ul>
@@ -88,14 +86,14 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <?php
 
-      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) { //cas dans lequel un utilisateur est connecté on affiche son prénom avec la variable de session
 
       ?>
         <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
           <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
-      } else {
+      } else { // cas dans le quel l'utilisateur n'est pas connecté on affiche le bouton se connecter avec la pop up de connexion
       ?>
         <div id="client">
           <div class="open-btn">
@@ -169,11 +167,23 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <!-- Affichage du prix total :-->
           <p>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></p>
         </div>
-      </div>
+        </div>
 
       <div class="LOGOimage">
         <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>
+
+      <?php
+
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) { //cas ou utilisateur est connecté on affiche le bouton de déconnexion
+
+      ?>
+        <div id="deco" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
+          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button>
+        </div>
+      <?php
+      }
+      ?>
 
       <div id="secondMenu">
         <li id="titleSndMenu">
@@ -283,7 +293,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
 
               <div class="product">
-                <h1 id="titleProduct" style="color:white">MEILLEURS VENTES</h1>
+                <h1 id="titleProduct" style="color:white">MEILLEURES VENTES</h1>
                 <br>
                 <div class="underProduct">
 
@@ -312,21 +322,13 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         </div>
 
 
-
-        <!--<div id="backBigMenu"></div>-->
-
-        <!--
-      <div>
-      <img id="imgAquascaping" src="aquascapingBackGround.jpg" />
-    </div>
-    -->
-
-
       </div>
     </div>
-  </div>
+  </header>
 
   <div id="imgcacheBackGround"></div>
+
+   <!-- Le footer contenant le le formulaire de contact, les réseaux et les horraires d'ouverture du magasin -->
 
   <footer>
     <div class="contenu-footer">

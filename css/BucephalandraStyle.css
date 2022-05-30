@@ -298,3 +298,10 @@ video#bgvid {
     padding-left: 980px;
     padding-top: 400px;
 }
+
+#deco {
+    position: absolute;
+    margin-left: 78%;
+    margin-top: 60px;
+    width: 125px;
+  }

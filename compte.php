@@ -29,21 +29,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 </head>
 
 <body>
-  <!--video playsinline autoplay muted loop id="bgvid">
-        <source type="video/mp4" src="lave.mp4" >
-    </video>-->
-
-
-  <!--responsive      margin: auto;
-    max-width;
-  width:...%
-    typo en responsive
-    font-size: 5vw;-->
-
-
-  <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
-    faire en sorte que le se connecter ne passe pas derriere le menu-->
-
   <div id="showcase">
 
     <div id="responsive">
@@ -102,14 +87,14 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <?php
 
-      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) { //cas dans lequel un utilisateur est connecté on affiche son prénom avec la variable de session
 
       ?>
         <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
           <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
-      } else {
+      } else { // cas dans le quel l'utilisateur n'est pas connecté on affiche le bouton se connecter avec la pop up de connexion
       ?>
         <div id="client">
           <div class="open-btn">
@@ -185,6 +170,18 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         </div>
       </div>
 
+      <?php
+
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) { //cas ou utilisateur est connecté on affiche le bouton de déconnexion
+
+      ?>
+        <div id="deco" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
+          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button>
+        </div>
+      <?php
+      }
+      ?>
+
 
       <div class="LOGOimage">
         <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
@@ -251,18 +248,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
     <?php include 'data/creation.php' ?>
 
-
-
-
-
-    <!--<div id="backBigMenu"></div>-->
-
-    <!--
-      <div>
-      <img id="imgAquascaping" src="aquascapingBackGround.jpg" />
-    </div>
-    -->
-
     <div id="promo">
 
     </div>
@@ -270,6 +255,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
   </div>
 
   <div id="imgcacheBackGround"></div>
+
+  <!-- Le footer contenant le le formulaire de contact, les réseaux et les horraires d'ouverture du magasin -->
 
   <footer>
     <div class="contenu-footer">
