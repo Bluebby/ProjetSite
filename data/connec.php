@@ -22,7 +22,7 @@
                         $_SESSION['prenom'] = $result['prenom'];
                         $_SESSION['adresse'] = $result['adresse'];
                         $_SESSION['telephone'] = $result['telephone'];
-                        echo '<script type="text/JavaScript"> location.reload(); </script>'; //on actualise la page
+                        echo '<script type="text/JavaScript"> window.refresh(); </script>'; //on actualise la page
                     }else{
                         $message="Le mot de passe n'est pas le bon.";
                         echo '<script type="text/javascript">window.alert("'.$message.'");</script>'; //pop up
