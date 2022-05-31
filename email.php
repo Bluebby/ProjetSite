@@ -92,7 +92,7 @@
         <p style="font-size:20%; color:white">Email provenant de : <?= $email; ?> <br>Bonjour, je suis <?= $nom; ?> <?= $prenom; ?>, <br>Je vous ecris au sujet de <?= $sujet; ?> car <?= $message; ?> </p>
       </div>
       <div style="text-align:center">
-        <a href="menu.php"><button class="button" style="background-color: rgb(38, 38, 38); color: white; border: 0; font-size: 1.1em;" type="button">Retour</button></a> <!-- retour sur le formulaire-->
+        <a href="index.php"><button class="button" style="background-color: rgb(38, 38, 38); color: white; border: 0; font-size: 1.1em;" type="button">Retour</button></a> <!-- retour sur le formulaire-->
       </div>
     <?php
     }
