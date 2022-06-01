@@ -31,11 +31,13 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 <body>
   <header id="showcase">
 
-    <div id="responsive">
+  <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
-        <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
-          <h1 class="bigTittle">FISH LE CAMP</h1>
+        <a href="Menu.php">
+          <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
+            <h1 class="bigTittle">FISH LE CAMP</h1>
+          </a>
         </a>
       </div>
       <div id="tabmenu">
@@ -73,10 +75,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
+      
             </ul>
           </li>
         </ul>

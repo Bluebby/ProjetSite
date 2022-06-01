@@ -31,57 +31,56 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 <body>
     <header id="showcase">
 
-        <div id="responsive">
-            <div id="opaqueNezo"></div>
-            <div id="Menu">
-                <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
-                    <h1 class="bigTittle">FISH LE CAMP</h1>
-                </a>
-            </div>
-            <div id="tabmenu">
-                <ul id="menu-demo2">
-                    <li>
-                        <a href="plantes.php">PLANTES</a>
-                        <ul>
-                            <li>
-                                <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
-                            </li>
-                            <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
-                            <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="poissons.php">POISSONS</a>
-                        <ul>
-                            <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
-                            <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
-                            <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
-                            <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
+    <div id="responsive">
+      <div id="opaqueNezo"></div>
+      <div id="Menu">
+        <a href="Menu.php">
+          <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
+            <h1 class="bigTittle">FISH LE CAMP</h1>
+          </a>
+        </a>
+      </div>
+      <div id="tabmenu">
+        <ul id="menu-demo2">
+          <li>
+            <a href="plantes.php">PLANTES</a>
+            <ul>
+              <li>
+                <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
+              </li>
+              <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
+              <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="poissons.php">POISSONS</a>
+            <ul>
+              <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
+              <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
+              <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
+              <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
 
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="materiel.php">MATERIEL</a>
-                        <ul>
-                            <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
-                            <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
-                            <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
-                            <li><a href="#" id="fontUnderMenu">SABLE</a></li>
-                            <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">PROMOTION</a>
-                        <ul>
-                            <li><a href="#">Sous menu 4</a></li>
-                            <li><a href="#">Sous menu 4</a></li>
-                            <li><a href="#">Sous menu 4</a></li>
-                            <li><a href="#">Sous menu 4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <br />
-            </div>
+            </ul>
+          </li>
+          <li>
+            <a href="materiel.php">MATERIEL</a>
+            <ul>
+              <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
+              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">PROMOTION</a>
+            <ul>
+      
+            </ul>
+          </li>
+        </ul>
+        <br />
+      </div>
 
             <?php include 'data/connec.php'; ?>
 

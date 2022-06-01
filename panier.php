@@ -30,27 +30,15 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 </head>
 
 <body>
-  <!--video playsinline autoplay muted loop id="bgvid">
-        <source type="video/mp4" src="lave.mp4" >
-    </video>-->
-
-
-  <!--responsive      margin: auto;
-    max-width;
-  width:...%
-    typo en responsive
-    font-size: 5vw;-->
-
-
-  <!--problème avec la pub qui se balade sans mon avis ducoup on regle probleme de pourquoi elle est en bas alors que je la positionne a aucun moment et lui trouver une place cool
-    faire en sorte que le se connecter ne passe pas derriere le menu-->
   <header id="showcase">
 
-    <div id="responsive">
+  <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
-        <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
-          <h1 class="bigTittle">FISH LE CAMP</h1>
+        <a href="Menu.php">
+          <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
+            <h1 class="bigTittle">FISH LE CAMP</h1>
+          </a>
         </a>
       </div>
       <div id="tabmenu">
@@ -76,18 +64,19 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
             </ul>
           </li>
           <li>
-            <a href="#">MATERIEL</a>
+            <a href="materiel.php">MATERIEL</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">Aquarium</a></li>
+              <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
+              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
+              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
             </ul>
           </li>
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
-              <li><a href="#">Sous menu 4</a></li>
+      
             </ul>
           </li>
         </ul>

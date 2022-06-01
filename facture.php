@@ -20,7 +20,7 @@ session_start();
   <section class="flex">
     <dl>
       <dt>Facture #</dt>
-      <dd><?= $_SESSION['prenom']; ?></dd>
+      <dd><?= $_SESSION['id']; ?></dd>
       <dt>Date de facturation</dt>
       <dd>
         <script>
