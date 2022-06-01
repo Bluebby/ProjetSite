@@ -243,7 +243,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
       <div class="product">
         <center>
         <?php $product = "Anubias" ?>
-          <h1 id="titleProduct" style="color: white; text-transform: uppercase">"><?= $product ?></h1>
+          <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $product ?></h1>
           <div class="underProduct">
             <img class="imgProduct" src="img/anubias.jpg">
             <div class="infoPriceProduct">
