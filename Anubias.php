@@ -242,17 +242,24 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <div class="product">
         <center>
-        <?php $product = "Anubias" ?>
-          <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $product ?></h1>
+        <?php
+          $category = "plantes";
+          $id = "Anubias";
+          $name = $_SESSION['products_data'][$category][$id]['name'];
+          $stock = $_SESSION['products_data'][$category][$id]['stock'];
+          $img = $_SESSION['products_data'][$category][$id]['img'];
+          $price = $_SESSION['products_data'][$category][$id]['price'];
+        ?>
+          <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $name ?></h1>
           <div class="underProduct">
-            <img class="imgProduct" src="img/anubias.jpg">
+            <img class="imgProduct" src="<?=$img?>">
             <div class="infoPriceProduct">
-              <p class="price">14,95€</p>
+              <p class="price"><?=$price?>€</p>
               <p style="color: white">Quantité</p>
               <div class="case_quantity_wanted">
-                <input id="<?= $product ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);">
+                <input id="<?= $name ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" name="<?=$stock?>" />
               </div>
-              <button onclick="addToCart('plantes', 'Anubias', '<?= $product ?>', document.getElementById('<?= $product ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+              <button onclick="addToCart('<?=$category?>', '<?=$id?>', '<?=$name?>', document.getElementById('<?= $name ?>-add-qty').value, document.getElementById('<?= $name ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
 
             </div>
 

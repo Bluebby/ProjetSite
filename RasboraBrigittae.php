@@ -242,19 +242,26 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
             <div class="product">
                 <center>
-                    <?php $product = "Rasbora brigittae" ?>
-                    <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $product ?></h1>
-                    <div class="underProduct">
-                        <img class="imgProduct" src="img/rasbora_brigittae.jpg">
-                        <div class="infoPriceProduct">
-                            <p class="price">4,90€</p>
-                            <p style="color: white">Quantité</p>
-                            <div class="case_quantity_wanted">
-                                <input id="<?= $product ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);">
-                            </div>
-                            <button onclick="addToCart('poissons', 'Rasborabrigittae', '<?= $product ?>', document.getElementById('<?= $product ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+                <?php
+          $category = "poissons";
+          $id = "Rasborabrigittae";
+          $name = $_SESSION['products_data'][$category][$id]['name'];
+          $stock = $_SESSION['products_data'][$category][$id]['stock'];
+          $img = $_SESSION['products_data'][$category][$id]['img'];
+          $price = $_SESSION['products_data'][$category][$id]['price'];
+        ?>
+          <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $name ?></h1>
+          <div class="underProduct">
+            <img class="imgProduct" src="<?=$img?>">
+            <div class="infoPriceProduct">
+              <p class="price"><?=$price?>€</p>
+              <p style="color: white">Quantité</p>
+              <div class="case_quantity_wanted">
+                <input id="<?= $name ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" name="<?=$stock?>" />
+              </div>
+              <button onclick="addToCart('<?=$category?>', '<?=$id?>', '<?=$name?>', document.getElementById('<?= $name ?>-add-qty').value, document.getElementById('<?= $name ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
 
-                        </div>
+            </div>
 
                         <div id="firstDescription">
                             <div style="width:100%">

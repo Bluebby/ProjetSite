@@ -245,7 +245,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         <center>
           <div style="display: flex">
 
-            <div style="margin-left: 35px; float: left; color:white">
+            <div style="margin-left: 15%; float: center; color:white">
               <table>
                 <tr>
                   <th>

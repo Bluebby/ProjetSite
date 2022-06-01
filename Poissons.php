@@ -20,7 +20,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1,0" />
   <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-  <title>Nos poissons</title>
+  <title>Boutique poissons</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
   <link rel="stylesheet" href="css/stylePlantes.css" />
   <link rel="stylesheet" href="css/stylePanier.css" />
@@ -255,8 +255,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   </a>
                   <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
                   <p class="price"><?= $data['price'] ?> €</p>
-                  <input id="<?= $data['name'] ?>-add-qty" type="number" min="1" value=1 class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" />
-                  <button onclick="addToCart('poissons', '<?=$id?>', '<?= $data['name'] ?>', document.getElementById('<?= $data['name'] ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+                  <input id="<?= $data['name'] ?>-add-qty" type="number" min="1" value=1 class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" name="<?= $data['stock'] ?>" />
+                  <button onclick="addToCart('poissons', '<?=$id?>', '<?= $data['name'] ?>', document.getElementById('<?= $data['name'] ?>-add-qty').value, document.getElementById('<?= $data['name'] ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
                 </div>
               </div>
             <?php endif; ?>

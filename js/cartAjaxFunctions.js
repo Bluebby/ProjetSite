@@ -1,8 +1,8 @@
 // Ajoute un produit au panier.
-function addToCart(category, id, product, quantity) {
-    if (quantity > 0) {
+function addToCart(category, id, product, quantity, stock) {
+    if (quantity > 0 && quantity <= stock) {
         // Si le produit n'a pas encore été ajouté au panier, on doit générer un nouvel élément grâce au DOM.
-        if (!document.getElementById("hcart-" + product) && quantity > 0) {
+        if (!document.getElementById("hcart-" + product)) {
 
             // Génération du conteneur du produit dans le panier (un conteneur par produit) :
             const newProductInCart = document.createElement("div");
@@ -30,8 +30,10 @@ function addToCart(category, id, product, quantity) {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-
-                document.getElementById(product + "-add-qty").value = 1; // Quantité liée au bouton "Ajouter au panier" remise à 1.
+                // Quantité liée au bouton "Ajouter au panier" remise à 1.
+                document.getElementById(product + "-add-qty").value = 1;
+                // Mise à jour du stock.
+                document.getElementById(product + "-add-qty").name = stock - quantity;
 
                 var cartDatas = this.responseText.split(","); // cartDatas = {quantité, prix quantité, prix total}
                 // Quantité commandée :
