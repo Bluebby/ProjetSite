@@ -246,7 +246,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         <h1 class="titleProduct" style="color:white">Plantes</h1>
         <div class="underProduct">
 
-          <<!-- Affichage des produits à partir de la base de données. -->
+          <!-- Affichage des produits à partir de la base de données. -->
           <?php foreach ($_SESSION['products_data']['plantes'] as $id => $data) : ?>
             <?php if ($data['stock'] > 0): ?>
               <div class="infoPriceProduct">
