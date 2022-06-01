@@ -25,6 +25,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
   <link rel="stylesheet" href="css/styleAnubias.css" />
   <link rel="stylesheet" href="css/stylePanier.css" />
   <script defer src="js/menu.js"></script>
+  <script src="js/cartAjaxFunctions.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 

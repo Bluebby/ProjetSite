@@ -25,6 +25,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
   <link rel="stylesheet" href="css/styleMenu.css" />
   <link rel="stylesheet" href="css/stylePanier.css" />
   <script defer src="js/menu.js"></script>
+  <script src="js/cartAjaxFunctions.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -298,18 +299,20 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 <div class="underProduct">
 
                   <!-- Affichage des produits à partir de la base de données. -->
-                  <?php foreach ($_SESSION['products_data']['poissons'] as $poisson => $data) : ?>
-                    <div class="infoPriceProduct">
-                      <div class="case_quantity_wanted">
-                        <a href="<?= $data['id'] ?>.php">
-                          <img class="imgProduct" src="<?= $data['img'] ?>" />
-                        </a>
-                        <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
-                        <p class="price"><?= $data['price'] ?> €</p>
-                        <input id="<?= $data['name'] ?>-add-qty" type="number" min="0" value=1 class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);" />
-                        <button onclick="addToCart('<?= $data['name'] ?>', <?= $data['price'] ?>, document.getElementById('<?= $data['name'] ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+                  <?php foreach ($_SESSION['products_data']['poissons'] as $id => $data) : ?>
+                    <?php if ($data['stock'] > 0): ?>
+                      <div class="infoPriceProduct">
+                        <div class="case_quantity_wanted">
+                          <a href="<?= $id ?>.php">
+                            <img class="imgProduct" src="<?= $data['img'] ?>" />
+                          </a>
+                          <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
+                          <p class="price"><?= $data['price'] ?> €</p>
+                          <input id="<?= $data['name'] ?>-add-qty" type="number" min="0" value=1 class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);" />
+                          <button onclick="addToCart('materiel', '<?=$id?>', '<?= $data['name'] ?>', document.getElementById('<?= $data['name'] ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
+                        </div>
                       </div>
-                    </div>
+                    <?php endif; ?>
                   <?php endforeach; ?>
 
                 </div>

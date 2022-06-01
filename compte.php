@@ -20,7 +20,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1,0" />
   <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-  <title>Se</title>
+  <title>S'inscrire</title>
   <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
   <link rel="stylesheet" href="css/styleCompte.css" />
   <link rel="stylesheet" href="css/stylePanier.css" />
