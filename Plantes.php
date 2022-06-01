@@ -251,7 +251,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
             <?php if ($data['stock'] > 0): ?>
               <div class="infoPriceProduct">
                 <div class="case_quantity_wanted">
-                  <a href="<?= $data['id'] ?>.php">
+                  <a href="<?= $id ?>.php">
                     <img class="imgProduct" src="<?= $data['img'] ?>" />
                   </a>
                   <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
