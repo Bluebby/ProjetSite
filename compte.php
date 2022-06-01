@@ -34,8 +34,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
-        <a href="Menu.php">
-          <a style="text-decoration:none; color:#eae4e4" href="Menu.php">
+        <a href="index.php">
+          <a style="text-decoration:none; color:#eae4e4" href="index.php">
             <h1 class="bigTittle">FISH LE CAMP</h1>
           </a>
         </a>
@@ -184,7 +184,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
 
       <div class="LOGOimage">
-        <a href="menu.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
+        <a href="index.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>
 
 
@@ -242,7 +242,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
       </form>
       <div style="text-align:center">
         <br>
-        <a href="menu.php"><button class="button" style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="button">Retour</button></a> <!-- retour sur le formulaire-->
+        <a href="index.php"><button class="button" style="background-color: rgb(136, 176, 93); color: white; border: 0; font-size: 1.1em;" type="button">Retour</button></a> <!-- retour sur le formulaire-->
       </div>
     </div>
 
