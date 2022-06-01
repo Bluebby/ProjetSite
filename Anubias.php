@@ -242,15 +242,17 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <div class="product">
         <center>
-          <h1 id="titleProduct" style="color: white">ANUBIAS</h1>
+        <?php $product = "Anubias" ?>
+          <h1 id="titleProduct" style="color: white"><?= $product ?></h1>
           <div class="underProduct">
             <img class="imgProduct" src="img/anubias.jpg">
             <div class="infoPriceProduct">
               <p class="price">14,95$</p>
               <p style="color: white">Quantité</p>
               <div class="case_quantity_wanted">
-                <input type="number" min="1" name="qty" class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                <input id="<?= $product ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);">
               </div>
+              <button onclick="addToCart('plantes', 'Anubias', '<?= $product ?>', document.getElementById('<?= $product ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
 
             </div>
 

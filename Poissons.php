@@ -255,7 +255,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   </a>
                   <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
                   <p class="price"><?= $data['price'] ?> €</p>
-                  <input id="<?= $data['name'] ?>-add-qty" type="number" min="0" value=1 class="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);" />
+                  <input id="<?= $data['name'] ?>-add-qty" type="number" min="1" value=1 class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" />
                   <button onclick="addToCart('poissons', '<?=$id?>', '<?= $data['name'] ?>', document.getElementById('<?= $data['name'] ?>-add-qty').value)" class="favorite styled">Ajouter au panier</button>
                 </div>
               </div>
