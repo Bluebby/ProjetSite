@@ -247,7 +247,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <div class="underProduct">
             <img class="imgProduct" src="img/anubias.jpg">
             <div class="infoPriceProduct">
-              <p class="price">14,95$</p>
+              <p class="price">14,95€</p>
               <p style="color: white">Quantité</p>
               <div class="case_quantity_wanted">
                 <input id="<?= $product ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);">
@@ -316,7 +316,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                   <img id="imgOtherProduct" src="img/crevette_amano.jpg">
                   <p id="nameOtherProduct" style="color: white">CREVETTE AMANO</p>
-                  <p id="priceOther">2,95$</p>
+                  <p id="priceOther">2,95 €</p>
 
                   <div id="Othercase_quantity_wanted">
                     <input type="number" min="1" name="qty" id="Anubias" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
@@ -329,7 +329,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                   <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
                   <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
-                  <p id="priceOther">3,50$</p>
+                  <p id="priceOther">3,50 €</p>
                   <div id="Othercase_quantity_wanted">
                     <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                   </div>
@@ -341,7 +341,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
                   <div id="underInfoPriceProduct">
                     <p id="nameOtherProduct">RASBORA GALAXY</p>
-                    <p id="priceOther">3,95$</p>
+                    <p id="priceOther">3,95 €</p>
                     <div id="Othercase_quantity_wanted">
                       <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                     </div>
@@ -355,7 +355,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   <img id="imgOtherProduct" src="img/ramirezi.jpg">
                   <div id="underOtherInfoPriceProduct">
                     <p id="nameOtherProduct" style="color: white">RAMIREZ</p>
-                    <p id="priceOther">15,50$</p>
+                    <p id="priceOther">15,50 €</p>
                     <div id="Othercase_quantity_wanted">
                       <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                     </div>
