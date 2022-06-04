@@ -50,33 +50,34 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
-              <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
-              <li><a href="#" id="fontUnderMenu">PANES</a></li>
-              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
+              <li><a href="Hygrophila.php" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="Panes.php" id="fontUnderMenu">PANES</a></li>
+              <li><a href="Titouman.php" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
             <a href="poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
+              <li><a href="CrevetteAmano.php" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
               <li><a href="RasboraBrigittae.php" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
-              <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
-              <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
-              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
+              <li><a href="RasboraGalaxy.php" id="fontUnderMenu">RASBORA GALAXY </a></li>
+              <li><a href="Ramirezi.php" id="fontUnderMenu">RAMIREZI</a></li>
+              <li><a href="Pictichromis.php" id="fontUnderMenu">PICTICHROMIS</a></li>
             </ul>
           </li>
           <li>
             <a href="materiel.php">MATERIEL</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
-              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
-              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
-              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
-              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
+              <li><a href="Aquarium.php" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="Filtre.php" id="fontUnderMenu">FILTRE</a></li>
+              <li><a href="LED.php" id="fontUnderMenu">ECLAIRAGE LED</a></li>
+              <li><a href="SubstratAdaYellow.php" id="fontUnderMenu">ADA ver.1</a></li>
+              <li><a href="SubstratAdaOrange.php" id="fontUnderMenu">ADA ver.2</a></li>
+              <li><a href="DiffuseurCO2.php" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">PROMOTION</a>
+            <a href="Actu.php">ACTUALITE</a>
             <ul>
 
             </ul>
@@ -89,26 +90,28 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <?php
 
-      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) { //cas dans lequel un utilisateur est connecté on affiche son prénom avec la variable de session
 
       ?>
         <div id="client" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
           <p style="color:white; text-align:center; margin-top: 4%;"> <?= $_SESSION['prenom']; ?></p>
         </div>
       <?php
-      } else {
+      } else { // cas dans le quel l'utilisateur n'est pas connecté on affiche le bouton se connecter avec la pop up de connexion
       ?>
         <div id="client">
           <div class="open-btn">
-            <button class="open-button" onclick="openForm()">Se connecter</button>
+            <button class="open-button" onclick="openForm()">Se connecter</button> <!-- boutton de connexion -->
           </div>
           <div class="login-popup">
+            <!-- Pop Up -->
             <div class="form-popup" id="popupForm">
               <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
+                <!-- la pop up est sous forme de tableau -->
                 <form method="post">
                   <tr>
                     <th>
-                      <h4 class="fas fa-user" style="color:white"> Email :</h4>
+                      <h4 class="fas fa-user" style="color:white"> Email :</h4> <!-- affichage du bonhomme et de email -->
                     </th>
                     <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
                     <th></th>
@@ -122,18 +125,18 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   </tr>
                   <tr>
                     <th>
-                      <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
+                      <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4> <!-- affichage du cadenas et de mot de passe -->
                     </th>
                     <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
                     <th></th>
                     <th>
                       <p style="visibility: hidden;">aaaa</p>
                     </th>
-                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                    <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
+                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th> <!-- ligne verte qui sépare la connexion de lacréation de compte -->
+                    <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th> <!-- bouton de création de compte -->
                   </tr>
                   <tr></tr>
-                  <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
+                  <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th> <!-- boutton de connexion -->
                   <th></th>
                   <th>
                     <p style="display:none">aaaa</p>
@@ -141,7 +144,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
                   </tr>
                   <tr>
-                    <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
+                    <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th> <!-- bouton permetant de fermer la page -->
                   </tr>
                 </form>
               </table>
@@ -172,74 +175,86 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         </div>
       </div>
 
+      <div class="LOGOimage">
+        <!-- Affichage su logo -->
+        <a href="index.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
+      </div>
+
       <?php
 
-      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) {
+      if (isset($_SESSION['email']) && (isset($_SESSION['nom']))) { //cas ou utilisateur est connecté on affiche le bouton de déconnexion
 
       ?>
         <div id="deco" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
-          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button>
+          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button> <!-- bouton de déconexion -->
         </div>
       <?php
       }
       ?>
 
-      <div class="LOGOimage">
-        <a href="index.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
-      </div>
-
-
-      <div id="secondMenu">
+<div id="secondMenu">
         <li id="titleSndMenu">
-          <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Plantes</a>
+          <a href="Plantes.php" style="color: rgb(125, 177, 80); text-decoration: none">Plantes</a>
           <ul>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Toutes les plantes aquatiques</a>
+              <a href="Anubias.php" style="color: white; text-decoration: none">Anubias</a>
             </li>
             <li id="UnderTitleSndMenu">
               <a href="Bucephalandra.php" style="color: white; text-decoration: none">Bucephalandra</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Mousses pour aquarium</a>
+              <a href="Hygrophila.php" style="color: white; text-decoration: none">Hygrophila</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Plantes Gazonnantes</a>
+              <a href="Panes.php" style="color: white; text-decoration: none">Panes</a>
+            </li>
+            <li id="UnderTitleSndMenu">
+              <a href="Titouman.php" style="color: white; text-decoration: none">Titouman</a>
             </li>
           </ul>
         </li>
         <li id="titleSndMenu">
-          <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Poissons</a>
+          <a href="Poissons.php" style="color: rgb(125, 177, 80); text-decoration: none">Poissons</a>
           <ul>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Invertébrés d'eau douce</a>
+              <a href="CrevetteAmano.php" style="color: white; text-decoration: none">Crevette d'amano</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Poissons d'eau douce</a>
+              <a href="RasboraGalaxy.php" style="color: white; text-decoration: none">Rasbora galaxy</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Poissons marins</a>
+              <a href="Ramirezi.php" style="color: white; text-decoration: none">Ramirezi</a>
+            </li>
+            <li id="UnderTitleSndMenu">
+              <a href="Pictichromis.php" style="color: white; text-decoration: none">Pictichromis</a>
             </li>
           </ul>
         </li>
         <li id="titleSndMenu">
-          <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Matériel</a>
+          <a href="materiel.php" style="color: rgb(125, 177, 80); text-decoration: none">Matériel</a>
           <ul>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Aquarium</a>
+              <a href="Aquarium.php" style="color: white; text-decoration: none">Aquarium</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Accessoires Aquarium</a>
+              <a href="Filtre.php" style="color: white; text-decoration: none">Filtre</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Filtration aquarium</a>
+              <a href="LED.php" style="color: white; text-decoration: none">Eclairage LED</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Eclairage aquarium</a>
+              <a href="SubstratAdaYellow.php" style="color: white; text-decoration: none">ADA ver.1</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Système CO2 d'aquarium</a>
+              <a href="SubstratAdaOrange.php" style="color: white; text-decoration: none">ADA ver.2</a>
+            </li>
+            <li id="UnderTitleSndMenu">
+              <a href="DiffuseurCO2.php" style="color: white; text-decoration: none">Diffuseur CO2</a>
             </li>
           </ul>
+        </li>
+        <li id="titleSndMenu">
+          <a href="Actu.php" style="color: rgb(125, 177, 80); text-decoration: none">Actualité</a>
         </li>
       </div>
 

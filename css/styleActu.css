@@ -287,6 +287,89 @@ video#bgvid {
     #3c3a3f 100%
   );
 }
+#menu-demo2 li:nth-child(4) {
+  background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+}
+
+#menu-demo2 li:nth-child(4):hover,
+#menu-demo2 li:nth-child(4) li:hover {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
+#menu-demo2 li:nth-child(4) li {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
+#menu-demo2 li:nth-child(5) {
+  background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+}
+
+#menu-demo2 li:nth-child(5):hover,
+#menu-demo2 li:nth-child(5) li:hover {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
+#menu-demo2 li:nth-child(5) li {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
 
 /* les a href */
 #menu-demo2 a {
