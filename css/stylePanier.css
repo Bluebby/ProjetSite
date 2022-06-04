@@ -6,6 +6,7 @@
     background-color: rgb(38, 38, 38);
     border-radius: 5px;
     margin-left: 78%;
+    z-index: 21;
 }
 
 /*bouton qui affiche le panier qd on passe la souris & renvoie vers le panier qd on clique*/

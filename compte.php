@@ -58,7 +58,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
             <a href="poissons.php">POISSONS</a>
             <ul>
               <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
-              <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
+              <li><a href="RasboraBrigittae.php" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
               <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
               <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>

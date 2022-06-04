@@ -32,7 +32,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 <body>
   <header id="showcase">
 
-    <div id="responsive">
+  <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
         <a href="index.php">
@@ -51,16 +51,18 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
               <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="#" id="fontUnderMenu">PANES</a></li>
+              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
             <a href="poissons.php">POISSONS</a>
             <ul>
               <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
-              <li><a href="#" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
+              <li><a href="RasboraBrigittae.php" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
               <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
               <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
-
+              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
             </ul>
           </li>
           <li>
@@ -76,7 +78,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <li>
             <a href="#">PROMOTION</a>
             <ul>
-      
+
             </ul>
           </li>
         </ul>
@@ -98,15 +100,15 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
       ?>
         <div id="client">
           <div class="open-btn">
-            <button class="open-button" onclick="openForm()">Se connecter</button>
+            <button class="open-button" onclick="openForm()">Se connecter</button> <!-- boutton de connexion -->
           </div>
-          <div class="login-popup">
+          <div class="login-popup"> <!-- Pop Up -->
             <div class="form-popup" id="popupForm">
-              <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
+              <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;"> <!-- la pop up est sous forme de tableau -->
                 <form method="post">
                   <tr>
                     <th>
-                      <h4 class="fas fa-user" style="color:white"> Email :</h4>
+                      <h4 class="fas fa-user" style="color:white"> Email :</h4> <!-- affichage du bonhomme et de email -->
                     </th>
                     <th><input type="email" name="lemail" id="lemail" placeholder="Votre email" required></th>
                     <th></th>
@@ -120,18 +122,18 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   </tr>
                   <tr>
                     <th>
-                      <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4>
+                      <h4 class="fas fa-lock" style="color:white"> Mot de passe :</h4> <!-- affichage du cadenas et de mot de passe -->
                     </th>
                     <th><input type="password" name="lpassword" id="lpassword" placeholder="Votre mot de passe" required></th>
                     <th></th>
                     <th>
                       <p style="visibility: hidden;">aaaa</p>
                     </th>
-                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
-                    <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th>
+                    <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th> <!-- ligne verte qui sépare la connexion de lacréation de compte -->
+                    <th><a href="compte.php"><button class="button" style="background-color: rgb(125, 177, 80); color: white; border: 0; font-size: 1.1em;" type="button">Se créer un compte</button></a></th> <!-- bouton de création de compte -->
                   </tr>
                   <tr></tr>
-                  <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th>
+                  <th colspan="2"><button style="background-color: rgb(125, 177, 80); color: white; border : 0; font-size: 1.1em;" type="submit" name="formlogin" id="formlogin">Se connecter</button></th> <!-- boutton de connexion -->
                   <th></th>
                   <th>
                     <p style="display:none">aaaa</p>
@@ -139,7 +141,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                   <th style="border-left: solid 4px; color: rgb(125, 177, 80);"></th>
                   </tr>
                   <tr>
-                    <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th>
+                    <th colspan="6"><button type="button" style="background-color: rgb(255, 0, 0); color: white; border : 0; font-size: 1.1em;" class="btn cancel" onclick="closeForm()">Fermer</button></th> <!-- bouton permetant de fermer la page -->
                   </tr>
                 </form>
               </table>
@@ -170,7 +172,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         </div>
         </div>
 
-      <div class="LOGOimage">
+      <div class="LOGOimage"> <!-- Affichage su logo -->
         <a href="index.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>
 
@@ -180,7 +182,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       ?>
         <div id="deco" style="border: solid 1px; border-radius: 5px; border: solid 1px #6db33f; background-color: rgb(38, 38, 38); max-height: 30px;">
-          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button>
+          <button onclick="window.location.href = 'logout.php'" style="color: white; background-color: rgb(38, 38, 38); border: none; outline: none; cursor: pointer;">Deconnexion</button> <!-- bouton de déconexion -->
         </div>
       <?php
       }
@@ -334,17 +336,17 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
    <!-- Le footer contenant le le formulaire de contact, les réseaux et les horraires d'ouverture du magasin -->
 
   <footer>
-    <div class="contenu-footer">
+    <div class="contenu-footer">  
       <div class="bloc footer-contact">
         <h3>Nous contacter</h3>
-        <ul class="liste-contact">
-          <li><a href="contact.php">Formulaire de contact</a></li>
+        <ul class="liste-contact">  <!-- La première liste -->
+          <li><a href="contact.php">Formulaire de contact</a></li> <!-- renvoie vers le formulaire de contact -->
         </ul>
       </div>
 
       <div class="bloc footer-services">
         <h3>Nos horaires</h3>
-        <ul class="liste-services">
+        <ul class="liste-services"> <!-- liste des horraires -->
           <li>✅ Lun 10h-19h</li>
           <li>✅ Mar 10h-19h</li>
           <li>✅ Mer 10h-19h</li>
@@ -357,7 +359,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <div class="bloc footer-medias">
         <h3>Nos Réseaux</h3>
-        <ul class="liste-medias">
+        <ul class="liste-medias"> <!-- liste des réseaux -->
           <li><a href="https://www.facebook.com"><img class="logo" src="img/icons/facebook.png" alt="icones reseaux">Facebook</a></li>
           <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="img/icons/github.png" alt="icones reseaux">github</a></li>
           <li><a href="https://www.instagram.com"><img class="logo" src="img/icons/instagram.png" alt="icones reseaux">instagram</a></li>

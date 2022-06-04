@@ -69,4 +69,7 @@ session_start();
         </tr>
       </tfoot>
   </table>
+  <div style="text-align:center">
+        <a href="index.php"><button class="button" style="background-color: rgb(38, 38, 38); color: white; border: 0; font-size: 1.1em;" type="button">Retour</button></a> <!-- retour sur le formulaire-->
+    </div>
 </body>
