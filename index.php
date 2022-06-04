@@ -32,7 +32,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 <body>
   <header id="showcase">
 
-  <div id="responsive">
+    <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
         <a href="index.php">
@@ -50,33 +50,34 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
-              <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
-              <li><a href="#" id="fontUnderMenu">PANES</a></li>
-              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
+              <li><a href="Hygrophila.php" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="Panes.php" id="fontUnderMenu">PANES</a></li>
+              <li><a href="Titouman.php" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
             <a href="poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
+              <li><a href="CrevetteAmano.php" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
               <li><a href="RasboraBrigittae.php" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
-              <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
-              <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
-              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
+              <li><a href="RasboraGalaxy.php" id="fontUnderMenu">RASBORA GALAXY </a></li>
+              <li><a href="Ramirezi.php" id="fontUnderMenu">RAMIREZI</a></li>
+              <li><a href="Pictichromis.php" id="fontUnderMenu">PICTICHROMIS</a></li>
             </ul>
           </li>
           <li>
             <a href="materiel.php">MATERIEL</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
-              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
-              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
-              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
-              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
+              <li><a href="Aquarium.php" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="Filtre.php" id="fontUnderMenu">FILTRE</a></li>
+              <li><a href="LED.php" id="fontUnderMenu">ECLAIRAGE LED</a></li>
+              <li><a href="SubstratAdaYellow.php" id="fontUnderMenu">ADA ver.1</a></li>
+              <li><a href="SubstratAdaOrange.php" id="fontUnderMenu">ADA ver.2</a></li>
+              <li><a href="DiffuseurCO2.php" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">PROMOTION</a>
+            <a href="Actu.php">ACTUALITE</a>
             <ul>
 
             </ul>
@@ -102,9 +103,11 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <div class="open-btn">
             <button class="open-button" onclick="openForm()">Se connecter</button> <!-- boutton de connexion -->
           </div>
-          <div class="login-popup"> <!-- Pop Up -->
+          <div class="login-popup">
+            <!-- Pop Up -->
             <div class="form-popup" id="popupForm">
-              <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;"> <!-- la pop up est sous forme de tableau -->
+              <table style="border-collapse:collapse; text-align: center; background-color: rgba(0, 0, 0, 0.4); width: 800px; z-index: 100;">
+                <!-- la pop up est sous forme de tableau -->
                 <form method="post">
                   <tr>
                     <th>
@@ -170,9 +173,10 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
           <!-- Affichage du prix total :-->
           <p>Total : <b id="hcart-subtotal"><?= $_SESSION['subtotal'] ?> €</b></p>
         </div>
-        </div>
+      </div>
 
-      <div class="LOGOimage"> <!-- Affichage su logo -->
+      <div class="LOGOimage">
+        <!-- Affichage su logo -->
         <a href="index.php"> <img style="max-width: 6%; margin-right: 60%; margin-top: -4%; z-index: 10;" src="img/icons/logo.png" /> </a>
       </div>
 
@@ -188,57 +192,69 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
       }
       ?>
 
-      <div id="secondMenu">
+<div id="secondMenu">
         <li id="titleSndMenu">
-          <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Plantes</a>
+          <a href="Plantes.php" style="color: rgb(125, 177, 80); text-decoration: none">Plantes</a>
           <ul>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Toutes les plantes aquatiques</a>
+              <a href="Anubias.php" style="color: white; text-decoration: none">Anubias</a>
             </li>
             <li id="UnderTitleSndMenu">
               <a href="Bucephalandra.php" style="color: white; text-decoration: none">Bucephalandra</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Mousses pour aquarium</a>
+              <a href="Hygrophila.php" style="color: white; text-decoration: none">Hygrophila</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Plantes Gazonnantes</a>
+              <a href="Panes.php" style="color: white; text-decoration: none">Panes</a>
+            </li>
+            <li id="UnderTitleSndMenu">
+              <a href="Titouman.php" style="color: white; text-decoration: none">Titouman</a>
             </li>
           </ul>
         </li>
         <li id="titleSndMenu">
-          <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Poissons</a>
+          <a href="Poissons.php" style="color: rgb(125, 177, 80); text-decoration: none">Poissons</a>
           <ul>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Invertébrés d'eau douce</a>
+              <a href="CrevetteAmano.php" style="color: white; text-decoration: none">Crevette d'amano</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Poissons d'eau douce</a>
+              <a href="RasboraGalaxy.php" style="color: white; text-decoration: none">Rasbora galaxy</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Poissons marins</a>
+              <a href="Ramirezi.php" style="color: white; text-decoration: none">Ramirezi</a>
+            </li>
+            <li id="UnderTitleSndMenu">
+              <a href="Pictichromis.php" style="color: white; text-decoration: none">Pictichromis</a>
             </li>
           </ul>
         </li>
         <li id="titleSndMenu">
-          <a href="#" style="color: rgb(125, 177, 80); text-decoration: none">Matériel</a>
+          <a href="materiel.php" style="color: rgb(125, 177, 80); text-decoration: none">Matériel</a>
           <ul>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Aquarium</a>
+              <a href="Aquarium.php" style="color: white; text-decoration: none">Aquarium</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Accessoires Aquarium</a>
+              <a href="Filtre.php" style="color: white; text-decoration: none">Filtre</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Filtration aquarium</a>
+              <a href="LED.php" style="color: white; text-decoration: none">Eclairage LED</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Eclairage aquarium</a>
+              <a href="SubstratAdaYellow.php" style="color: white; text-decoration: none">ADA ver.1</a>
             </li>
             <li id="UnderTitleSndMenu">
-              <a href="#" style="color: white; text-decoration: none">Système CO2 d'aquarium</a>
+              <a href="SubstratAdaOrange.php" style="color: white; text-decoration: none">ADA ver.2</a>
+            </li>
+            <li id="UnderTitleSndMenu">
+              <a href="DiffuseurCO2.php" style="color: white; text-decoration: none">Diffuseur CO2</a>
             </li>
           </ul>
+        </li>
+        <li id="titleSndMenu">
+          <a href="Actu.php" style="color: rgb(125, 177, 80); text-decoration: none">Actualité</a>
         </li>
       </div>
 
@@ -302,7 +318,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                   <!-- Affichage des produits à partir de la base de données. -->
                   <?php foreach ($_SESSION['products_data']['poissons'] as $id => $data) : ?>
-                    <?php if ($data['stock'] > 0): ?>
+                    <?php if ($data['stock'] > 0) : ?>
                       <div class="infoPriceProduct">
                         <div class="case_quantity_wanted">
                           <a href="<?= $id ?>.php">
@@ -311,7 +327,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                           <p class="nameProduct" style="color:white"><?= $data['name'] ?></p>
                           <p class="price"><?= $data['price'] ?> €</p>
                           <input id="<?= $data['name'] ?>-add-qty" type="number" min="1" value=1 class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" name="<?= $data['stock'] ?>" />
-                          <button onclick="addToCart('poissons', '<?=$id?>', '<?= $data['name'] ?>', document.getElementById('<?= $data['name'] ?>-add-qty').value, document.getElementById('<?= $data['name'] ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
+                          <button onclick="addToCart('poissons', '<?= $id ?>', '<?= $data['name'] ?>', document.getElementById('<?= $data['name'] ?>-add-qty').value, document.getElementById('<?= $data['name'] ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
                         </div>
                       </div>
                     <?php endif; ?>
@@ -333,20 +349,22 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
   <div id="imgcacheBackGround"></div>
 
-   <!-- Le footer contenant le le formulaire de contact, les réseaux et les horraires d'ouverture du magasin -->
+  <!-- Le footer contenant le le formulaire de contact, les réseaux et les horraires d'ouverture du magasin -->
 
   <footer>
-    <div class="contenu-footer">  
+    <div class="contenu-footer">
       <div class="bloc footer-contact">
         <h3>Nous contacter</h3>
-        <ul class="liste-contact">  <!-- La première liste -->
+        <ul class="liste-contact">
+          <!-- La première liste -->
           <li><a href="contact.php">Formulaire de contact</a></li> <!-- renvoie vers le formulaire de contact -->
         </ul>
       </div>
 
       <div class="bloc footer-services">
         <h3>Nos horaires</h3>
-        <ul class="liste-services"> <!-- liste des horraires -->
+        <ul class="liste-services">
+          <!-- liste des horraires -->
           <li>✅ Lun 10h-19h</li>
           <li>✅ Mar 10h-19h</li>
           <li>✅ Mer 10h-19h</li>
@@ -359,7 +377,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
       <div class="bloc footer-medias">
         <h3>Nos Réseaux</h3>
-        <ul class="liste-medias"> <!-- liste des réseaux -->
+        <ul class="liste-medias">
+          <!-- liste des réseaux -->
           <li><a href="https://www.facebook.com"><img class="logo" src="img/icons/facebook.png" alt="icones reseaux">Facebook</a></li>
           <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="img/icons/github.png" alt="icones reseaux">github</a></li>
           <li><a href="https://www.instagram.com"><img class="logo" src="img/icons/instagram.png" alt="icones reseaux">instagram</a></li>

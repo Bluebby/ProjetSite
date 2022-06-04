@@ -20,7 +20,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1,0" />
     <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-    <title>Rasbora Brigittae</title>
+    <title>Crevette Amano</title>
     <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
     <link rel="stylesheet" href="css/styleAnubias.css" />
     <link rel="stylesheet" href="css/stylePanier.css" />
@@ -258,8 +258,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
             <div class="product">
                 <center>
                     <?php
-                    $category = "poissons";
-                    $id = "Rasborabrigittae";
+                    $category = "materiel";
+                    $id = "Aquarium";
                     $name = $_SESSION['products_data'][$category][$id]['name'];
                     $stock = $_SESSION['products_data'][$category][$id]['stock'];
                     $img = $_SESSION['products_data'][$category][$id]['img'];
@@ -267,9 +267,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                     ?>
                     <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $name ?></h1>
                     <div class="underProduct">
-                        <div class="imgProduct">
-                            <img src="<?= $img ?>">
-                        </div>
+                        <div class="imgProduct"><img src="<?= $img ?>"></div>
 
                         <div class="infoPriceProduct">
                             <p class="price"><?= $price ?>€</p>
@@ -287,41 +285,28 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                             </div>
                             <p id="fontDescription">
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">Taille</h>
-                                <div id="fontCharacteristic">1-3cm</div>
+                                <h id="tittleCharacteristic">CAPACITE</h>
+                                <div id="fontCharacteristic">60L</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">PH MAXIMUM</h>
-                                <div id="fontCharacteristic">7</div>
+                                <h id="tittleCharacteristic">DIMENSIONS</h>
+                                <div id="fontCharacteristic">41 x 41 x 60cm</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">PH MINIMIUM</h>
-                                <div id="fontCharacteristic">4</div>
+                                <h id="tittleCharacteristic">ECLAIRAGE LED</h>
+                                <div id="fontCharacteristic">6W</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">GH MAXIMUM</h>
-                                <div id="fontCharacteristic">8</div>
+                                <h id="tittleCharacteristic">SYSTEME DE FILTRATION</h>
+                                <div id="fontCharacteristic">350L/H</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">GH MINIMIUM</h>
-                                <div id="fontCharacteristic">2</div>
+                                <h id="tittleCharacteristic">CHAUFFAGE</h>
+                                <div id="fontCharacteristic">50W</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">TEMPERATURE</h>
-                                <div id="fontCharacteristic">25 A 28°C</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">ORIGINE GÉOGRAPHIQUE</h>
-                                <div id="fontCharacteristic">ASIE</div>
-                            </div>
-
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">DIFFICULTE</h>
-                                <div id="fontCharacteristic">FACILE</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">NOMBRE D'INDIVIDUS</h>
-                                <div id="fontCharacteristic" style="color:rgb(255, 92, 82)">MINIMUM 10</div>
+                                <h id="tittleCharacteristic">COULEUR</h>
+                                <div id="fontCharacteristic">NOIR</div>
                             </div>
 
                             </p>
@@ -329,29 +314,19 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                         <div id="secondDescription">
                             <h4>DESCRIPTION</h4>
-                            <p id="fontDescription">Le Rasboras Brigittae est un tout petit poisson mesurerant environ 3cm adulte, il est originaire de Bornéo et d’Indonésie. En tant que poisson de banc, celui-ci doit vivre en groupe de 10 individus minimum mais il se sentira mieux dans un groupe plus important.
+                            <p id="fontDescription" style="color: white">L'aquarium HEXA SET est original avec sa forme hexagonale. Il est équipé d’un couvercle avec l’éclairage LED, d’un filtre en cascade et un thermoplongeur automatique. C’est une décoration originale pour chaque intérieur moderne. Avec son volume contenu, il pourra facilement trouver sa place, dans une chambre, un salon ou un bureau.
+
+                                Le verre utilisé est épais et résistant, collé avec un silicone spécial pour aquarium noir. Cela garantit non seulement leur durabilité et leur étanchéité, mais empêche également l’apparition de salissures et de dépôts.
+
                             </p>
                         </div>
 
                         <div id="thirdDescription">
                             <div style="width:100%">
-                                <h4>LES AUTRES ONT AIME</h4>
+                                <h4 style="color: white">LES AUTRES ONT AIME</h4>
                             </div>
                             <div id="underOtherProduct">
 
-                                <div id="infoOtherPriceProduct">
-
-                                    <img id="imgOtherProduct" src="img/crevette_amano.jpg">
-                                    <p id="nameOtherProduct">CREVETTE AMANO</p>
-                                    <p id="priceOther">2,95 €</p>
-
-                                    <div id="Othercase_quantity_wanted">
-                                        <input type="number" min="1" name="qty" id="Crevette Amano" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                    </div>
-                                    <button onclick="addToCart('Crevette Amano', 2.95, document.getElementById('Crevette Amano').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
-
-                                </div>
                                 <div id="infoOtherPriceProduct">
 
                                     <img id="imgOtherProduct" src="img/anubias.jpg">
@@ -365,14 +340,25 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                                 </div>
                                 <div id="infoOtherPriceProduct">
 
+                                    <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
+                                    <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
+                                    <p id="priceOther">3,50 €</p>
+                                    <div id="Othercase_quantity_wanted">
+                                        <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                    </div>
+                                    <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
+                                </div>
+                                <div id="infoOtherPriceProduct">
+
                                     <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
                                     <div id="underInfoPriceProduct">
                                         <p id="nameOtherProduct">RASBORA GALAXY</p>
-                                        <p id="priceOther">3.50 €</p>
+                                        <p id="priceOther">3,95 €</p>
                                         <div id="Othercase_quantity_wanted">
-                                            <input type="number" min="1" name="qty" id="Rasbora galaxy" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                            <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                         </div>
-                                        <button onclick="addToCart('Rasbora galaxy', 3.50 , document.getElementById('Rasbora galaxy').value)" class="favorite Otherstyled">Ajouter au panier</button>
+                                        <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
                                     </div>
                                 </div>
@@ -381,12 +367,12 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                                     <img id="imgOtherProduct" src="img/ramirezi.jpg">
                                     <div id="underOtherInfoPriceProduct">
-                                        <p id="nameOtherProduct">RAMIREZ</p>
+                                        <p id="nameOtherProduct" style="color: white">RAMIREZ</p>
                                         <p id="priceOther">15,50 €</p>
                                         <div id="Othercase_quantity_wanted">
-                                            <input type="number" min="1" name="qty" id="Ramirez" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                            <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                         </div>
-                                        <button onclick="addToCart('Ramirez', 15.50, document.getElementById('Ramirez').value)" class="favorite Otherstyled">Ajouter au panier</button>
+                                        <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
                                     </div>
                                 </div>
@@ -397,6 +383,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 </center>
             </div>
 
+
             <div class="section">
 
 
@@ -405,7 +392,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     </header>
 
     <div id="imgcacheBackGround"></div>
-
 
     <footer>
         <div class="contenu-footer">

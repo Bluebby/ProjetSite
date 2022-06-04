@@ -20,7 +20,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1,0" />
     <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-    <title>Rasbora Brigittae</title>
+    <title>Ramirezi</title>
     <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
     <link rel="stylesheet" href="css/styleAnubias.css" />
     <link rel="stylesheet" href="css/stylePanier.css" />
@@ -259,7 +259,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 <center>
                     <?php
                     $category = "poissons";
-                    $id = "Rasborabrigittae";
+                    $id = "Ramirezi";
                     $name = $_SESSION['products_data'][$category][$id]['name'];
                     $stock = $_SESSION['products_data'][$category][$id]['stock'];
                     $img = $_SESSION['products_data'][$category][$id]['img'];
@@ -270,7 +270,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                         <div class="imgProduct">
                             <img src="<?= $img ?>">
                         </div>
-
                         <div class="infoPriceProduct">
                             <p class="price"><?= $price ?>€</p>
                             <p style="color: white">Quantité</p>
@@ -288,7 +287,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                             <p id="fontDescription">
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">Taille</h>
-                                <div id="fontCharacteristic">1-3cm</div>
+                                <div id="fontCharacteristic">5-6cm</div>
                             </div>
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">PH MAXIMUM</h>
@@ -308,20 +307,16 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                             </div>
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">TEMPERATURE</h>
-                                <div id="fontCharacteristic">25 A 28°C</div>
+                                <div id="fontCharacteristic">24 A 32°C</div>
                             </div>
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">ORIGINE GÉOGRAPHIQUE</h>
-                                <div id="fontCharacteristic">ASIE</div>
+                                <div id="fontCharacteristic">VENEZUELA</div>
                             </div>
 
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">DIFFICULTE</h>
                                 <div id="fontCharacteristic">FACILE</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">NOMBRE D'INDIVIDUS</h>
-                                <div id="fontCharacteristic" style="color:rgb(255, 92, 82)">MINIMUM 10</div>
                             </div>
 
                             </p>
@@ -329,8 +324,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                         <div id="secondDescription">
                             <h4>DESCRIPTION</h4>
-                            <p id="fontDescription">Le Rasboras Brigittae est un tout petit poisson mesurerant environ 3cm adulte, il est originaire de Bornéo et d’Indonésie. En tant que poisson de banc, celui-ci doit vivre en groupe de 10 individus minimum mais il se sentira mieux dans un groupe plus important.
-                            </p>
+                            <p id="fontDescription">Le Ramirezi est probablement le Cichlidé nain le plus connu des aquariophiles. Il offre une grande variété de couleurs. Il mesure entre 5 et 6 cm adulte. Le Mikrogeophagus Ramirezi vit en couple ou en groupe. Le mâle est un peu plus grand que la femelle. Il vit naturellement proche du sol. </p>
                         </div>
 
                         <div id="thirdDescription">
@@ -365,16 +359,14 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                                 </div>
                                 <div id="infoOtherPriceProduct">
 
-                                    <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
-                                    <div id="underInfoPriceProduct">
-                                        <p id="nameOtherProduct">RASBORA GALAXY</p>
-                                        <p id="priceOther">3.50 €</p>
-                                        <div id="Othercase_quantity_wanted">
-                                            <input type="number" min="1" name="qty" id="Rasbora galaxy" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                        </div>
-                                        <button onclick="addToCart('Rasbora galaxy', 3.50 , document.getElementById('Rasbora galaxy').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
+                                    <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
+                                    <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
+                                    <p id="priceOther">3,50 €</p>
+                                    <div id="Othercase_quantity_wanted">
+                                        <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                     </div>
+                                    <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
                                 </div>
 
                                 <div id="infoOtherPriceProduct">

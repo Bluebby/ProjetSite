@@ -20,7 +20,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1,0" />
     <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-    <title>Rasbora Brigittae</title>
+    <title>Hygrophila</title>
     <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
     <link rel="stylesheet" href="css/styleAnubias.css" />
     <link rel="stylesheet" href="css/stylePanier.css" />
@@ -258,8 +258,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
             <div class="product">
                 <center>
                     <?php
-                    $category = "poissons";
-                    $id = "Rasborabrigittae";
+                    $category = "plantes";
+                    $id = "Hygrophila";
                     $name = $_SESSION['products_data'][$category][$id]['name'];
                     $stock = $_SESSION['products_data'][$category][$id]['stock'];
                     $img = $_SESSION['products_data'][$category][$id]['img'];
@@ -287,80 +287,74 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                             </div>
                             <p id="fontDescription">
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">Taille</h>
-                                <div id="fontCharacteristic">1-3cm</div>
+                                <h id="tittleCharacteristic">Hauteur Maximal (cm)</h>
+                                <div id="fontCharacteristic">50cm</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">PH MAXIMUM</h>
-                                <div id="fontCharacteristic">7</div>
+                                <h id="tittleCharacteristic">Hauteur Minimal (cm)</h>
+                                <div id="fontCharacteristic">15cm</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">PH MINIMIUM</h>
-                                <div id="fontCharacteristic">4</div>
+                                <h id="tittleCharacteristic">LUMIÈRE MAXIMALE</h>
+                                <div id="fontCharacteristic">FORTE (1W/2L)</div>
                             </div>
                             <div class="characteristic">
-                                <h id="tittleCharacteristic">GH MAXIMUM</h>
-                                <div id="fontCharacteristic">8</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">GH MINIMIUM</h>
-                                <div id="fontCharacteristic">2</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">TEMPERATURE</h>
-                                <div id="fontCharacteristic">25 A 28°C</div>
+                                <h id="tittleCharacteristic">LUMIÈRE MINIMALE</h>
+                                <div id="fontCharacteristic">TRÈS FAIBLE (1W/5L)</div>
                             </div>
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">ORIGINE GÉOGRAPHIQUE</h>
                                 <div id="fontCharacteristic">ASIE</div>
                             </div>
-
+                            <div class="characteristic">
+                                <h id="tittleCharacteristic">PH MAXIMUM</h>
+                                <div id="fontCharacteristic">8</div>
+                            </div>
+                            <div class="characteristic">
+                                <h id="tittleCharacteristic">PH MINIMIUM</h>
+                                <div id="fontCharacteristic">5.5</div>
+                            </div>
                             <div class="characteristic">
                                 <h id="tittleCharacteristic">DIFFICULTE</h>
                                 <div id="fontCharacteristic">FACILE</div>
                             </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">NOMBRE D'INDIVIDUS</h>
-                                <div id="fontCharacteristic" style="color:rgb(255, 92, 82)">MINIMUM 10</div>
-                            </div>
-
                             </p>
                         </div>
 
                         <div id="secondDescription">
                             <h4>DESCRIPTION</h4>
-                            <p id="fontDescription">Le Rasboras Brigittae est un tout petit poisson mesurerant environ 3cm adulte, il est originaire de Bornéo et d’Indonésie. En tant que poisson de banc, celui-ci doit vivre en groupe de 10 individus minimum mais il se sentira mieux dans un groupe plus important.
+                            <p id="fontDescription" style="color: white">Il existe de nombreuses variétés d'Hygrophila Polysperma. Celle du Sri Lanka a de gracieuses feuilles à bords ondulés plus larges et longues que celles de l'Hygrophila Polysperma courante. Les feuilles prennent des tons cuivrés sous éclairage fort. Elle donne beaucoup de tiges secondaires, c'est pourquoi il suffit de quelques exemplaires pour constituer un bel ensemble bien fourni. Voir également Hygrophila polysperma.
                             </p>
                         </div>
 
                         <div id="thirdDescription">
                             <div style="width:100%">
-                                <h4>LES AUTRES ONT AIME</h4>
+                                <h4 style="color: white">LES AUTRES ONT AIME</h4>
                             </div>
                             <div id="underOtherProduct">
 
                                 <div id="infoOtherPriceProduct">
 
                                     <img id="imgOtherProduct" src="img/crevette_amano.jpg">
-                                    <p id="nameOtherProduct">CREVETTE AMANO</p>
+                                    <p id="nameOtherProduct" style="color: white">CREVETTE AMANO</p>
                                     <p id="priceOther">2,95 €</p>
 
                                     <div id="Othercase_quantity_wanted">
-                                        <input type="number" min="1" name="qty" id="Crevette Amano" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                        <input type="number" min="1" name="qty" id="Anubias" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                     </div>
-                                    <button onclick="addToCart('Crevette Amano', 2.95, document.getElementById('Crevette Amano').value)" class="favorite Otherstyled">Ajouter au panier</button>
+                                    <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
 
                                 </div>
                                 <div id="infoOtherPriceProduct">
 
-                                    <img id="imgOtherProduct" src="img/anubias.jpg">
-                                    <p id="nameOtherProduct">ANUBIAS</p>
+                                    <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
+                                    <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
                                     <p id="priceOther">3,50 €</p>
                                     <div id="Othercase_quantity_wanted">
-                                        <input type="number" min="1" name="qty" id="Anubias" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                        <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                     </div>
-                                    <button onclick="addToCart('Anubias', 3.50, document.getElementById('Anubias').value)" class="favorite Otherstyled">Ajouter au panier</button>
+                                    <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
                                 </div>
                                 <div id="infoOtherPriceProduct">
@@ -368,11 +362,11 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                                     <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
                                     <div id="underInfoPriceProduct">
                                         <p id="nameOtherProduct">RASBORA GALAXY</p>
-                                        <p id="priceOther">3.50 €</p>
+                                        <p id="priceOther">3,95 €</p>
                                         <div id="Othercase_quantity_wanted">
-                                            <input type="number" min="1" name="qty" id="Rasbora galaxy" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                            <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                         </div>
-                                        <button onclick="addToCart('Rasbora galaxy', 3.50 , document.getElementById('Rasbora galaxy').value)" class="favorite Otherstyled">Ajouter au panier</button>
+                                        <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
                                     </div>
                                 </div>
@@ -381,12 +375,12 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                                     <img id="imgOtherProduct" src="img/ramirezi.jpg">
                                     <div id="underOtherInfoPriceProduct">
-                                        <p id="nameOtherProduct">RAMIREZ</p>
+                                        <p id="nameOtherProduct" style="color: white">RAMIREZ</p>
                                         <p id="priceOther">15,50 €</p>
                                         <div id="Othercase_quantity_wanted">
-                                            <input type="number" min="1" name="qty" id="Ramirez" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                            <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                         </div>
-                                        <button onclick="addToCart('Ramirez', 15.50, document.getElementById('Ramirez').value)" class="favorite Otherstyled">Ajouter au panier</button>
+                                        <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
 
                                     </div>
                                 </div>
@@ -397,6 +391,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 </center>
             </div>
 
+
             <div class="section">
 
 
@@ -405,7 +400,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
     </header>
 
     <div id="imgcacheBackGround"></div>
-
 
     <footer>
         <div class="contenu-footer">

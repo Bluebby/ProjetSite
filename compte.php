@@ -31,7 +31,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 <body>
   <div id="showcase">
 
-    <div id="responsive">
+  <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
         <a href="index.php">
@@ -49,33 +49,34 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 <a href="Anubias.php" id="fontUnderMenu">ANUBIAS</a>
               </li>
               <li><a href="Bucephalandra.php" id="fontUnderMenu">BUCEPHALANDRA</a></li>
-              <li><a href="#" id="fontUnderMenu">HYGROPHILA</a></li>
-              <li><a href="#" id="fontUnderMenu">PANES</a></li>
-              <li><a href="#" id="fontUnderMenu">TITOUMAN</a></li>
+              <li><a href="Hygrophila.php" id="fontUnderMenu">HYGROPHILA</a></li>
+              <li><a href="Panes.php" id="fontUnderMenu">PANES</a></li>
+              <li><a href="Titouman.php" id="fontUnderMenu">TITOUMAN</a></li>
             </ul>
           </li>
           <li>
             <a href="poissons.php">POISSONS</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
+              <li><a href="CrevetteAmano.php" id="fontUnderMenu">CREVETTE D'AMANO</a></li>
               <li><a href="RasboraBrigittae.php" id="fontUnderMenu">RASBORA BRIGITTAE</a></li>
-              <li><a href="#" id="fontUnderMenu">RASBORA GALAXY </a></li>
-              <li><a href="#" id="fontUnderMenu">RAMIREZI</a></li>
-              <li><a href="#" id="fontUnderMenu">PICTICHROMIS</a></li>
+              <li><a href="RasboraGalaxy.php" id="fontUnderMenu">RASBORA GALAXY </a></li>
+              <li><a href="Ramirezi.php" id="fontUnderMenu">RAMIREZI</a></li>
+              <li><a href="Pictichromis.php" id="fontUnderMenu">PICTICHROMIS</a></li>
             </ul>
           </li>
           <li>
             <a href="materiel.php">MATERIEL</a>
             <ul>
-              <li><a href="#" id="fontUnderMenu">AQUARIUM</a></li>
-              <li><a href="#" id="fontUnderMenu">FILTRAGE</a></li>
-              <li><a href="#" id="fontUnderMenu">ECLAIRAGE</a></li>
-              <li><a href="#" id="fontUnderMenu">SABLE</a></li>
-              <li><a href="#" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
+              <li><a href="Aquarium.php" id="fontUnderMenu">AQUARIUM</a></li>
+              <li><a href="Filtre.php" id="fontUnderMenu">FILTRE</a></li>
+              <li><a href="LED.php" id="fontUnderMenu">ECLAIRAGE LED</a></li>
+              <li><a href="SubstratAdaYellow.php" id="fontUnderMenu">ADA ver.1</a></li>
+              <li><a href="SubstratAdaOrange.php" id="fontUnderMenu">ADA ver.2</a></li>
+              <li><a href="DiffuseurCO2.php" id="fontUnderMenu">DIFFUSEUR CO2</a></li>
             </ul>
           </li>
           <li>
-            <a href="#">PROMOTION</a>
+            <a href="Actu.php">ACTUALITE</a>
             <ul>
 
             </ul>

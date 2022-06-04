@@ -259,7 +259,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                 <center>
                     <?php
                     $category = "poissons";
-                    $id = "Rasborabrigittae";
+                    $id = "Pictichromis";
                     $name = $_SESSION['products_data'][$category][$id]['name'];
                     $stock = $_SESSION['products_data'][$category][$id]['stock'];
                     $img = $_SESSION['products_data'][$category][$id]['img'];
@@ -270,7 +270,6 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                         <div class="imgProduct">
                             <img src="<?= $img ?>">
                         </div>
-
                         <div class="infoPriceProduct">
                             <p class="price"><?= $price ?>€</p>
                             <p style="color: white">Quantité</p>
@@ -286,42 +285,39 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                                 <h4 style="color: white">CARACTERISTIQUE</h4>
                             </div>
                             <p id="fontDescription">
-                            <div class="characteristic">
+                            <div id="characteristic">
                                 <h id="tittleCharacteristic">Taille</h>
-                                <div id="fontCharacteristic">1-3cm</div>
+                                <div id="fontCharacteristic">6-7cm</div>
                             </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">PH MAXIMUM</h>
-                                <div id="fontCharacteristic">7</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">PH MINIMIUM</h>
-                                <div id="fontCharacteristic">4</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">GH MAXIMUM</h>
-                                <div id="fontCharacteristic">8</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">GH MINIMIUM</h>
-                                <div id="fontCharacteristic">2</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">TEMPERATURE</h>
-                                <div id="fontCharacteristic">25 A 28°C</div>
-                            </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">ORIGINE GÉOGRAPHIQUE</h>
-                                <div id="fontCharacteristic">ASIE</div>
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">lONGEVITE</h>
+                                <div id="fontCharacteristic">5ans</div>
                             </div>
 
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">DIFFICULTE</h>
-                                <div id="fontCharacteristic">FACILE</div>
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">PH MAXIMUM</h>
+                                <div id="fontCharacteristic">8.4</div>
                             </div>
-                            <div class="characteristic">
-                                <h id="tittleCharacteristic">NOMBRE D'INDIVIDUS</h>
-                                <div id="fontCharacteristic" style="color:rgb(255, 92, 82)">MINIMUM 10</div>
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">PH MINIMIUM</h>
+                                <div id="fontCharacteristic">8.2</div>
+                            </div>
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">TEMPERATURE</h>
+                                <div id="fontCharacteristic">22 A 26°C</div>
+                            </div>
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">ORIGINE GÉOGRAPHIQUE</h>
+                                <div id="fontCharacteristic">VENERUELA</div>
+                            </div>
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">VOlUME MIN</h>
+                                <div id="fontCharacteristic">110 litres</div>
+                            </div>
+
+                            <div id="characteristic">
+                                <h id="tittleCharacteristic">DIFFICULTE</h>
+                                <div id="fontCharacteristic">DIFFICILE</div>
                             </div>
 
                             </p>
@@ -329,8 +325,8 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                         <div id="secondDescription">
                             <h4>DESCRIPTION</h4>
-                            <p id="fontDescription">Le Rasboras Brigittae est un tout petit poisson mesurerant environ 3cm adulte, il est originaire de Bornéo et d’Indonésie. En tant que poisson de banc, celui-ci doit vivre en groupe de 10 individus minimum mais il se sentira mieux dans un groupe plus important.
-                            </p>
+                            <p id="fontDescription">Il porte un nom très évocateur, en effet, avec une moitié du corps rose et l'autre jaune, ce poisson corallien fort populaire rappelle les couleurs d'un certain cornet de glace.
+                                Très territorial, mais généralement paisible avec les autres espèces de poissons. Reste à l'abri des infractuosités du décor.</p>
                         </div>
 
                         <div id="thirdDescription">
@@ -365,16 +361,14 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
                                 </div>
                                 <div id="infoOtherPriceProduct">
 
-                                    <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
-                                    <div id="underInfoPriceProduct">
-                                        <p id="nameOtherProduct">RASBORA GALAXY</p>
-                                        <p id="priceOther">3.50 €</p>
-                                        <div id="Othercase_quantity_wanted">
-                                            <input type="number" min="1" name="qty" id="Rasbora galaxy" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                        </div>
-                                        <button onclick="addToCart('Rasbora galaxy', 3.50 , document.getElementById('Rasbora galaxy').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
+                                    <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
+                                    <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
+                                    <p id="priceOther">3,50 €</p>
+                                    <div id="Othercase_quantity_wanted">
+                                        <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
                                     </div>
+                                    <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
                                 </div>
 
                                 <div id="infoOtherPriceProduct">

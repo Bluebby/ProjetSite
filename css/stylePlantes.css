@@ -315,6 +315,90 @@ video#bgvid {
   /*quand les cases et sous cases sont survolé elle prennent un couleur grise*/
 }
 
+#menu-demo2 li:nth-child(4) {
+  background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+}
+
+#menu-demo2 li:nth-child(4):hover,
+#menu-demo2 li:nth-child(4) li:hover {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
+#menu-demo2 li:nth-child(4) li {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
+#menu-demo2 li:nth-child(5) {
+  background-color: rgb(125, 177, 80);
+  border: 1px solid rgb(125, 177, 80);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(38, 38, 38) 0%,
+    rgb(38, 38, 38) 100%
+  );
+}
+
+#menu-demo2 li:nth-child(5):hover,
+#menu-demo2 li:nth-child(5) li:hover {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
+#menu-demo2 li:nth-child(5) li {
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(125, 177, 80) 0%,
+    #2a2333 100%
+  );
+  background-image: linear-gradient(
+    to left,
+    rgb(125, 177, 80) 0%,
+    #3c3a3f 100%
+  );
+}
+
 #secondMenu {
   position: absolute;
   border-radius: 7px;
@@ -887,3 +971,35 @@ footer {
   margin-top: 85px;
   width: 125px;
 }
+
+.styled {
+  margin-top: 5px;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: max(0.5vw, 5px);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 7px;
+  background-color: #6db33f;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: #438318;
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+

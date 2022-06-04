@@ -3,8 +3,8 @@ session_start();
 
 // On crée un panier vide s'il n'y en a pas dans la session en cours.
 if (!isset($_SESSION['cart'])) {
-  $_SESSION['cart'] = array();
-  $_SESSION['subtotal'] = 0;
+    $_SESSION['cart'] = array();
+    $_SESSION['subtotal'] = 0;
 }
 
 // Lecture de la base de donnée liée aux produits.
@@ -16,23 +16,23 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1,0" />
-  <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
-  <title>Anubias</title>
-  <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
-  <link rel="stylesheet" href="css/styleAnubias.css" />
-  <link rel="stylesheet" href="css/stylePanier.css" />
-  <script defer src="js/menu.js"></script>
-  <script src="js/cartAjaxFunctions.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,0" />
+    <!--la largeur prise en compte est la largeur disponible, le zoom de base sera à 1-->
+    <title>Filtre</title>
+    <link rel="icon" type="image/jpg" sizes="16x16" href="https://zupimages.net/up/22/05/747m.png" />
+    <link rel="stylesheet" href="css/styleAnubias.css" />
+    <link rel="stylesheet" href="css/stylePanier.css" />
+    <script defer src="js/menu.js"></script>
+    <script src="js/cartAjaxFunctions.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
-  <header id="showcase">
+    <header id="showcase">
 
-  <div id="responsive">
+    <div id="responsive">
       <div id="opaqueNezo"></div>
       <div id="Menu">
         <a href="index.php">
@@ -255,188 +255,163 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
         </li>
       </div>
 
-      <div class="product">
-        <center>
-          <?php
-          $category = "plantes";
-          $id = "Anubias";
-          $name = $_SESSION['products_data'][$category][$id]['name'];
-          $stock = $_SESSION['products_data'][$category][$id]['stock'];
-          $img = $_SESSION['products_data'][$category][$id]['img'];
-          $price = $_SESSION['products_data'][$category][$id]['price'];
-          ?>
-          <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $name ?></h1>
-          <div class="underProduct">
-            <div class="imgProduct">
-              <img src="<?= $img ?>">
+            <div class="product">
+                <center>
+                    <?php
+                    $category = "materiel";
+                    $id = "SubstratAdaYellow";
+                    $name = $_SESSION['products_data'][$category][$id]['name'];
+                    $stock = $_SESSION['products_data'][$category][$id]['stock'];
+                    $img = $_SESSION['products_data'][$category][$id]['img'];
+                    $price = $_SESSION['products_data'][$category][$id]['price'];
+                    ?>
+                    <h1 id="titleProduct" style="color: white; text-transform: uppercase"><?= $name ?></h1>
+                    <div class="underProduct">
+                        <div class="imgProduct"><img src="<?= $img ?>"></div>
+
+                        <div class="infoPriceProduct">
+                            <p class="price"><?= $price ?>€</p>
+                            <p style="color: white">Quantité</p>
+                            <div class="case_quantity_wanted">
+                                <input id="<?= $name ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" name="<?= $stock ?>" />
+                            </div>
+                            <button onclick="addToCart('<?= $category ?>', '<?= $id ?>', '<?= $name ?>', document.getElementById('<?= $name ?>-add-qty').value, document.getElementById('<?= $name ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
+
+                        </div>
+
+                        <div id="firstDescription">
+                            <div style="width:100%">
+                                <h4 style="color: white">CARACTERISTIQUE</h4>
+                            </div>
+                            <p id="fontDescription">
+                            <div class="characteristic">
+                                <h id="tittleCharacteristic">GRANULOMETRIE</h>
+                                <div id="fontCharacteristic">3-4mm</div>
+                            </div>
+                            <div class="characteristic">
+                                <h id="tittleCharacteristic">type de sol</h>
+                                <div id="fontCharacteristic">SOL TECHNIQUE</div>
+                            </div>
+                            <div class="characteristic">
+                                <h id="tittleCharacteristic">PH constaté</h>
+                                <div id="fontCharacteristic">5.5 à 6.5</div>
+                            </div>
+
+
+                            </p>
+                        </div>
+
+                        <div id="secondDescription">
+                            <h4>DESCRIPTION</h4>
+                            <p id="fontDescription" style="color: white">Le sol amazonia a été créé par ADA la société de Takeshi Amano, le créateur de l'aquascaping. C'est un sol technique ou sol complet acidifiant et adoucissant l'eau tout en étant enrichi en engrais pour les plantes d'aquarium. Très utilisé en aquascaping et pour les aquarium de crevettes. En se combinant avec Power Sand, il devient le substrat idéal pour les plantes.</p>
+                        </div>
+
+                        <div id="thirdDescription">
+                            <div style="width:100%">
+                                <h4 style="color: white">LES AUTRES ONT AIME</h4>
+                            </div>
+                            <div id="underOtherProduct">
+
+                                <div id="infoOtherPriceProduct">
+
+                                    <img id="imgOtherProduct" src="img/anubias.jpg">
+                                    <p id="nameOtherProduct">ANUBIAS</p>
+                                    <p id="priceOther">3,50 €</p>
+                                    <div id="Othercase_quantity_wanted">
+                                        <input type="number" min="1" name="qty" id="Anubias" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                    </div>
+                                    <button onclick="addToCart('Anubias', 3.50, document.getElementById('Anubias').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
+                                </div>
+                                <div id="infoOtherPriceProduct">
+
+                                    <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
+                                    <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
+                                    <p id="priceOther">3,50 €</p>
+                                    <div id="Othercase_quantity_wanted">
+                                        <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                    </div>
+                                    <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
+                                </div>
+                                <div id="infoOtherPriceProduct">
+
+                                    <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
+                                    <div id="underInfoPriceProduct">
+                                        <p id="nameOtherProduct">RASBORA GALAXY</p>
+                                        <p id="priceOther">3,95 €</p>
+                                        <div id="Othercase_quantity_wanted">
+                                            <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                        </div>
+                                        <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
+                                    </div>
+                                </div>
+
+                                <div id="infoOtherPriceProduct">
+
+                                    <img id="imgOtherProduct" src="img/ramirezi.jpg">
+                                    <div id="underOtherInfoPriceProduct">
+                                        <p id="nameOtherProduct" style="color: white">RAMIREZ</p>
+                                        <p id="priceOther">15,50 €</p>
+                                        <div id="Othercase_quantity_wanted">
+                                            <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
+                                        </div>
+                                        <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                </center>
             </div>
 
-            <div class="infoPriceProduct">
-              <p class="price"><?= $price ?>€</p>
-              <p style="color: white">Quantité</p>
-              <div class="case_quantity_wanted">
-                <input id="<?= $name ?>-add-qty" type="number" min="1" value="1" class="quantity_wanted" class="text" style="border: 1px solid rgb(189, 194, 201);" name="<?= $stock ?>" />
-              </div>
-              <button onclick="addToCart('<?= $category ?>', '<?= $id ?>', '<?= $name ?>', document.getElementById('<?= $name ?>-add-qty').value, document.getElementById('<?= $name ?>-add-qty').name)" class="favorite styled">Ajouter au panier</button>
+
+            <div class="section">
+
+
 
             </div>
+    </header>
 
-            <div id="firstDescription">
-              <div style="width:100%">
-                <h4 style="color: white">CARACTERISTIQUE</h4>
-              </div>
-              <p id="fontDescription">
-              <div class="characteristic">
-                <h id="tittleCharacteristic">Hauteur Maximal (cm)</h>
-                <div id="fontCharacteristic">10</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">Hauteur Minimum (cm)</h>
-                <div id="fontCharacteristic">5</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">LUMIÈRE MAXIMALE</h>
-                <div id="fontCharacteristic">FORTE (1W/2L)</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">LUMIÈRE MINIMALE</h>
-                <div id="fontCharacteristic">TRÈS FAIBLE (1W/5L)</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">ORIGINE GÉOGRAPHIQUE</h>
-                <div id="fontCharacteristic">AFRIQUE</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">PH MAXIMUM</h>
-                <div id="fontCharacteristic">7</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">PH MINIMIUM</h>
-                <div id="fontCharacteristic">6</div>
-              </div>
-              <div class="characteristic">
-                <h id="tittleCharacteristic">DIFFICULTE</h>
-                <div id="fontCharacteristic">TRES FACILE</div>
-              </div>
-              </p>
+    <div id="imgcacheBackGround"></div>
+
+    <footer>
+        <div class="contenu-footer">
+            <div class="bloc footer-contact">
+                <h3>Nous contacter</h3>
+                <ul class="liste-contact">
+                    <li><a href="contact.php">Formulaire de contact</a></li>
+                </ul>
             </div>
 
-            <div id="secondDescription">
-              <h4>DESCRIPTION</h4>
-              <p id="fontDescription" style="color: white">L'Anubias nana est une petite plante séduisante qui pousse dans tous milieux, issue d'une sélection naine d'Anubias barteri var Nana. La croissance est lente, les feuilles pouvant durer plusieurs années, ce qui laisse parfois le temps aux algues le temps de s' établir.
-                A planter de préférence sur une pierre ou une souche sur laquelle on l'attachera avec un fil en Nylon jusqu'à ce qu'elle s'enracine. Si on la plante dans le sol, éviter de recouvrir le rhizome qui dans ce cas risque de pourrir. Floraisons fréquentes en immersion.
-                Non consommée par les poissons phytophages, A. nana résiste particulièrement à l'appétit des poissons rouges.
-              </p>
+            <div class="bloc footer-services">
+                <h3>Nos horaires</h3>
+                <ul class="liste-services">
+                    <li>✅ Lun 10h-19h</li>
+                    <li>✅ Mar 10h-19h</li>
+                    <li>✅ Mer 10h-19h</li>
+                    <li>✅ Jeu 10h-19h</li>
+                    <li>✅ Ven 10h-19h</li>
+                    <li>❌ Sam fermé</li>
+                    <li>❌ Dim fermé</li>
+                </ul>
             </div>
 
-            <div id="thirdDescription">
-              <div style="width:100%">
-                <h4 style="color: white">LES AUTRES ONT AIME</h4>
-              </div>
-              <div id="underOtherProduct">
-
-                <div id="infoOtherPriceProduct">
-
-                  <img id="imgOtherProduct" src="img/crevette_amano.jpg">
-                  <p id="nameOtherProduct" style="color: white">CREVETTE AMANO</p>
-                  <p id="priceOther">2,95 €</p>
-
-                  <div id="Othercase_quantity_wanted">
-                    <input type="number" min="1" name="qty" id="Anubias" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                  </div>
-                  <button onclick="addToCart('Anubias', 14, document.getElementById('Anubias').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
-
-                </div>
-                <div id="infoOtherPriceProduct">
-
-                  <img id="imgOtherProduct" src="img/rasbora_brigittae.jpg">
-                  <p id="nameOtherProduct">RASBORA BRIGITTAE</p>
-                  <p id="priceOther">3,50 €</p>
-                  <div id="Othercase_quantity_wanted">
-                    <input type="number" min="1" name="qty" id="Bucephalandra" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                  </div>
-                  <button onclick="addToCart('Bucephalandra', 12, document.getElementById('Bucephalandra').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
-                </div>
-                <div id="infoOtherPriceProduct">
-
-                  <img id="imgOtherProduct" src="img/rasbora_galaxy.jpg">
-                  <div id="underInfoPriceProduct">
-                    <p id="nameOtherProduct">RASBORA GALAXY</p>
-                    <p id="priceOther">3,95 €</p>
-                    <div id="Othercase_quantity_wanted">
-                      <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                    </div>
-                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
-                  </div>
-                </div>
-
-                <div id="infoOtherPriceProduct">
-
-                  <img id="imgOtherProduct" src="img/ramirezi.jpg">
-                  <div id="underOtherInfoPriceProduct">
-                    <p id="nameOtherProduct" style="color: white">RAMIREZ</p>
-                    <p id="priceOther">15,50 €</p>
-                    <div id="Othercase_quantity_wanted">
-                      <input type="number" min="1" name="qty" id="Hygrophila" class="Otherquantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                    </div>
-                    <button onclick="addToCart('Hygrophila', 20.05, document.getElementById('Hygrophila').value)" class="favorite Otherstyled">Ajouter au panier</button>
-
-                  </div>
-                </div>
-
-
-              </div>
+            <div class="bloc footer-medias">
+                <h3>Nos Réseaux</h3>
+                <ul class="liste-medias">
+                    <li><a href="https://www.facebook.com"><img class="logo" src="img/icons/facebook.png" alt="icones reseaux">Facebook</a></li>
+                    <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="img/icons/github.png" alt="icones reseaux">github</a></li>
+                    <li><a href="https://www.instagram.com"><img class="logo" src="img/icons/instagram.png" alt="icones reseaux">instagram</a></li>
+                    <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="img/icons/twitter.png" alt="icones reseaux">Twitter</a></li>
+                </ul>
             </div>
-        </center>
-      </div>
 
-
-      <div class="section">
-
-
-
-      </div>
-  </header>
-
-  <div id="imgcacheBackGround"></div>
-
-  <footer>
-    <div class="contenu-footer">
-      <div class="bloc footer-contact">
-        <h3>Nous contacter</h3>
-        <ul class="liste-contact">
-          <li><a href="contact.php">Formulaire de contact</a></li>
-        </ul>
-      </div>
-
-      <div class="bloc footer-services">
-        <h3>Nos horaires</h3>
-        <ul class="liste-services">
-          <li>✅ Lun 10h-19h</li>
-          <li>✅ Mar 10h-19h</li>
-          <li>✅ Mer 10h-19h</li>
-          <li>✅ Jeu 10h-19h</li>
-          <li>✅ Ven 10h-19h</li>
-          <li>❌ Sam fermé</li>
-          <li>❌ Dim fermé</li>
-        </ul>
-      </div>
-
-      <div class="bloc footer-medias">
-        <h3>Nos Réseaux</h3>
-        <ul class="liste-medias">
-          <li><a href="https://www.facebook.com"><img class="logo" src="img/icons/facebook.png" alt="icones reseaux">Facebook</a></li>
-          <li><a href="https://github.com/Bluebby/ProjetSite"><img class="logo" src="img/icons/github.png" alt="icones reseaux">github</a></li>
-          <li><a href="https://www.instagram.com"><img class="logo" src="img/icons/instagram.png" alt="icones reseaux">instagram</a></li>
-          <li><a href="https://twitter.com/?lang=fr"><img class="logo" src="img/icons/twitter.png" alt="icones reseaux">Twitter</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </footer>
+        </div>
+    </footer>
 
 
 
