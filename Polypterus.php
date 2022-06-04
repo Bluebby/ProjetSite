@@ -283,7 +283,7 @@ $_SESSION['products_data'] = json_decode(file_get_contents('data/products-data.j
 
                         <div id="firstDescription">
                             <div style="width:100%">
-                                <h4 style="color: white">CARACTERISTIC</h4>
+                                <h4 style="color: white">CARACTERISTIQUE</h4>
                             </div>
                             <p id="fontDescription">
                             <div class="characteristic">
